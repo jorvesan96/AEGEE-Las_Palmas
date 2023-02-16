@@ -1,10 +1,33 @@
 body {
-    background-color: #ffffff;
-    margin: 0;
+  top: 0%;
+  margin: 0px;
+}
+
+header {
+  background-color: #1468c5;
+  height: 150px;
+}
+.lista_header {
+  font-family: "Bebas neue", sans-serif;
+  display: flex;
+  margin: auto;
+  font-size: 23px;
+
+  .boton_header {
+    font-size: 23px;
+    font-family: "Bebas neue", sans-serif;
+    background-color: white;
+    color: #163e7a;
+    border-radius: 10px;
+    border: 3px solid #163e7a;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto;
+    padding: 10px 25px;
   }
-  h1{
-    font-family: 'Open sans', sans-serif;
+  
+  .boton_header:hover {
+    background-color: #c5c6c6;
+    cursor: pointer;
   }
-  h2{
-    font-family: 'Bebas Neue', sans-serif
-  }
+}
