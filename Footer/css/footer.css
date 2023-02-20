@@ -1,0 +1,19 @@
+footer {
+  position: absolute;
+  width: 1920px;
+  top: 7965px;
+}
+
+p{
+  color: #FFFF;
+}
+
+.lista_footer {
+  font-family: "Bebas neue", sans-serif;
+  background-color: #434242;
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+  font-size: 23px;
+  padding: 10px 25px;
+}
