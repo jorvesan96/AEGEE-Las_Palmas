@@ -7,6 +7,9 @@ header {
   background-color: #1468c5;
   height: 150px;
   display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .icono_aegee{
@@ -76,7 +79,10 @@ header {
 footer {
   background-color: #434242;
   display: flex;
-  height: 4rem;
+  height: 3rem;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
 }
 
 .texto_footer{
@@ -93,7 +99,7 @@ footer {
   position: absolute;
   margin-bottom: auto;
   right: 9%;
-  margin-top: 0.7rem;
+  margin-top: 0.4rem;
   dt{
     margin-right: 8%;
     opacity: 50%;
