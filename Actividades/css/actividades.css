@@ -1,0 +1,49 @@
+h1{
+    font-family: "Open sans", sans-serif;
+    font-size: 2rem;
+    margin-left: 15em;
+}
+
+.formulario {
+    margin-left: 8vh;
+    margin-top: 3vh;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    padding: 1vh 4vh;
+}
+
+.formulario p{
+    font-family: "Open sans", sans-serif;
+}
+
+.formulario ul{
+    margin-left: -10%;
+    list-style-type: circle;
+}
+
+.separator {
+    width: 150%;
+    margin-left: 20%;
+    border: none;
+    height: 0.15rem;
+    background: linear-gradient(90deg, #C51C13 19%, white 19% 20%, #A0C514 20% 39%, white 39% 40%, #931991 40% 59%, white 59% 60%, #FBBA00 60% 79%, white 79% 80%, #1468C5 80%);
+}
+
+.grupo{
+    display: flex;
+    width: 85%;
+    margin-left: 7%;
+    font-family: "Open sans", sans-serif;
+}
+
+.button_formulario {
+    font-size: 150%;
+    margin-top: 2%;
+    margin-left: 5%;
+    font-family: "Bebas neue", sans-serif;
+    background-color: white;
+    color: #CF9800;
+    border-radius: 10px;
+    border: 3px solid #CF9800;
+    padding: 1rem 2rem;
+}
