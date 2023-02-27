@@ -1,0 +1,43 @@
+body{
+    height: 100%;
+}
+.imagen{
+    height: 50vh;
+    background-color: #C5C6C6;
+}
+h1{
+    font-family: "Open Sans",sans-serif;
+    text-align: center;
+
+}
+.seccion{
+
+    margin: auto;
+    width: 80vw;
+    margin-bottom: 5%;
+    font-family: "Open Sans",sans-serif;
+    text-align: justify;
+    h2{
+        font-family: "Bebas neue", sans-serif;
+    }
+    #primera{
+        margin-top: 5%;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        p{
+            width: 40%;
+        }
+        img{
+            width: 30vw;
+            height: 30vh;
+        }
+    }
+}
+a{
+    color: #1468C5;
+    text-decoration: underline;
+}
+a:hover{
+    cursor: pointer;
+}
