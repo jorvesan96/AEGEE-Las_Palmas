@@ -4,14 +4,14 @@ h1{
     margin-left: 25em;
 }
 
-nav{
+.grupo{
     display: flex;
     width: 85%;
     margin-left: 7%;
     font-family: "Open sans", sans-serif;
 }
 
-nav a{
+.grupo a{
     margin: auto;
     background-color: lightgrey;
 }
