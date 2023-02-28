@@ -15,31 +15,121 @@ h2{
     text-align: center;
 }
 
-li{
-    list-style:none
+.grupo_junta{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 10%;
+  margin-top: 5%;
 }
 
-.imagen_dch{
-
+#imagen_junta{
+  margin-left: 10%;
 }
 
-.imagen_izq{
-
+.grupo_junta p{
+  width: 50%;
+  text-align: justify;
 }
+
+/* POSICION DE LOS MIEMBROS DE LA JUNTA*/
+
+.miembros{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.miembros p{
+  text-align: justify;
+}
+.miembros h2{
+  text-align:left;
+}
+.presidente{
+  grid-column: 1;
+  grid-row: 1;
+  margin: auto;
+}
+
+.texto_presi{
+  grid-column: 2 / span 3;
+  grid-row: 1;
+  margin: auto;
+}
+
+.secretario{
+  grid-column: 3;
+  grid-row: 2;
+  margin: auto;
+}
+
+.texto_secretario{
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  margin: auto;
+}
+
+.tesorero{
+  grid-column: 1;
+  grid-row: 3;
+  margin: auto;
+}
+
+.texto_tesorero{
+  grid-column: 2 / span 3;
+  grid-row: 3;
+  margin: auto;
+}
+
+.rrhh{
+  grid-column: 3;
+  grid-row: 4;
+  margin: auto;
+}
+
+.texto_rrhh{
+  grid-column: 1 / span 2;
+  grid-row: 4;
+  margin: auto;
+}
+
+.diseñador{
+  grid-column: 1;
+  grid-row: 5;
+  margin: auto;
+}
+
+.texto_diseñador{
+  grid-column: 2 / span 3;
+  grid-row: 5;
+  margin: auto;
+}
+
+.auxiliar{
+  grid-column: 3;
+  grid-row: 6;
+  margin: auto;
+}
+
+.texto_auxiliar{
+  grid-column: 1 / span 2;
+  grid-row: 6;
+  margin: auto;
+}
+
+/*-----------------------------*/
+
 
 .texto{
     font-family: "Open Sans", sans-serif;
 }
 
-.miembros{
-    
-}
-
-#junta{
-
-}
-
-.boton_desplazamiento_arriba{
+.boton_desplazamiento{
     width: 70%;
     background-color: #C5C6C6;
     color: #222224;
@@ -47,25 +137,17 @@ li{
     margin: 0 auto;
     height: 35px;
     font-family: "Open Sans", sans-serif;   
-    font-size: 200;
+    font-size: xx-large;
+    border-radius: 25px;
 }
 
-.boton_desplazamiento_abajo{
-    text-align: center;
-    width: 70%;
-    background-color: #C5C6C6;
-    color: #222224;
-    margin: 0 auto;
-    height: 35px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 50;
-}
 .queHacemos{
+  margin-top: 5%;
 
 }
 
-.contenedor{
-
+.contenedor_queHacemos{
+  
 }
 
 .contacta{
@@ -214,6 +296,9 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: "Open Sans", sans-serif;   
+    font-size: xx-large;
+    color: #ffffff;
   }
   
   
