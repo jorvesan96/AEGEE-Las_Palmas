@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="sp">
 <head>
     <meta charset="UTF-8">
-    <title>AEGEE Las Palmas</title>
-
-    <!--Import de las fuentes-->
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
-
-    <!--Import del css-->
-    <link rel="stylesheet" href="/elementos_comunes/elementos_comunes.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="icon" type="image/x-icon" href="http://aegeelaspalmas.es/wp-content/uploads/2022/01/cropped-WebLogo-32x32.png">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="home.css" rel="stylesheet" >
 </head>
 
 <body>
-
     <header>
-        <a class="icono_aegee" href="Home.html"> <img src="\iconos\logo-AEGEE.png" alt="" width="150" height="80"></a>
+        <a class="icono_aegee" href="/Home/Home.html"> <img src="\iconos\logo-AEGEE.png" alt="" width="150" height="80"></a>
         <dl class="lista_header">
             <dt class="texto">Actividades</dt>
             <dt class="texto">Buddy program</dt>
@@ -27,8 +19,187 @@
         </dl>
     </header>
 
-    <hr class="separator">
 
+    <div class="carrusel">
 
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+              <img src="http://aegeelaspalmas.es/wp-content/uploads/2022/01/Escape-room-1024x687.jpg" style="width:100%">
+          <div class="texto_encima">BIENVENIDO</div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div>
+        <h1>¿Quiénes somos?</h1>
+        <hr class="separator"> 
+    </div>
+    
+    <div class="imagen_izq">
+        <img src="http://aegeelaspalmas.es/wp-content/uploads/2023/01/Board2023-1024x1024.jpg"
+            alt="Imagen de la junta"
+            width="720"
+            height="360">
+            <p id="junta">
+            AEGEE es una organización de estudiantes sin fines de lucro que se fundó en 1985 para promover la unión 
+            y la cooperación entre jóvenes de toda Europa. Desde entonces, ha crecido y se ha expandido a más de 200 antenas locales en 40 países,
+            convirtiéndose en una de las asociaciones de estudiantes más grandes de Europa. AEGEE organiza una amplia variedad de actividades,
+            incluyendo conferencias, eventos culturales, proyectos de voluntariado y misiones de estudio en el extranjero. 
+            También trabaja en temas de actualidad, como la democracia, el medio ambiente y la diversidad cultural.
+            AEGEE es completamente independiente y está abierta a todos los estudiantes de Europa, independientemente de su género,
+            raza, orientación sexual o creencia política.
+            <br>
+            Nosotros representamos AEGEE en Las Palmas de Gran Canaria. Somos estudiantes 
+            y jóvenes como tú, con inquietudes y abiertos a conocer gente nueva. 
+            Aquí siempre te recibiremos con los brazos abiertos.
+            </p>
+    </div>     
+
+    <div class="boton_desplazamiento_arriba">v</div>
+
+    <div class="miembros">
+        <ul>
+            <li class="imagen_izq">
+                <img src="https://images.ecestaticos.com/I5MzFwwX64fG9WQ_yIWofrCcfkE=/16x58:1987x2378/1200x1200/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fe95%2F449%2F51c%2Fe9544951c85f8de1b21df143075b2e9c.jpg"
+                alt="Imagen Presidente de la junta"
+                width="360"
+                height="180">
+                <br>
+                <h2>PRESIDENTE/A</h2>
+                <p class="texto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </li>
+            <li class="imagen_dch">
+                <img src="https://thumbs.dreamstime.com/b/instrucciones-de-escritura-del-secretario-secretar%C3%ADa-atractiva-ayudando-jefe-y-escribiendo-en-el-lugar-trabajo-cargo-196277723.jpg"
+                alt="Imagen Secretario de la junta"
+                width="360"
+                height="180">
+                <br>
+                <h2>SECRETARI@</h2>
+                <p class="texto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </li>
+            <li class="imagen_izq">
+                <img src="https://static.wikia.nocookie.net/harrypotter/images/e/e3/Gringotts_Head_Goblin.jpg/revision/latest?cb=20100214234030"
+                alt="Imagen Tesorero de la junta"
+                width="360"
+                height="180">
+                <br>
+                <h2>TESORER@</h2>
+                <p class="texto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </li>
+            <li class="imagen_dch">
+                <img  src="https://cdn.techtitute.com/techtitute-blog/2020/12/recursos-humanos-el-valor-agregado-scaled.jpg"
+                alt="Imagen RRHH de la junta"
+                width="360"
+                height="180">
+                <br>
+                <h2>RRHH</h2>
+                <p class="texto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </li>
+            <li class="imagen_izq">
+                <img src="https://www.biografiasyvidas.com/monografia/goya/fotos/goya_vicente_lopez.jpg"
+                alt="Imagen DiseñodeImagenes de la junta"
+                width="360"
+                height="180">
+                <br>
+                <h2>DISEÑADOR/A</h2>
+                <p class="texto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </li>
+            <li class="imagen_dch">
+                <img src="https://dimobaservicios.com/wp-content/uploads/2020/12/auxiliar-de-servicios.png"
+                alt="Imagen Auxiliar de la junta"
+                width="360"
+                height="180">
+                <br>
+                <h2>AUXILIAR</h2>
+                <p class="texto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+            </li>
+        </ul>  
+    </div>
+
+    <div class="boton_desplazamiento_abajo">^</div>
+
+    <div class="queHacemos">
+        <h1>¿Qué hacemos?</h1>
+        <hr class="separator"> 
+    </div>
+    <div class="contenedor">
+        <ul>
+            <li>Conoce nuestras actividades
+                <a class="boton_actividades">Actividades</a>
+            </li>
+            <li>Apúntate a nuestras actividades de guía
+                <a class="boton_buddy_program">Buddy Program</a>
+            </li>
+            <li>Las actividades más humanas de Aegee-LasPalmas
+                <a class="boton_voluntariado">Voluntariado</a>
+            </li>
+        </ul>
+        
+    </div>
+
+    <div class="contacta">
+        <h1>Contacta con nosotros</h1>
+        <hr class="separator"> 
+        <img style="float:left" src="https://images.ecestaticos.com/O7s0-fsoC7rfatlawCXT07rE_ls=/41x0:939x500/1200x1200
+        /filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F9dd%2Ff10%2F8ee%2F9ddf108eea54d80bc8af14ce42d67431.jpg"
+                alt="Imagen Amigos todos"
+                width="360"
+                height="180">
+        <p class="texto">Dirección: intermedia.ulpgc, Edificio Anexo a La Granja - Campus Universitario de San Cristobal, 
+            Avenida Marítima de Canarias s/n, 35016 Las Palmas de Gran Canaria
+        <br>
+        O si prefieres nuestro e-mail
+        </p>
+    </div>
 </body>
-</html> 
+<!-- <footer> -->
+
+<p class="texto_footer">Copyright © 2023 AEGEE-Las Palmas. </p>
+
+<dl class="lista_footer">
+
+    <dt>
+        <a href="https://twitter.com/aegee_laspalmas?lang=es">
+            <img id="twitter" src="\iconos\Twitter_white.png" alt="Twitter">
+        </a>
+    </dt>
+
+    <dt>
+        <a href="https://www.instagram.com/aegee.laspalmas/?hl=es">
+            <img id="instagram" src="\iconos\Instagram_white.png" alt="Instagram">
+        </a>
+    </dt>
+
+    <dt>
+        <a href="https://linktr.ee/aegeelaspalmas">
+            <img id="linktree" src="\iconos\Linktree_White.png" alt="Linktree">
+        </a>
+    </dt>
+</dl>
+</footer>
+    
+
+</html>
