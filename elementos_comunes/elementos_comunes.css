@@ -28,6 +28,16 @@ header {
 .lista_header dt {
   margin-right: 3rem;
 }
+
+.texto{
+  color:white;
+}
+
+.texto:link{
+  text-decoration: none;
+}
+
+
 .lista_header .texto:hover {
   color: #163e7a;
   cursor: pointer;
@@ -51,6 +61,9 @@ header {
 .lista_header .boton_header:hover {
   background-color: #c5c6c6;
   cursor: pointer;
+}
+.boton_header:link{
+  text-decoration: none;
 }
 
 .separator {
