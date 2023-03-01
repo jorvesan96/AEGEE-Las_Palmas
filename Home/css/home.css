@@ -1,34 +1,35 @@
-.imagenCarrusel{
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+body{
+  font-family: "Open Sans", sans-serif;
+  margin: auto;
+  font-size: large;
+}
 
-}   
 h1{
     font-family: "Open Sans", sans-serif;
     text-align: center;
+    font-size: xxx-large;
 }
 
 h2{
     font-family: "Open Sans", sans-serif;
     text-align: center;
+    font-size: x-large;
 }
 
 .grupo_junta{
   display: flex;
-  width: 80%;
-  justify-content: space-between;
-  margin-bottom: 10%;
+  width: 95%;
+  margin-bottom: 5%;
   margin-top: 5%;
 }
 
 #imagen_junta{
   margin-left: 10%;
+  margin-right: 5%;
 }
 
 .grupo_junta p{
-  width: 50%;
+  width: 80%;
   text-align: justify;
 }
 
@@ -126,16 +127,17 @@ h2{
 
 
 .texto{
-    font-family: "Open Sans", sans-serif;
+  
+
 }
 
 .boton_desplazamiento{
-    width: 70%;
     background-color: #C5C6C6;
     color: #222224;
     text-align: center;
     margin: 0 auto;
-    height: 35px;
+    width: 85%;
+    display: block;
     font-family: "Open Sans", sans-serif;   
     font-size: xx-large;
     border-radius: 25px;
@@ -147,108 +149,82 @@ h2{
 }
 
 .contenedor_queHacemos{
-  
+  border: 3px solid #931991;
+  border-style:dashed;
+  border-radius: 30px;
+  text-align: center;
+  width: 40%;
+  height: 350px;
+  margin: 3% auto;
+
 }
 
-.contacta{
-
-}
-body{
-    top: 0%;
-    margin: 0%;
+.contenedor_queHacemos p{
+  font-size: x-large;
 }
 
-header {
-    background-color: #1468c5;
-    height: 150px;
-    display: flex;
-    top: 0;
-  }
-  
-  .icono_aegee {
-    margin: auto;
-  }
-  
-  .icono_aegee:hover {
-    cursor: pointer;
-  }
-  
-  .lista_header {
-    font-family: "Bebas neue", sans-serif;
-    font-size: 170%;
-    margin: auto;
-    display: flex;
-    color: white;
-  }
-  .lista_header dt {
-    margin-right: 3rem;
-  }
-  .lista_header .texto:hover {
-    color: #163e7a;
-    cursor: pointer;
-  }
-  .lista_header .boton_header {
-    font-size: 100%;
-    font-family: "Bebas neue", sans-serif;
-    background-color: white;
-    color: #163e7a;
-    border-radius: 10px;
-    border: 3px solid #163e7a;
-    display: inline-block;
-    cursor: pointer;
-    margin-top: -23%;
-    padding: 0.8rem 1rem;
-  }
-  .lista_header .boton_header:hover {
-    background-color: #c5c6c6;
-    cursor: pointer;
-  }
-  .lista_header .boton_header:hover {
-    background-color: #c5c6c6;
-    cursor: pointer;
-  }
-  
-  .separator {
-    width: 90%;
-    border: none;
-    height: 0.15rem;
-    background: linear-gradient(90deg, #C51C13 19%, white 19% 20%, #A0C514 20% 39%, white 39% 40%, #931991 40% 59%, white 59% 60%, #FBBA00 60% 79%, white 79% 80%, #1468C5 80%);
-  }
+.boton_actividades{ 
+  border: 3px solid #CF9800;
+  border-radius: 25px;
+  box-shadow: 0 0 5px #000000;
+  color: #CF9800;
+  font-size: x-large;
+  padding: 10px
+}
 
 
-footer {
-    background-color: #434242;
-    display: flex;
-    height: 3rem;
-    bottom: 0;
+.boton_buddy_program{
+  border: 3px solid #647A16;
+  border-radius: 25px;
+  box-shadow: 0 0 5px #000000;
+  color: #647A16;
+  font-size: x-large;
+  padding: 10px
+
+}
+
+.boton_voluntariado{
+  border: 3px solid #163E7A;
+  border-radius: 25px;
+  box-shadow: 0 0 5px #000000;
+  color: #163E7A;
+  font-size: x-large;
+  padding: 10px
+
+}
+
+.contacta {
+ display:inline-flex;
+ margin-right: 5%;
+ margin-left: 20%;
+ margin-top: 5%;
+}
+
+.contacta img{
+  margin-right: 5%;
+}
+
+.contacta p{
+
+  margin-right: 20%;
+}
+/* Css del carrusel */
+.imagenCarrusel{
+    display: block;
     width: 100%;
-    position: fixed;
-}
+    margin-left: auto;
+    margin-right: auto;
 
-.texto_footer {
-    color: white;
-    font-family: "Bebas neue", sans-serif;
-    margin-left: 5%;
-    font-size: large;
-}
-  
-.lista_footer {
-    font-family: "Bebas neue", sans-serif;
-    cursor: pointer;
-    display: flex;
-    position: absolute;
-    margin-bottom: auto;
-    right: 9%;
-    margin-top: 0.4rem;
-}
-  .lista_footer dt {
-    margin-right: 8%;
-    opacity: 50%;
-}
- 
-
-/* Css del carrusel *\
-
+}   
+.texto_encima {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Open Sans", sans-serif;   
+  font-size: xxx-large;
+  color: #ffffff;
+}  
 * {box-sizing:border-box}
 
 /* Slideshow container */
@@ -291,15 +267,7 @@ footer {
   }
   
   /* Caption text */
-  .texto_encima {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Open Sans", sans-serif;   
-    font-size: xx-large;
-    color: #ffffff;
-  }
+
   
   
   /* The dots/bullets/indicators */
