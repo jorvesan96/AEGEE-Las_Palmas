@@ -4,6 +4,21 @@ h1{
     margin-left: 25em;
 }
 
+h2 {
+    font-size: 3rem;
+    margin-left: 4%;
+    margin-top: 4%;
+    margin-bottom: -2%;
+}
+
+p {
+    font-size: 2rem;
+    width: 95%;
+    text-align: justify;
+    margin-left: 4%;
+    margin-bottom: 4%;
+}
+
 .grupo{
     display: flex;
     width: 85%;
@@ -14,19 +29,4 @@ h1{
 .grupo a{
     margin: auto;
     background-color: lightgrey;
-}
-
-p {
-    font-size: 2rem;
-    width: 95%;
-    text-align: justify;
-    margin-left: 4%;
-    margin-bottom: 4%;
-}
-  
-h2 {
-    font-size: 3rem;
-    margin-left: 4%;
-    margin-top: 4%;
-    margin-bottom: -2%;
 }
