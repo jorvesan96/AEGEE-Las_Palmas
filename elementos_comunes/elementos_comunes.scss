@@ -24,70 +24,68 @@ header {
   margin: auto;
   display: flex;
   color: white;
+}
+.lista_header dt {
+  margin-right: 3rem;
+}
 
-  dt{
-    margin-right: 3rem;
-  }
-  .texto:hover{
-    color: #163e7a;
-    cursor: pointer;
-  }
+.texto{
+  color:white;
+}
 
-  .boton_header {
-    font-size: 100%;
-    font-family: "Bebas neue", sans-serif;
-    background-color: white;
-    color: #163e7a;
-    border-radius: 10px;
-    border: 3px solid #163e7a;
-    display: inline-block;
-    cursor: pointer;
-    margin-top: -23%;
-    padding: 0.8rem  1rem;
-  }
-  
-  .boton_header:hover {
-    background-color: #c5c6c6;
-    cursor: pointer;
-  }
-  .boton_header:hover {
-    background-color: #c5c6c6;
-    cursor: pointer;
-  }
+.texto:link{
+  text-decoration: none;
+}
+
+
+.lista_header .texto:hover {
+  color: #163e7a;
+  cursor: pointer;
+}
+.lista_header .boton_header {
+  font-size: 100%;
+  font-family: "Bebas neue", sans-serif;
+  background-color: white;
+  color: #163e7a;
+  border-radius: 10px;
+  border: 3px solid #163e7a;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: -23%;
+  padding: 0.8rem 1rem;
+}
+.lista_header .boton_header:hover {
+  background-color: #c5c6c6;
+  cursor: pointer;
+}
+.lista_header .boton_header:hover {
+  background-color: #c5c6c6;
+  cursor: pointer;
+}
+.boton_header:link{
+  text-decoration: none;
 }
 
 .separator {
   width: 90%;
   border: none;
   height: 0.15rem;
-  background: linear-gradient(
-    90deg,
-    #C51C13 19%,
-    white 19% 20%,
-    #A0C514 20% 39%,
-    white 39% 40%,
-    #931991 40% 59%,
-    white 59% 60%,
-    #FBBA00 60% 79%,
-    white 79% 80%,
-    #1468C5 80%
-  );
+  background: linear-gradient(90deg, #C51C13 19%, white 19% 20%, #A0C514 20% 39%, white 39% 40%, #931991 40% 59%, white 59% 60%, #FBBA00 60% 79%, white 79% 80%, #1468C5 80%);
 }
 
 footer {
   background-color: #434242;
   display: flex;
-  height: 3rem;
-  bottom: 0;
+  height: 3.3rem;
+  position: absolute;
   width: 100%;
-  position: fixed;
 }
 
-.texto_footer{
-  color: #FFFF;
+.texto_footer {
+  color: white;
   font-family: "Bebas neue", sans-serif;
   margin-left: 5%;
-  font-size: large
+  font-size: large;
 }
 
 .lista_footer {
@@ -98,8 +96,8 @@ footer {
   margin-bottom: auto;
   right: 9%;
   margin-top: 0.4rem;
-  dt{
-    margin-right: 8%;
-    opacity: 50%;
-  }
 }
+.lista_footer dt {
+  margin-right: 8%;
+  opacity: 50%;
+}/*# sourceMappingURL=elementos_comunes.css.map */

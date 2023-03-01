@@ -25,23 +25,24 @@ header {
   display: flex;
   color: white;
 }
+
 .lista_header dt {
   margin-right: 3rem;
 }
 
-.texto{
-  color:white;
+.texto {
+  color: white;
 }
 
-.texto:link{
+.texto:link {
   text-decoration: none;
 }
-
 
 .lista_header .texto:hover {
   color: #163e7a;
   cursor: pointer;
 }
+
 .lista_header .boton_header {
   font-size: 100%;
   font-family: "Bebas neue", sans-serif;
@@ -54,15 +55,18 @@ header {
   margin-top: -23%;
   padding: 0.8rem 1rem;
 }
+
 .lista_header .boton_header:hover {
   background-color: #c5c6c6;
   cursor: pointer;
 }
+
 .lista_header .boton_header:hover {
   background-color: #c5c6c6;
   cursor: pointer;
 }
-.boton_header:link{
+
+.boton_header:link {
   text-decoration: none;
 }
 
@@ -76,7 +80,7 @@ header {
 footer {
   background-color: #434242;
   display: flex;
-  height: 3rem;
+  height: 3.3rem;
   position: absolute;
   width: 100%;
 }
@@ -97,7 +101,8 @@ footer {
   right: 9%;
   margin-top: 0.4rem;
 }
+
 .lista_footer dt {
   margin-right: 8%;
   opacity: 50%;
-}/*# sourceMappingURL=elementos_comunes.css.map */
+} /*# sourceMappingURL=elementos_comunes.css.map */

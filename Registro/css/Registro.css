@@ -2,10 +2,6 @@ body {
   height: 100%;
 }
 
-footer {
-  bottom: 0;
-}
-
 .rectangulo {
   height: 20vh;
   background-color: #C5C6C6;
@@ -16,9 +12,8 @@ footer {
   margin: auto;
   margin-top: -8.7vh;
   width: 35vw;
-  height: 50vh;
+  height: 8.1vh;
   background: white;
-  border: 2px solid #000000;
   border-top: 5px solid rgb(212, 0, 0);
   display: flex;
 }
@@ -26,21 +21,9 @@ footer {
   font-size: 2.4vmin;
   width: 30vw;
   position: absolute;
-  margin-left: 5%;
+  margin-left: 23.5vw;
 }
-.Container .titulo {
-  margin-left: 3.5vw;
-  width: 10%;
-  text-align: center;
-  position: absolute;
-}
-.Container .introduce {
-  margin-top: 12vh;
-  font-size: 2vmin;
-  width: 22vw;
-  margin-left: 6.5vw;
-}
-.Container .Registro {
+.Container .Iniciar_sesion {
   margin-right: 3.5vw;
   text-align: center;
   position: absolute;
@@ -48,26 +31,56 @@ footer {
   font-size: 2.4vmin;
   width: 17.5vw;
   position: absolute;
-  margin-left: 17.5vw;
   height: 8.1vh;
   text-decoration: none;
   color: black;
 }
-.Container .Registro p {
+.Container .Iniciar_sesion p {
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 6vw;
 }
 
-form {
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 0%;
+}
+
+.seccion {
+  width: 60vw;
   margin: auto;
-  align-items: center;
+  margin-top: 5vh;
+  font-size: 1.2rem;
+  text-align: justify;
+  margin-bottom: 5vh;
+}
+.seccion img {
+  aspect-ratio: 4/3;
+  height: 30vh;
+  float: right;
+  margin-left: 15%;
+  margin-bottom: 3%;
+}
+
+form {
+  width: 60vw;
+  margin: auto;
+  text-align: start;
+}
+form label {
+  font-size: 1.5rem;
+}
+form select {
+  margin-bottom: 5%;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 12px;
 }
 form .campo {
-  margin-left: 18%;
   margin-bottom: 5%;
-  font-size: x-large;
-  width: 60%;
+  font-size: 1.5rem;
   background-color: transparent;
   border: 2px solid black;
   border-radius: 12px;
@@ -82,20 +95,10 @@ form .boton {
   cursor: pointer;
   margin-bottom: 5%;
 }
-form .text {
-  color: #1468c5;
-  font-size: 85%;
-  cursor: pointer;
-  margin-left: 12.8vw;
+form .eleccion {
+  display: flex;
+  height: 2vh;
 }
-
-.codigo {
-  text-align: center;
-  margin-left: 11.2vw;
-  font-size: x-large;
-  width: 11vw;
-  background-color: transparent;
-  border: transparent;
-  border-bottom: 2px black groove;
-  letter-spacing: 0.5rem;
-}/*# sourceMappingURL=Login.css.map */
+form .eleccion p {
+  margin-top: 0vh;
+}/*# sourceMappingURL=Registro.css.map */
