@@ -20,7 +20,9 @@
             </dl>
         </header>
 
-        <h1>Recepción de documentos</h1>
+        <div class="titulo">
+            <h1>Recepción de documentos</h1>
+        </div>
         <hr class="separator">
 
         <div class="data_bank">
@@ -34,16 +36,16 @@
 
         <div class="seleccion">
             <p>¿Cuál es el motivo de su transferencia?</p>
-            <label for="cbox1">
-                <input type="checkbox" id="cbox1" value="first_checkbox"> Registro
+            <label for="radio1">
+                <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"> Registro
             </label>
-            <label for ="cbox2">
-                <input type="checkbox" id="cbox2" value="second_checkbox">Actividad
+            <label for ="radio2">
+                <input type="radio" id="cbox2" name="opcion" value="second_radio">Actividad
             </label>
         </div>
         
         <div>
-            <input id="dni" type="text" name="nombre" value="Introducir DNI" style="text-transform:uppercase">
+            <input id="dni" type="text" name="nombre" placeholder="Introduzca su DNI">
         </div>
         
 
@@ -51,12 +53,10 @@
             <p>Espacio para cargar el justificante de transferencia:</p>
             <input id="fichero" type="file" name="nombre">
             <div>
-              <p>
-                <input id="boton" type="submit" value="Enviar">
-              </p>
+                <input id="boton" type="button"  value="Enviar">
             </div>
-          </div>
-        
+        </div>
+
         <div class="correo">
             <p>
                 En caso de no poder cargar el fichero con la justificación de la transferencia, 
