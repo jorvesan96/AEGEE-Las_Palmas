@@ -186,6 +186,10 @@ h2{
   padding: 10px;
 }
 
+a:link, a:visited {
+  text-decoration: none;
+}
+
 .contacta {
  display:inline-flex;
  margin-right: 5%;
