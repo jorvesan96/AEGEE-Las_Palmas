@@ -5,7 +5,8 @@ body {
 
 header {
   background-color: #1468c5;
-  height: 150px;
+  height: 10vw;
+  width: 100vw;
   display: flex;
   top: 0;
 }
@@ -14,20 +15,25 @@ header {
   margin: auto;
 }
 
+.icono_aegee img {
+  width: 15vw;
+  max-width: 180px;
+}
+
 .icono_aegee:hover {
   cursor: pointer;
 }
 
 .lista_header {
   font-family: "Bebas neue", sans-serif;
-  font-size: 170%;
+  font-size: 2vw;
   margin: auto;
   display: flex;
   color: white;
 }
 
 .lista_header dt {
-  margin-right: 3rem;
+  margin-right: 3vw;
 }
 
 .texto {
@@ -44,7 +50,6 @@ header {
 }
 
 .lista_header .boton_header {
-  font-size: 100%;
   font-family: "Bebas neue", sans-serif;
   background-color: white;
   color: #163e7a;
@@ -53,7 +58,7 @@ header {
   display: inline-block;
   cursor: pointer;
   margin-top: -23%;
-  padding: 0.8rem 1rem;
+  padding: 0.7vw 1vw;
 }
 
 .lista_header .boton_header:hover {
@@ -74,13 +79,13 @@ header {
   width: 90%;
   border: none;
   height: 0.15rem;
-  background: linear-gradient(90deg, #C51C13 19%, white 19% 20%, #A0C514 20% 39%, white 39% 40%, #931991 40% 59%, white 59% 60%, #FBBA00 60% 79%, white 79% 80%, #1468C5 80%);
+  background: linear-gradient(90deg, #c51c13 19%, white 19% 20%, #a0c514 20% 39%, white 39% 40%, #931991 40% 59%, white 59% 60%, #fbba00 60% 79%, white 79% 80%, #1468c5 80%);
 }
 
 footer {
   background-color: #434242;
   display: flex;
-  height: 3.3rem;
+  height: 4vw;
   position: absolute;
   width: 100%;
 }
@@ -89,20 +94,32 @@ footer {
   color: white;
   font-family: "Bebas neue", sans-serif;
   margin-left: 5%;
-  font-size: large;
+  font-size: 1.3vw;
 }
 
 .lista_footer {
   font-family: "Bebas neue", sans-serif;
   cursor: pointer;
   display: flex;
+  margin: auto;
+  margin-top: 0.4vw;
   position: absolute;
-  margin-bottom: auto;
   right: 9%;
-  margin-top: 0.4rem;
 }
 
 .lista_footer dt {
   margin-right: 8%;
   opacity: 50%;
-} /*# sourceMappingURL=elementos_comunes.css.map */
+}
+
+.lista_footer img {
+  aspect-ratio: 1/1;
+  width: 3vw;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 450px) {
+  .lista_footer {
+    margin-top: 0vw;
+  }
+}/*# sourceMappingURL=elementos_comunes.css.map */
