@@ -1,65 +1,64 @@
 h1{
     font-family: "Open sans", sans-serif;
-    font-size: 2rem;
-    margin-left: 25rem;
+    font-size: 2vw;
+    text-align: center;
 }
 
 h2 {
-    font-size: 3rem;
-    margin-left: 2rem;
-    margin-top: 2rem;
+    font-size: 3vw;
+    margin-left: 2vw;
 }
 
 p {
-    font-size: 2rem;
+    font-size: 2vw;
     text-align: justify;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
+    margin-left: 2vw;
+    margin-bottom: 2vw;
 }
 
-/*
-.grupo{
-    display: flex;
-    width: 85%;
-    margin-left: 7%;
-    font-family: "Open sans", sans-serif;
+@media only screen and (min-width: 1281px) {
+    
+    .grupo{
+        display: flex;
+        width: 85%;
+        margin-left: 7%;
+        font-family: "Open sans", sans-serif;
+    }
+
+    .grupo a{
+        margin: auto;
+        background-color: lightgrey;
+    }
+
 }
 
-.grupo a{
-    margin: auto;
-    background-color: lightgrey;
-}
+@media only screen and (max-width: 1280px){
+    
+    img{
+        display: block;
+        margin: auto;
+    }
 
-/* Grilla para ordenadores */
-.grilla {
-    box-sizing: border-box;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 auto;
-    max-width: 70rem;
-    width: 100%;
-}
-
-.grilla a{
-    margin-top: 6rem;
-}
-
-/* Tamaño de pantalla de la table */
-@media (max-width: 1280){
-
-    .contenedor{
-        grid-column-end: span 2;
+    h2{
+        text-align: center;
     }
     
-    .contenedor img{
-        margin-left: 30rem;
+    p{
+        margin: 6%;
     }
 }
 
-/* Tamaño de pantalla en el movil */
-@media (max-width: 601px) {
-    .prev, .next, .text {
-      font-size: 11px;
+@media screen and (max-width: 600px) {
+
+    img{
+        display: none;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    p{
+        margin: 6%;
     }
 }
