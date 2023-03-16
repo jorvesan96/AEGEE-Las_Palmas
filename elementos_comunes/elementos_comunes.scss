@@ -13,15 +13,13 @@ header {
 
 .icono_aegee {
   margin: auto;
-}
-
-.icono_aegee img{
-  width: 15vw;
-  max-width: 180px;
-}
-
-.icono_aegee:hover {
-  cursor: pointer;
+  img {
+    aspect-ratio: 18/10;
+    width: 12vw;
+  }
+  img:hover {
+    cursor: pointer;
+  }
 }
 
 .lista_header {
@@ -29,51 +27,35 @@ header {
   font-size: 2vw;
   margin: auto;
   display: flex;
-  color: white;
-}
-.lista_header dt {
-  margin-right: 3vw;
-}
 
-.texto {
-  color: white;
-}
+  dt {
+    margin-right: 3vw;
+  }
+  .texto {
+    color: white;
+    text-decoration: none;
+  }
+  .texto:hover {
+    color: #163e7a;
+  }
 
-.texto:link {
-  text-decoration: none;
-}
-
-.lista_header .texto:hover {
-  color: #163e7a;
-  cursor: pointer;
-}
-.lista_header .boton_header {
-  font-family: "Bebas neue", sans-serif;
-  background-color: white;
-  color: #163e7a;
-  border-radius: 10px;
-  border: 3px solid #163e7a;
-  display: inline-block;
-  cursor: pointer;
-  margin-top: -23%;
-  padding: 0.7vw 1vw;
-}
-.lista_header .boton_header:hover {
-  background-color: #c5c6c6;
-  cursor: pointer;
-}
-.lista_header .boton_header:hover {
-  background-color: #c5c6c6;
-  cursor: pointer;
-}
-.boton_header:link {
-  text-decoration: none;
+  .boton_header {
+    background-color: white;
+    text-decoration: none;
+    color: #163e7a;
+    border: 0.25vw solid #163e7a;
+    border-radius: 0.5vw;
+    padding: 0.7vw;
+  }
+  .boton_header:hover {
+    background-color: #c5c6c6;
+  }
 }
 
 .separator {
-  width: 90%;
+  width: 80vw;
+  height: 0.2vw;
   border: none;
-  height: 0.15rem;
   background: linear-gradient(
     90deg,
     #c51c13 19%,
@@ -90,41 +72,32 @@ header {
 
 footer {
   background-color: #434242;
-  display: flex;
   height: 4vw;
-  position: absolute;
-  width: 100%;
-}
-
-.texto_footer {
-  color: white;
-  font-family: "Bebas neue", sans-serif;
-  margin-left: 5%;
-  font-size: 1.3vw;
-}
-
-.lista_footer {
-  font-family: "Bebas neue", sans-serif;
-  cursor: pointer;
-  display: flex;
-  margin: auto;
-  margin-top: 0.4vw;
-  position: absolute;
-  right: 9%;
-}
-.lista_footer dt {
-  margin-right: 8%;
-  opacity: 50%;
-}
-
-.lista_footer img{
-  aspect-ratio: 1 / 1;
-  width: 3vw;
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 450px) {
-  .lista_footer{
-    margin-top: 0vw;
+  width: 100vw;
+  
+  .elementos_footer {
+    justify-content: space-between;
+    height: 100%;
+    display: flex;
+    width: 80vw;
+    margin-left: 10.2vw;
+    
+    .texto_footer {
+      margin: 1.15vw 0 0 0;
+      font-family: "Bebas neue", sans-serif;
+      font-size: 1.5vw;
+      color: white;
+    }
+    .lista_footer{
+      margin:0;
+      height: 100%;
+      display: flex;
+      img{
+        margin-top: 0.5vw;
+        opacity: 50%;
+        width: 3vw;
+        aspect-ratio: 1/1;
+      }
+    }
   }
 }
