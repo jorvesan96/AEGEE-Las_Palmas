@@ -16,20 +16,13 @@
     <link rel="icon" type="image/x-icon"
         href="http://aegeelaspalmas.es/wp-content/uploads/2022/01/cropped-WebLogo-32x32.png">
 
+    <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
+
 </head>
 
 <body>
 
-    <header>
-        <a class="icono_aegee" href="/Home/Home.html"> <img src="\iconos\logo-AEGEE.png" alt="" width="150"
-                height="80"></a>
-        <dl class="lista_header">
-            <dt><a class="texto" href="/Actividades/actividades.html">Actividades</a></dt>
-            <dt><a class="texto" href="/Buddy Program/Buddy program.html">Buddy program</a></dt>
-            <dt><a class="boton_header" href="/Registro/Registro.html">Únete a aegee-las Palmas</a></dt>
-            <dt><a class="boton_header" href="/Log in/Login.html">Accede a tu cuenta</a></dt>
-        </dl>
-    </header>
+    <aegee-header></aegee-header>
 
     <div class="rectangulo"></div>
     <div class="Container">
@@ -38,37 +31,14 @@
         <form action="Login.html " method="get">
             <input class="campo" type="text" name="correo" size="40" placeholder="Nueva contraseña">
             <input class="campo" type="password" name="contraseña" size="40" placeholder="Repetir contraseña">
+            <a href="Login.html" class="text">Volver a inicio de sesión</a>
             <p>
-                <input class="boton" type="submit" value="Establecer">
+                <input class="boton" type="submit" value="Confirmar">
             </p>
         </form>
     </div>
 </body>
 
-<footer>
-
-    <p class="texto_footer">Copyright © 2023 AEGEE-Las Palmas. </p>
-
-    <dl class="lista_footer">
-
-        <dt>
-            <a href="https://twitter.com/aegee_laspalmas?lang=es">
-                <img id="twitter" src="\iconos\Twitter_white.png" alt="Twitter">
-            </a>
-        </dt>
-
-        <dt>
-            <a href="https://www.instagram.com/aegee.laspalmas/?hl=es">
-                <img id="instagram" src="\iconos\Instagram_white.png" alt="Instagram">
-            </a>
-        </dt>
-
-        <dt>
-            <a href="https://linktr.ee/aegeelaspalmas">
-                <img id="linktree" src="\iconos\Linktree_White.png" alt="Linktree">
-            </a>
-        </dt>
-    </dl>
-</footer>
+<aegee-footer></aegee-footer>
 
 </html>
