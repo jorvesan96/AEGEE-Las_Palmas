@@ -1,12 +1,14 @@
 body {
-  top: 0%;
-  margin: 0%;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   background-color: #1468c5;
   height: 10vw;
-  width: 100vw;
+  width: 100%;
   display: flex;
   top: 0;
 }
@@ -15,8 +17,8 @@ header {
   margin: auto;
 }
 .icono_aegee img {
-  aspect-ratio: 18/10;
   width: 12vw;
+  height: auto;
 }
 .icono_aegee img:hover {
   cursor: pointer;
@@ -59,8 +61,9 @@ header {
 
 footer {
   background-color: #434242;
-  height: 4vw;
-  width: 100vw;
+  height: 3vw;
+  width: 100%;
+  margin-top: auto;
 }
 footer .elementos_footer {
   justify-content: space-between;
@@ -70,7 +73,7 @@ footer .elementos_footer {
   margin-left: 10.2vw;
 }
 footer .elementos_footer .texto_footer {
-  margin: 1.15vw 0 0 0;
+  margin: 0.8vw 0 0 0;
   font-family: "Bebas neue", sans-serif;
   font-size: 1.5vw;
   color: white;
@@ -83,6 +86,6 @@ footer .elementos_footer .lista_footer {
 footer .elementos_footer .lista_footer img {
   margin-top: 0.5vw;
   opacity: 50%;
-  width: 3vw;
+  width: 2vw;
   aspect-ratio: 1/1;
 }/*# sourceMappingURL=elementos_comunes.css.map */
