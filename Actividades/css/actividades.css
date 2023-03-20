@@ -67,7 +67,7 @@ p {
     margin-bottom: 4%;
 }
 
-.button_formulario {
+.button_misactividades {
     font-size: 150%;
     margin-top: 2%;
     margin-left: 5%;
@@ -79,7 +79,7 @@ p {
     text-decoration: none;
 }
 
-.button_formulario:hover{
+.button_misactividades:hover{
     cursor: pointer;
     border: 3px solid #745c1b;
     color: #745c1b;
@@ -98,4 +98,38 @@ p {
 .button_desplegar label{
     clip-path: polygon(89.18% 55.08%, 97.3% 66.57%, 50% 100%, 2.81% 66.41%, 2.7% 66.57%, 10.85% 55.08%, 50% 82.77%);
     background-color: #ffffff;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    img{
+        display: none;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    p{
+        margin: 6%;
+    }
+
+    
+    .button_misactividades {
+        display: block;
+        margin: auto;
+    }
+
+    .filtro {
+        margin-left: 17vw;
+        width: 60%;
+    }
+    .filtro_movil{
+        display: flex;
+    }
+
+    .ahal{
+        display: flex;
+    }
 }
