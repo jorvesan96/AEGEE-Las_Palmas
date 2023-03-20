@@ -14,20 +14,23 @@ h2{
 }
 
 .filtro {
-    margin-left: 6vw;
+    margin-left: 3vw;
     margin-top: 3vw;
     border-radius: 20px;
     border: 2px solid #000000;
-    padding: 1vw 6vw;
+    padding: 0vw 2vw;
     width: 15%;
 }
 
 .filtro ul{
-    font-size: 3vw;
+    font-size: 2vw;
     margin-left: -10%;
     list-style-type: circle;
 }
 
+.filtro p{
+    font-size: 2vw;s
+}
 
 .separator {
     width: 65vw;
@@ -84,12 +87,12 @@ p {
 
 .button_desplegar{
     font-size: 4vw;
-    margin-left: 30vw;
+    margin-left: 6vw;
     margin-bottom: 6vw;
     background-color: #C5C6C6;
     border-radius: 20px;
     border: 2px solid #000000;
-    padding: 1vh 54vh;
+    padding: 1vh 41vh;
 }
 
 .button_desplegar label{
