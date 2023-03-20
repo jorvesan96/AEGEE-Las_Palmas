@@ -1,35 +1,33 @@
-h1{
+body{
     font-family: "Open sans", sans-serif;
-    font-size: 2rem;
-    margin-left: 10em;
+}
+
+h1{
+    font-size: 2vw;
+    margin-left: 10vw;
     text-align: center;
 }
 
 h2{
-    font-family: "Open sans", sans-serif;
-    font-size: 2rem;
-    margin-left: 2rem;
+    font-size: 2vw;
+    margin-left: 2vw;
 }
 
 .filtro {
-    margin-left: 6vh;
-    margin-top: 3vh;
+    margin-left: 6vw;
+    margin-top: 3vw;
     border-radius: 20px;
     border: 2px solid #000000;
-    padding: 1vh 4vh;
-    position: absolute;
+    padding: 1vw 6vw;
     width: 15%;
 }
 
-.filtro p{
-    font-family: "Open sans", sans-serif;
-}
-
 .filtro ul{
-    font-size: 4vh;
+    font-size: 3vw;
     margin-left: -10%;
     list-style-type: circle;
 }
+
 
 .separator {
     width: 65vw;
@@ -50,7 +48,6 @@ h2{
     display:flex;
     width: 100%;
     margin-left: 7%;
-    font-family: "Open sans", sans-serif;
 }
 
 .actividad a{
@@ -60,7 +57,7 @@ h2{
 }
 
 p {
-    font-size: 3vh;
+    font-size: 3vw;
     width: 95%;
     text-align: justify;
     margin-left: 4%;
@@ -86,9 +83,9 @@ p {
 } 
 
 .button_desplegar{
-    font-size: 4vh;
-    margin-left: 30vh;
-    margin-bottom: 6vh;
+    font-size: 4vw;
+    margin-left: 30vw;
+    margin-bottom: 6vw;
     background-color: #C5C6C6;
     border-radius: 20px;
     border: 2px solid #000000;
