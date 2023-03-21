@@ -23,48 +23,51 @@
 
         <div class="titulo">
             <h1>Recepción de documentos</h1>
+            <hr class="separator">
         </div>
-        <hr class="separator">
-
-        <div class="data_bank">
-            <p>Titular: AEGEE-LasPalmas</p>
-            <p>IBAN: ES 12 2100 1001 3202 0021 0001</p>
-            <p>SWIFT: CAHMESMMXXX</p>
-            <p>Concepto: “Nombre de la persona + Pago membresía/Pago actividad X” 
-                (en caso de realizarse el pago en nombre de otras personas añadir el nombre de esas personas en este concepto)</p>
-            <p>Importe: 20€</p>
-        </div>
-
-        <div class="seleccion">
-            <p>¿Cuál es el motivo de su transferencia?</p>
-            <label for="radio1">
-                <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"> Registro
-            </label>
-            <label for ="radio2">
-                <input type="radio" id="cbox2" name="opcion" value="second_radio">Actividad
-            </label>
-        </div>
-        
-        <div>
-            <input id="dni" type="text" name="nombre" placeholder="Introduzca su DNI">
-        </div>
-        
-
-        <div class="documento">
-            <p>Espacio para cargar el justificante de transferencia:</p>
-            <input id="fichero" type="file" name="nombre">
-            <div>
-                <input id="boton" type="button"  value="Enviar">
+    
+        <section>
+            <div class="data_bank">
+                <p>Titular: AEGEE-LasPalmas</p>
+                <p>IBAN: ES77 1491 0001 2830</p>
+                <p>SWIFT: TRIOESMMXXX</p>
+                <p>Concepto: “Nombre de la persona + Pago membresía/Pago actividad X” 
+                    (en caso de realizarse el pago en nombre de otras personas añadir el nombre de esas personas en este concepto)</p>
+                <p>Importe: 20€</p>
             </div>
-        </div>
-
+        </section>
+        
+        <section>
+            <div class="seleccion">
+                <p>¿Cuál es el motivo de su transferencia?</p>
+                <label for="radio1">
+                    <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"> Registro
+                </label>
+                <label for ="radio2">
+                    <input type="radio" id="cbox2" name="opcion" value="second_radio">Actividad
+                </label>
+            </div>
+            
+            <div>
+                <input id="dni" type="text" name="nombre" placeholder="Introduzca su DNI">
+            </div>
+            
+    
+            <div class="documento">
+                <p>Espacio para cargar el justificante de transferencia:</p>
+                <input id="fichero" type="file" name="nombre">
+                <div>
+                    <input id="boton" type="button"  value="Enviar">
+                </div>
+            </div>
+        </section>
+        
         <div class="correo">
             <p>
                 En caso de no poder cargar el fichero con la justificación de la transferencia, 
                 mandar un e-mail al correo <a href="mailto:aegee.laspalmas@gmail.com">aegee.lasplamas@gmail.com</a>.       
             </p>
         </div>
-    
 
         <footer>
             <p class="texto_footer">Copyright © 2023 AEGEE-Las Palmas. </p>

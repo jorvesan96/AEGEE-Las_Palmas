@@ -25,22 +25,25 @@
             </dl>
         </header>
 
-        <article>
-            <h1> Constructor de actividades</h1>
-            <hr class="separator">  
-            <aside id="menu">
+        <h1> Constructor de actividades</h1>
+        <hr class="separator">  
+
+        <section class="conjunto">
+            <aside class="menu">
                 <section id="elementos_form">
-                    <div>
+                    <div id="menu_elementos">
                         <h3>Elementos formulario:</h3>
                         <p>
                             Pulsa sobre ellos para añadir
                         </p>
                     </div>
+                    <ul>
+                        <li>Pregunta</li>
+                        <li>Texto plano</li>
+                        <li>Checklist</li>
+                        <li>Desplegable</s>
+                    </ul>
                     
-                    <a> + Pregunta</a>
-                    <a> + Texto plano</a>
-                    <a> + Checklist</a>
-                    <a> + Desplegable</a>
                 </section>
 
                 <section id="vista_form">
@@ -48,17 +51,19 @@
 
                 </section>
 
-                <a>Terminado</a>
+                <a id="terminado">Terminado</a>
             </aside>
 
-            <section clas="campos_form">
-                <figure>
+            <section class="campos_form">
+                <figure class="contenedor">
                     <img scr="" width="300" height="200">
-                    <p>Insertar imagen de la actividad</p>
+                    <div class="texto_centrado"><p>Insertar imagen de la actividad</p></div>
                 </figure>
                 
                 
                 <article id="pregunta">
+                    <a class="imagen_bin"><img id="bin" src="\iconos\bin.png" alt="" ></a>
+                    <br>
                     <form>
                         <section id="titulo">
                             <p><input type="text" placeholder="Titulo pregunta"></p>
@@ -70,10 +75,12 @@
                            <p><input type="text" placeholder="Descripcion pregunta"></p>
                         </section>                       
                     </form>
-                    <a>Eliminar</a>
                 </article>
 
+
                 <article id="texto_plano">
+                    <a class="imagen_bin"><img id="bin" src="\iconos\bin.png" alt="" ></a>
+                    <br>
                     <form>
                         <section id="titulo">
                             <p><input type="text" placeholder="Titulo pregunta"></p>
@@ -82,10 +89,12 @@
                            <p><input type="text" placeholder="Texto a añadir"></p>
                         </section> 
                     </form>
-                    <a>Eliminar</a>
                 </article>  
 
+
                 <article id="checklist">
+                    <a class="imagen_bin"><img id="bin" src="\iconos\bin.png" alt="" ></a>
+                    <br>
                     <form>
                         <section id="titulo">
                             <p><input type="text" placeholder="Titulo pregunta"></p>
@@ -98,17 +107,21 @@
                                 <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"><input type="text" placeholder="Opcion">
                             </label>
                             <label for ="radio2">
-                                <input type="radio" id="cbox2" name="opcion" value="second_radio"><input type="text" placeholder="Opcion"><a>Eliminar</a>
+                                <input type="radio" id="cbox2" name="opcion" value="second_radio"><input type="text" placeholder="Opcion">
+                                <a class="imagen_bin"><img id="bin_element" src="\iconos\bin.png" alt="" ></a>
                             </label>
                             <label for ="radio3">
-                                <input type="radio" id="cbox3" name="opcion" value="third_radio"><input type="text" placeholder="Opcion"><a>Eliminar</a>
+                                <input type="radio" id="cbox3" name="opcion" value="third_radio"><input type="text" placeholder="Opcion">
+                                <a class="imagen_bin"><img id="bin_element" src="\iconos\bin.png" alt="" ></a>
                             </label>
                         </section> 
                     </form>
-                    <a>Eliminar</a>
+                    
                 </article>
-
+                <br>
                 <article id="desplegable">
+                    <a class="imagen_bin"><img id="bin" src="\iconos\bin.png" alt="" ></a>
+                    <br>
                     <form>
                         <section id="titulo">
                             <p><input type="text" placeholder="Titulo pregunta"></p>
@@ -118,16 +131,18 @@
                         </section>
                         <section id="opciones">
                             <p><input type="text" placeholder="Opcion">
-                            <p><input type="text" placeholder="Opcion"><a>Eliminar</a>  
-                            <p><input type="text" placeholder="Opcion"><a>Eliminar</a>
+                            <p><input type="text" placeholder="Opcion">
+                            <a class="imagen_bin"><img id="bin_element" src="\iconos\bin.png" alt="" ></a>  
+                            <p><input type="text" placeholder="Opcion">
+                            <a class="imagen_bin"><img id="bin_element" src="\iconos\bin.png" alt="" ></a>
                         </section> 
                     </form>
-                    <a>Eliminar</a>
+                    
                 </article>
                 
             </section>
 
-        </article>
+        </section>
         
         <footer>
             <p class="texto_footer">Copyright © 2023 AEGEE-Las Palmas. </p>

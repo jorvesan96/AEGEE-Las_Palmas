@@ -16,12 +16,12 @@ h1 {
   margin-bottom: 4%;
 }
 
-nav {
+article {
   display: flex;
   width: 85%;
   margin-left: 7%;
 }
-nav a {
+article a{
   margin: auto;
   background-color: lightgrey;
 }
