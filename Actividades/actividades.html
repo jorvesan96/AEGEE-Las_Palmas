@@ -17,62 +17,53 @@
         <link rel="icon" type="image/x-icon"
             href="http://aegeelaspalmas.es/wp-content/uploads/2022/01/cropped-WebLogo-32x32.png">
 
-    <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
+        <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
 
-</head>
+    </head>
 
     <body>
 
-        <header>
-            <a class="icono_aegee" href="/Home/Home.html"> <img src="\iconos\logo-AEGEE.png" alt="" width="150"
-                    height="80"></a>
-            <dl class="lista_header">
-                <dt><a class="texto" href="/Actividades/actividades.html">Actividades</a></dt>
-                <dt><a class="texto" href="/Buddy Program/Buddy program.html">Buddy program</a></dt>
-                <dt><a class="boton_header" href="/Registro/Registro.html">Únete a aegee-las Palmas</a></dt>
-                <dt><a class="boton_header" href="/Log in/Login.html">Accede a tu cuenta</a></dt>
-            </dl>
-        </header>
+        <aegee-header></aegee-header>
 
-    <div id="grupo">
+        <div id="grupo">
 
-        <a href="/MisActividades/MisActividades.html" class="button_formulario"><label>Mis Actividades</label></a>
+            <a href="/MisActividades/MisActividades.html" class="button_misactividades"><label>Mis Actividades</label></a>
 
-        <div>
-            <h1>Actividades Locales</h1>
-            <hr class="separator">
+            <div>
+                <h1>Actividades Locales</h1>
+                <hr class="separator">
+            </div>
         </div>
-    </div>
 
-    <div class="filtro">
-        <p>Tipo</p>
+        <div class="filtro">
+            <p>Tipo</p>
 
-        <ul>
-            <li>Locales</li>
-            <li>Europeas</li>
-        </ul>
+            <ul>
+                <li>Locales</li>
+                <li>Europeas</li>
+            </ul>
 
-        <p>Fecha</p>
+            <p>Fecha</p>
 
-        <ul>
-            <li>Recientes</li>
-            <li>Antiguas</li>
-        </ul>
+            <ul>
+                <li>Recientes</li>
+                <li>Antiguas</li>
+            </ul>
 
-        <p>Usuario</p>
+            <p>Usuario</p>
 
-        <ul>
-            <li>Registrado</li>
-            <li>No Registrado</li>
-        </ul>
-        <p>Participantes</p>
+            <ul>
+                <li>Registrado</li>
+                <li>No Registrado</li>
+            </ul>
+            <p>Participantes</p>
 
-        <ul>
-            <li>0-20</li>
-            <li>20-40</li>
-            <li>40-60</li>
-        </ul>
-    </div>
+            <ul>
+                <li>0-20</li>
+                <li>20-40</li>
+                <li>40-60</li>
+            </ul>
+        </div>
 
         <div id="grupo_actividades">
             <div class="actividad">
@@ -169,32 +160,7 @@
             <button type="button" class="button_desplegar"><label>V</label></button>
         </div>
        
-
-        <footer>
-
-            <p class="texto_footer">Copyright © 2023 AEGEE-Las Palmas. </p>
-
-            <dl class="lista_footer">
-
-                <dt>
-                    <a href="https://twitter.com/aegee_laspalmas?lang=es">
-                        <img id="twitter" src="\iconos\Twitter_white.png" alt="Twitter">
-                    </a>
-                </dt>
-
-                <dt>
-                    <a href="https://www.instagram.com/aegee.laspalmas/?hl=es">
-                        <img id="instagram" src="\iconos\Instagram_white.png" alt="Instagram">
-                    </a>
-                </dt>
-
-                <dt>
-                    <a href="https://linktr.ee/aegeelaspalmas">
-                        <img id="linktree" src="\iconos\Linktree_White.png" alt="Linktree">
-                    </a>
-                </dt>
-            </dl>
-        </footer>
+        <aegee-footer></aegee-footer>
     </body>
 
 </html>
