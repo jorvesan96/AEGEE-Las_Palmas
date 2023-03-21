@@ -1,67 +1,95 @@
 <!DOCTYPE html>
 <html lang="sp">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recepcion_documentos</title>
+        <link href="/elementos_comunes/elementos_comunes.css" rel="stylesheet">
+        <link href="css/Recepcion_documentos.css" rel="stylesheet">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recepcion_documentos</title>
-    <link href="/elementos_comunes/elementos_comunes.css" rel="stylesheet">
-    <link href="css/Recepcion_documentos.css" rel="stylesheet">
+    <body>
+        <header>
+            <a class="icono_aegee" href="/Home/Home.html"> <img src="\iconos\logo-AEGEE.png" alt="" width="150"
+                    height="80"></a>
+            <dl class="lista_header">
+                <dt><a class="texto" href="/Actividades/actividades.html">Actividades</a></dt>
+                <dt><a class="texto" href="/Buddy Program/Buddy program.html">Buddy program</a></dt>
+                <dt><a class="boton_header" href="/Registro/Registro.html">Únete a aegee-las Palmas</a></dt>
+                <dt><a class="boton_header" href="/Log in/Login.html">Accede a tu cuenta</a></dt>
+            </dl>
+        </header>
 
-    <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
-</head>
-
-<body>
-    <aegee-header></aegee-header>
-
-    <div class="titulo">
-        <h1>Recepción de documentos</h1>
-    </div>
-    <hr class="separator">
-
-    <div class="data_bank">
-        <p>Titular: AEGEE-LasPalmas</p>
-        <p>IBAN: ES 12 2100 1001 3202 0021 0001</p>
-        <p>SWIFT: CAHMESMMXXX</p>
-        <p>Concepto: “Nombre de la persona + Pago membresía/Pago actividad X”
-            (en caso de realizarse el pago en nombre de otras personas añadir el nombre de esas personas en este
-            concepto)</p>
-        <p>Importe: 20€</p>
-    </div>
-
-    <div class="seleccion">
-        <p>¿Cuál es el motivo de su transferencia?</p>
-        <label for="radio1">
-            <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"> Registro
-        </label>
-        <label for="radio2">
-            <input type="radio" id="cbox2" name="opcion" value="second_radio">Actividad
-        </label>
-    </div>
-
-    <div>
-        <input id="dni" type="text" name="nombre" placeholder="Introduzca su DNI">
-    </div>
-
-
-    <div class="documento">
-        <p>Espacio para cargar el justificante de transferencia:</p>
-        <input id="fichero" type="file" name="nombre">
-        <div>
-            <input id="boton" type="button" value="Enviar">
+        <div class="titulo">
+            <h1>Recepción de documentos</h1>
         </div>
-    </div>
+        <hr class="separator">
 
-    <div class="correo">
-        <p>
-            En caso de no poder cargar el fichero con la justificación de la transferencia,
-            mandar un e-mail al correo <a href="mailto:aegee.laspalmas@gmail.com">aegee.lasplamas@gmail.com</a>.
-        </p>
-    </div>
+        <div class="data_bank">
+            <p>Titular: AEGEE-LasPalmas</p>
+            <p>IBAN: ES 12 2100 1001 3202 0021 0001</p>
+            <p>SWIFT: CAHMESMMXXX</p>
+            <p>Concepto: “Nombre de la persona + Pago membresía/Pago actividad X” 
+                (en caso de realizarse el pago en nombre de otras personas añadir el nombre de esas personas en este concepto)</p>
+            <p>Importe: 20€</p>
+        </div>
 
+        <div class="seleccion">
+            <p>¿Cuál es el motivo de su transferencia?</p>
+            <label for="radio1">
+                <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"> Registro
+            </label>
+            <label for ="radio2">
+                <input type="radio" id="cbox2" name="opcion" value="second_radio">Actividad
+            </label>
+        </div>
+        
+        <div>
+            <input id="dni" type="text" name="nombre" placeholder="Introduzca su DNI">
+        </div>
+        
 
-    <aegee-footer></aegee-footer>
-</body>
+        <div class="documento">
+            <p>Espacio para cargar el justificante de transferencia:</p>
+            <input id="fichero" type="file" name="nombre">
+            <div>
+                <input id="boton" type="button"  value="Enviar">
+            </div>
+        </div>
 
+        <div class="correo">
+            <p>
+                En caso de no poder cargar el fichero con la justificación de la transferencia, 
+                mandar un e-mail al correo <a href="mailto:aegee.laspalmas@gmail.com">aegee.lasplamas@gmail.com</a>.       
+            </p>
+        </div>
+    
+
+        <footer>
+            <p class="texto_footer">Copyright © 2023 AEGEE-Las Palmas. </p>
+
+            <dl class="lista_footer">
+
+                <dt>
+                    <a href="https://twitter.com/aegee_laspalmas?lang=es">
+                        <img id="twitter" src="\iconos\Twitter_white.png" alt="Twitter">
+                    </a>
+                </dt>
+
+                <dt>
+                    <a href="https://www.instagram.com/aegee.laspalmas/?hl=es">
+                        <img id="instagram" src="\iconos\Instagram_white.png" alt="Instagram">
+                    </a>
+                </dt>
+
+                <dt>
+                    <a href="https://linktr.ee/aegeelaspalmas">
+                        <img id="linktree" src="\iconos\linktree_White.png" alt="linktree">
+                    </a>
+                </dt>
+            </dl>
+        </footer>
+    </body>
 </html>
+    

@@ -1,59 +1,89 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>AEGEE Las Palmas</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>AEGEE Las Palmas</title>
 
-    <!--Import de las fuentes-->
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+        <!--Import de las fuentes-->
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
 
-    <!--Import del css-->
-    <link rel="stylesheet" href="/elementos_comunes/elementos_comunes.css">
-    <link rel="stylesheet" href="css/voluntariado.css">
-    <link rel="stylesheet" href="css/Perfil.css">
+        <!--Import del css-->
+        <link rel="stylesheet" href="/elementos_comunes/elementos_comunes.css">
+        <link rel="stylesheet" href="css/voluntariado.css">
+        <link rel="stylesheet" href="css/Perfil.css">
 
-    <link rel="icon" type="image/x-icon"
-        href="http://aegeelaspalmas.es/wp-content/uploads/2022/01/cropped-WebLogo-32x32.png">
+        <link rel="icon" type="image/x-icon"
+            href="http://aegeelaspalmas.es/wp-content/uploads/2022/01/cropped-WebLogo-32x32.png">
 
-    <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
+    </head>
 
-</head>
+    <body>
 
-<body>
+        <header>
+            <a class="icono_aegee" href="/Home/Home.html"> <img src="\iconos\logo-AEGEE.png" alt="" width="150"
+                    height="80"></a>
+            <dl class="lista_header">
+                <dt><a class="texto" href="/Actividades/actividades.html">Actividades</a></dt>
+                <dt><a class="texto" href="/Buddy Program/Buddy program.html">Buddy program</a></dt>
+                <dt><a class="boton_header" href="/Registro/Registro.html">Únete a aegee-las Palmas</a></dt>
+                <dt><a class="boton_header" href="/Log in/Login.html">Accede a tu cuenta</a></dt>
+            </dl>
+        </header>
 
-    <aegee-header></aegee-header>
+        <h1>Nombres, Primer Apellido, Segundo Apellido</h1>
 
-    <h1>Nombres, Primer Apellido, Segundo Apellido</h1>
+        <hr class="separator">
 
-    <hr class="separator">
+        <div class="formulario">
+            <p><b>Iniciar Sesión</b><br>
+            
+                <ul>
+                    <li>País</li>
+                    <input type="text" id="pais" name="pais">
+                    <li>Ciudad</li>
+                    <input type="text" id="ciudad" name="ciudad">
+                    <li>Código Postal</li>
+                    <input type="text" id="postal" name="postal">
+                    <li>Dirección</li>
+                    <input type="text" id="direccion" name="direccion">
+                    <li>Teléfono Móvil</li>
+                    <input type="number" id="telefono" name="telefono">
+                    <li>DNI</li>
+                    <input type="number" id="dni" name="dni">
+                    <li>Correo Electrónico</li>                    
+                    <input type="text" id="email" name="email">
+                </ul>  
+                
+                <button type="button" class="button_formulario"><label>Editar Perfil</label></button>
+        </div>
 
-    <div class="formulario">
-        <p><b>Iniciar Sesión</b><br>
+        <footer>
 
-        <ul>
-            <li>País</li>
-            <input type="text" id="pais" name="pais">
-            <li>Ciudad</li>
-            <input type="text" id="ciudad" name="ciudad">
-            <li>Código Postal</li>
-            <input type="text" id="postal" name="postal">
-            <li>Dirección</li>
-            <input type="text" id="direccion" name="direccion">
-            <li>Teléfono Móvil</li>
-            <input type="number" id="telefono" name="telefono">
-            <li>DNI</li>
-            <input type="number" id="dni" name="dni">
-            <li>Correo Electrónico</li>
-            <input type="text" id="email" name="email">
-        </ul>
+            <p class="texto_footer">Copyright © 2023 AEGEE-Las Palmas. </p>
 
-        <button type="button" class="button_formulario"><label>Editar Perfil</label></button>
-    </div>
+            <dl class="lista_footer">
 
-    <aegee-footer></aegee-footer>
-    
-</body>
+                <dt>
+                    <a href="https://twitter.com/aegee_laspalmas?lang=es">
+                        <img id="twitter" src="\iconos\Twitter_white.png" alt="Twitter">
+                    </a>
+                </dt>
+
+                <dt>
+                    <a href="https://www.instagram.com/aegee.laspalmas/?hl=es">
+                        <img id="instagram" src="\iconos\Instagram_white.png" alt="Instagram">
+                    </a>
+                </dt>
+
+                <dt>
+                    <a href="https://linktr.ee/aegeelaspalmas">
+                        <img id="linktree" src="\iconos\Linktree_White.png" alt="Linktree">
+                    </a>
+                </dt>
+            </dl>
+        </footer>
+    </body>
 
 </html>
