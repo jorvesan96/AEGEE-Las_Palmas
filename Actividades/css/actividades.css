@@ -123,6 +123,12 @@ p {
     p{
         margin: 6%;
     }
+
+    #boton_centrado{
+        margin-left: 36vw;
+        margin-top: 5vw; 
+        padding: 0vw 11vw;
+    }
     
     .button_misactividades {
         display: block;
