@@ -13,6 +13,11 @@ h2{
     margin-left: 2vw;
 }
 
+.separator {
+    width: 60vw;
+    margin-left: 7vw;
+}
+
 .filtro {
     margin-left: 3vw;
     margin-top: 3vw;
@@ -30,11 +35,6 @@ h2{
 
 .filtro p{
     font-size: 2vw;
-}
-
-.separator {
-    width: 65vw;
-    margin-left: 6vw;
 }
 
 #grupo{
@@ -86,13 +86,12 @@ p {
 } 
 
 .button_desplegar{
-    font-size: 4vw;
-    margin-left: 6vw;
+    font-size: 2vw;
+    margin-left: 8vw;
     margin-bottom: 6vw;
     background-color: #C5C6C6;
     border-radius: 20px;
     border: 2px solid #000000;
-    padding: 1vh 41vh;
 }
 
 .button_desplegar label{
@@ -100,6 +99,16 @@ p {
     background-color: #ffffff;
 }
 
+#colocación_texto{
+    margin-left: 10vw;
+}
+
+@media screen and (min-width: 1281px) {
+
+    .button_desplegar{
+        padding: 1vw 50vw;
+    }
+}
 
 @media screen and (max-width: 600px) {
 
@@ -114,22 +123,31 @@ p {
     p{
         margin: 6%;
     }
-
     
     .button_misactividades {
         display: block;
         margin: auto;
     }
 
-    .filtro {
-        margin-left: 17vw;
-        width: 60%;
-    }
-    .filtro_movil{
+    .ahal{
         display: flex;
     }
 
-    .ahal{
-        display: flex;
+    .button_desplegar{
+        padding: 1vw 30vw;
+    }
+
+    .filtro{
+        display: table;
+        width: 36vw;
+        margin-left: 35vw;
+    }
+
+    .fila_filtro{
+        display: table-row;
+    }
+    
+    .celda_fila_filtro{
+        display: table-cell;
     }
 }
