@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
+        <title>Constructor</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
@@ -25,7 +25,7 @@
             </dl>
         </header>
 
-        <h1> Constructor de actividades</h1>
+        <h1 id="titulo_pagina"> Constructor de actividades</h1>
         <hr class="separator">  
 
         <section class="conjunto">
@@ -38,10 +38,10 @@
                         </p>
                     </div>
                     <ul>
-                        <li>Pregunta</li>
-                        <li>Texto plano</li>
-                        <li>Checklist</li>
-                        <li>Desplegable</s>
+                        <li><a>Pregunta</a></li>
+                        <li><a>Texto plano</a></li>
+                        <li><a>Checklist</a></li>
+                        <li><a>Desplegable</a></s>
                     </ul>
                     
                 </section>
@@ -50,7 +50,6 @@
                     <h3>Vista general simplificada:</h3>
 
                 </section>
-
                 <a id="terminado">Terminado</a>
             </aside>
 
@@ -130,11 +129,11 @@
                             <p><input type="text" placeholder="Enunciado pregunta">
                         </section>
                         <section id="opciones">
-                            <p><input type="text" placeholder="Opcion">
-                            <p><input type="text" placeholder="Opcion">
-                            <a class="imagen_bin"><img id="bin_element" src="\iconos\bin.png" alt="" ></a>  
-                            <p><input type="text" placeholder="Opcion">
-                            <a class="imagen_bin"><img id="bin_element" src="\iconos\bin.png" alt="" ></a>
+                            <select name="opciones" id="pais">
+                                <option value="opcion1">Opcion 1</option>
+                                <option value="opcion2">Opcion 2</option>
+                                <option value="opcion3">Opcion 3</option>
+                            <a class="imagen_bin">
                         </section> 
                     </form>
                     
