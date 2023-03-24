@@ -61,7 +61,7 @@ form {
         padding: 1vw 2.5vw;
         cursor: pointer;
         margin-left: 7vw;
-    }
+        }
     .boton:hover {
         background-color: #c5c6c6;
     }
@@ -86,3 +86,7 @@ form {
     letter-spacing: 0.5vw
 }
 
+footer{
+    position:absolute;
+    bottom:0;
+}

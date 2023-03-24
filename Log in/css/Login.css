@@ -83,4 +83,9 @@ form .text:hover {
   border: transparent;
   border-bottom: 2px black solid;
   letter-spacing: 0.5vw;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
 }/*# sourceMappingURL=Login.css.map */
