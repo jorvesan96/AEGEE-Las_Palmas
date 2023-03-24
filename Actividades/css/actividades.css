@@ -1,43 +1,39 @@
-h1{
+body{
     font-family: "Open sans", sans-serif;
-    font-size: 2rem;
-    margin-left: 10em;
-    text-align: center;
+}
+
+h1{
+    font-size: 2vw;
+    margin-left: 29vw;
 }
 
 h2{
-    font-family: "Open sans", sans-serif;
-    font-size: 2rem;
-    margin-left: 2rem;
+    font-size: 2vw;
+    margin-left: 2vw;
+}
+
+.separator {
+    width: 60vw;
+    margin-left: 7vw;
 }
 
 .filtro {
-    margin-left: 6vh;
-    margin-top: 3vh;
+    margin-left: 3vw;
+    margin-top: 3vw;
     border-radius: 20px;
     border: 2px solid #000000;
-    padding: 1vh 4vh;
-    position: absolute;
+    padding: 0vw 2vw;
     width: 15%;
 }
 
-.filtro p{
-    font-family: "Open sans", sans-serif;
-}
-
 .filtro ul{
-    font-size: 4vh;
+    font-size: 2vw;
     margin-left: -10%;
     list-style-type: circle;
 }
 
-.separator {
-    width: 65vw;
-    margin-left: 6vw;
-}
-
-#grupo{
-    display: flex;
+.filtro p{
+    font-size: 2vw;
 }
 
 #grupo_actividades{
@@ -48,9 +44,8 @@ h2{
 
 .actividad{
     display:flex;
-    width: 100%;
+    width: 80%;
     margin-left: 7%;
-    font-family: "Open sans", sans-serif;
 }
 
 .actividad a{
@@ -60,14 +55,14 @@ h2{
 }
 
 p {
-    font-size: 3vh;
+    font-size: 3vw;
     width: 95%;
     text-align: justify;
     margin-left: 4%;
     margin-bottom: 4%;
 }
 
-.button_formulario {
+.button_misactividades {
     font-size: 150%;
     margin-top: 2%;
     margin-left: 5%;
@@ -79,23 +74,110 @@ p {
     text-decoration: none;
 }
 
-.button_formulario:hover{
+.button_misactividades:hover{
     cursor: pointer;
     border: 3px solid #745c1b;
     color: #745c1b;
 } 
 
 .button_desplegar{
-    font-size: 4vh;
-    margin-left: 30vh;
-    margin-bottom: 6vh;
+    font-size: 2vw;
+    margin-left: 8vw;
+    margin-bottom: 6vw;
     background-color: #C5C6C6;
     border-radius: 20px;
     border: 2px solid #000000;
-    padding: 1vh 54vh;
 }
 
 .button_desplegar label{
     clip-path: polygon(89.18% 55.08%, 97.3% 66.57%, 50% 100%, 2.81% 66.41%, 2.7% 66.57%, 10.85% 55.08%, 50% 82.77%);
     background-color: #ffffff;
+}
+
+@media screen and (min-width: 1280px) {
+
+    .button_desplegar{
+        padding: 1vw 28vw;
+    }
+
+    #grupo{
+        display: table;
+        width: 100%;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    #fila_grupo{
+        display: table-row;
+    }
+
+    #celda_fila_grupo{
+        display: table-cell;
+    }
+
+    #filtro_actividades_grupo{
+        display: table;
+        width: 100%;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    #fila_filtro_actividades_grupo{
+        display: table-row;
+    }
+
+    #celda_filtro_actividades_fila_grupo{
+        display: table-cell;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    h2{
+        text-align: center;
+    }
+    
+    .actividad{
+        width: 80%;
+        margin-left: 6vw;
+    }
+
+    .actividad img{
+        display: none;
+    }
+
+    .button_misactividades {
+        display: block;
+        margin-left: 33vw;
+        margin-top: 2vw;
+        margin-right: 34vw;
+    }
+
+    .ahal{
+        display: flex;
+    }
+
+    .button_desplegar{
+        padding: 1vw 30vw;
+    }
+
+    .filtro{
+        display: table;
+        width: 36vw;
+        margin-left: 30vw;
+    }
+
+    .fila_filtro{
+        display: table-row;
+    }
+    
+    .celda_fila_filtro{
+        display: table-cell;
+    }
+
+    #boton_centrado{
+        margin-left: 36vw;
+        margin-top: 5vw; 
+        padding: 0vw 11vw;
+    }
 }

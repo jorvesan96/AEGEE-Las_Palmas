@@ -55,10 +55,10 @@ h1 {
   font-size: 1.2rem;
   text-align: justify;
   margin-bottom: 5vh;
-  font-family: "Open sans", sans-serif; 
+  font-family: "Open sans", sans-serif;
 }
 .seccion img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4/3;
   height: 30vh;
   float: right;
   margin-left: 15%;

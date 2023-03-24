@@ -1,12 +1,14 @@
 body {
-  top: 0%;
-  margin: 0%;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   background-color: #1468c5;
   height: 10vw;
-  width: 100vw;
+  width: 100%;
   display: flex;
   top: 0;
 }
@@ -14,13 +16,11 @@ header {
 .icono_aegee {
   margin: auto;
 }
-
 .icono_aegee img {
-  width: 15vw;
-  max-width: 180px;
+  width: 12vw;
+  height: auto;
 }
-
-.icono_aegee:hover {
+.icono_aegee img:hover {
   cursor: pointer;
 }
 
@@ -29,97 +29,63 @@ header {
   font-size: 2vw;
   margin: auto;
   display: flex;
-  color: white;
 }
-
 .lista_header dt {
   margin-right: 3vw;
 }
-
-.texto {
+.lista_header .texto {
   color: white;
-}
-
-.texto:link {
   text-decoration: none;
 }
-
 .lista_header .texto:hover {
   color: #163e7a;
-  cursor: pointer;
 }
-
 .lista_header .boton_header {
-  font-family: "Bebas neue", sans-serif;
   background-color: white;
-  color: #163e7a;
-  border-radius: 10px;
-  border: 3px solid #163e7a;
-  display: inline-block;
-  cursor: pointer;
-  margin-top: -23%;
-  padding: 0.7vw 1vw;
-}
-
-.lista_header .boton_header:hover {
-  background-color: #c5c6c6;
-  cursor: pointer;
-}
-
-.lista_header .boton_header:hover {
-  background-color: #c5c6c6;
-  cursor: pointer;
-}
-
-.boton_header:link {
   text-decoration: none;
+  color: #163e7a;
+  border: 0.25vw solid #163e7a;
+  border-radius: 0.5vw;
+  padding: 0.7vw;
+}
+.lista_header .boton_header:hover {
+  background-color: #c5c6c6;
 }
 
 .separator {
-  width: 90%;
+  width: 80vw;
+  height: 0.2vw;
   border: none;
-  height: 0.15rem;
   background: linear-gradient(90deg, #c51c13 19%, white 19% 20%, #a0c514 20% 39%, white 39% 40%, #931991 40% 59%, white 59% 60%, #fbba00 60% 79%, white 79% 80%, #1468c5 80%);
 }
 
 footer {
   background-color: #434242;
-  display: flex;
-  height: 4vw;
-  position: absolute;
+  height: 3vw;
   width: 100%;
+  margin-top: auto;
 }
-
-.texto_footer {
-  color: white;
-  font-family: "Bebas neue", sans-serif;
-  margin-left: 5%;
-  font-size: 1.3vw;
-}
-
-.lista_footer {
-  font-family: "Bebas neue", sans-serif;
-  cursor: pointer;
+footer .elementos_footer {
+  justify-content: space-between;
+  height: 100%;
   display: flex;
-  margin: auto;
-  margin-top: 0.4vw;
-  position: absolute;
-  right: 9%;
+  width: 80vw;
+  margin-left: 10.2vw;
 }
-
-.lista_footer dt {
-  margin-right: 8%;
+footer .elementos_footer .texto_footer {
+  margin: 0.8vw 0 0 0;
+  font-family: "Bebas neue", sans-serif;
+  font-size: 1.5vw;
+  color: white;
+}
+footer .elementos_footer .lista_footer {
+  margin: 0;
+  height: 100%;
+  display: flex;
+}
+footer .elementos_footer .lista_footer img {
+  margin-top: 0.5vw;
   opacity: 50%;
-}
-
-.lista_footer img {
+  width: 2vw;
   aspect-ratio: 1/1;
-  width: 3vw;
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 450px) {
-  .lista_footer {
-    margin-top: 0vw;
-  }
 }/*# sourceMappingURL=elementos_comunes.css.map */
