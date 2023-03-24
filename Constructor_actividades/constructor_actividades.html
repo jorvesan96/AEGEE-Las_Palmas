@@ -4,7 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
+        <title>Constructor</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+
         <link href="/elementos_comunes/elementos_comunes.css" rel="stylesheet">
         <link href="css/home.css" rel="stylesheet">
         <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
@@ -13,8 +17,122 @@
     <body>
         <aegee-header></aegee-header>
 
-        <section>
-            <h1> Constructor de actividades</h1>
+        <h1 id="titulo_pagina"> Constructor de actividades</h1>
+        <hr class="separator">  
+
+        <section class="conjunto">
+            <aside class="menu">
+                <section id="elementos_form">
+                    <div id="menu_elementos">
+                        <h3>Elementos formulario:</h3>
+                        <p>
+                            Pulsa sobre ellos para añadir
+                        </p>
+                    </div>
+                    <ul>
+                        <li><a>Pregunta</a></li>
+                        <li><a>Texto plano</a></li>
+                        <li><a>Checklist</a></li>
+                        <li><a>Desplegable</a></s>
+                    </ul>
+                    
+                </section>
+
+                <section id="vista_form">
+                    <h3>Vista general simplificada:</h3>
+
+                </section>
+                <a id="terminado">Terminado</a>
+            </aside>
+
+            <section class="campos_form">
+                <figure class="contenedor">
+                    <img scr="" width="300" height="200">
+                    <div class="texto_centrado"><p>Insertar imagen de la actividad</p></div>
+                </figure>
+                
+                
+                <article id="pregunta">
+                    <a class="imagen_bin"><img id="bin" src="\iconos\bin.png" alt="" ></a>
+                    <br>
+                    <form>
+                        <section id="titulo">
+                            <p><input type="text" placeholder="Titulo pregunta"></p>
+                        </section>
+                        <section id="enunciado">
+                            <p><input type="text" placeholder="Enunciado pregunta">
+                        </section>
+                        <section id="descripcion">
+                           <p><input type="text" placeholder="Descripcion pregunta"></p>
+                        </section>                       
+                    </form>
+                </article>
+
+
+                <article id="texto_plano">
+                    <a class="imagen_bin"><img id="bin" src="\iconos\bin.png" alt="" ></a>
+                    <br>
+                    <form>
+                        <section id="titulo">
+                            <p><input type="text" placeholder="Titulo pregunta"></p>
+                        </section>
+                        <section id="descripcion">
+                           <p><input type="text" placeholder="Texto a añadir"></p>
+                        </section> 
+                    </form>
+                </article>  
+
+
+                <article id="checklist">
+                    <a class="imagen_bin"><img id="bin" src="\iconos\bin.png" alt="" ></a>
+                    <br>
+                    <form>
+                        <section id="titulo">
+                            <p><input type="text" placeholder="Titulo pregunta"></p>
+                        </section>
+                        <section id="enunciado">
+                            <p><input type="text" placeholder="Enunciado pregunta">
+                        </section>
+                        <section id="seleccion">
+                            <label for="radio1">
+                                <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"><input type="text" placeholder="Opcion">
+                            </label>
+                            <label for ="radio2">
+                                <input type="radio" id="cbox2" name="opcion" value="second_radio"><input type="text" placeholder="Opcion">
+                                <a class="imagen_bin"><img id="bin_element" src="\iconos\bin.png" alt="" ></a>
+                            </label>
+                            <label for ="radio3">
+                                <input type="radio" id="cbox3" name="opcion" value="third_radio"><input type="text" placeholder="Opcion">
+                                <a class="imagen_bin"><img id="bin_element" src="\iconos\bin.png" alt="" ></a>
+                            </label>
+                        </section> 
+                    </form>
+                    
+                </article>
+                <br>
+                <article id="desplegable">
+                    <a class="imagen_bin"><img id="bin" src="\iconos\bin.png" alt="" ></a>
+                    <br>
+                    <form>
+                        <section id="titulo">
+                            <p><input type="text" placeholder="Titulo pregunta"></p>
+                        </section>
+                        <section id="enunciado">
+                            <p><input type="text" placeholder="Enunciado pregunta">
+                        </section>
+                        <section id="opciones">
+                            <select name="opciones" id="pais">
+                                <option value="opcion1">Opcion 1</option>
+                                <option value="opcion2">Opcion 2</option>
+                                <option value="opcion3">Opcion 3</option>
+                            <a class="imagen_bin">
+                        </section> 
+                    </form>
+                    
+                </article>
+                
+            </section>
+
         </section>
         
         <aegee-footer></aegee-footer>
