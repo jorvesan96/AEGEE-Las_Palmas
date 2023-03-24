@@ -2,7 +2,7 @@ h1 {
   font-family: "Open sans", sans-serif;
   font-size: 4.5vw;
   width: 75%;
-  margin: auto;
+  margin: 2vw auto 0 auto;
   text-align: center;
 }
 
@@ -15,33 +15,27 @@ h1 {
   margin: 2vw auto 2vw auto;
 }
 
-
 article {
   margin: auto;
   display: flex;
   width: 85%;
   margin: 2vw auto 2vw auto;
-}
 
-article a{
-  margin: auto;
-  background-color: lightgrey;
 }
 article h2 {
   font-family: "Bebas neue", sans-serif;
   margin: 2% 0 -2% 0;
   font-size: 3.5vw;
-
 }
-section p {
+article p {
   font-family: "Open sans", sans-serif;
   width: 80%;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   text-align: justify;
 }
-section a {
+article img {
+  width: 100vw;
   aspect-ratio: 3/2;
   margin: auto;
-  width: 250vw;
   background-color: lightgrey;
 }/*# sourceMappingURL=voluntariado.css.map */
