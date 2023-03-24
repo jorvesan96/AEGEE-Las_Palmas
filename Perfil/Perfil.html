@@ -11,13 +11,13 @@
 
         <!--Import del css-->
         <link rel="stylesheet" href="/elementos_comunes/elementos_comunes.css">
-        <link rel="stylesheet" href="css/voluntariado.css">
         <link rel="stylesheet" href="css/Perfil.css">
 
         <link rel="icon" type="image/x-icon"
             href="http://aegeelaspalmas.es/wp-content/uploads/2022/01/cropped-WebLogo-32x32.png">
 
-            <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
+        <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
+        <script src="Perfil.js"></script>
     </head>
 
     <body>
@@ -33,22 +33,22 @@
             
                 <ul>
                     <li>País</li>
-                    <input type="text" id="pais" name="pais">
+                    <input type="text" id="pais" name="pais" readonly>
                     <li>Ciudad</li>
-                    <input type="text" id="ciudad" name="ciudad">
+                    <input type="text" id="ciudad" name="ciudad" readonly>
                     <li>Código Postal</li>
-                    <input type="text" id="postal" name="postal">
+                    <input type="text" id="postal" name="postal" readonly>
                     <li>Dirección</li>
-                    <input type="text" id="direccion" name="direccion">
+                    <input type="text" id="direccion" name="direccion" readonly>
                     <li>Teléfono Móvil</li>
-                    <input type="number" id="telefono" name="telefono">
+                    <input type="number" id="telefono" name="telefono" readonly>
                     <li>DNI</li>
-                    <input type="number" id="dni" name="dni">
+                    <input type="number" id="dni" name="dni" readonly>
                     <li>Correo Electrónico</li>                    
-                    <input type="text" id="email" name="email">
+                    <input type="text" id="email" name="email" readonly>
                 </ul>  
                 
-                <button type="button" class="button_formulario"><label>Editar Perfil</label></button>
+                <button type="button" class="button_formulario" id="editarPerfil"><label>Editar Perfil</label></button>
             </form>
 
         <aegee-footer></aegee-footer>
