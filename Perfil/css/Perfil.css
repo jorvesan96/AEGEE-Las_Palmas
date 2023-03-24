@@ -1,17 +1,17 @@
 h1 {
     font-family: "Open sans", sans-serif;
-    font-size: 2rem;
-    margin-left: 15em;
+    font-size: 2vw;
+    margin-left: 30vw;
 }
 
 .formulario {
-    margin-block: 20vh;
-    margin-left: 64vh;
+    margin-block: 6vw;
+    margin-left: 27vw;
     border-radius: 20px;
-    font-size: 2rem;
+    font-size: 2vw;
     border: 3px solid #000000;
     width: 30%;
-    padding: 1vh 9vh;
+    padding: 1vw 9vw;
 }
 
 .formulario p{
@@ -28,7 +28,7 @@ h1 {
     border-radius: 10px;
     border: 3px solid #000000;
     width: 55%; 
-    padding: 1vh 12vh;
+    padding: 1vw 8vw;
 }
 
 .button_formulario {
@@ -39,5 +39,5 @@ h1 {
     color: #CF9800;
     border-radius: 10px;
     border: 3px solid #CF9800;
-    padding: 1rem 2rem;
+    padding: 1vw 2vw;
 }
