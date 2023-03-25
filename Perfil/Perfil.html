@@ -18,6 +18,7 @@
 
         <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
         <script src="Perfil.js"></script>
+        <script src="validacionPerfil.js"></script>
     </head>
 
     <body>
@@ -29,27 +30,34 @@
         <hr class="separator">
 
         <form class="formulario">
-            <p><b>Iniciar Sesión</b><br>
+            <p><b>Iniciar Sesión</b></p>
             
                 <ul>
                     <li>País</li>
                     <input type="text" id="pais" name="pais" readonly>
+                    <span class="error"></span>
                     <li>Ciudad</li>
                     <input type="text" id="ciudad" name="ciudad" readonly>
+                    <span class="error"></span>
                     <li>Código Postal</li>
                     <input type="text" id="postal" name="postal" readonly>
+                    <span class="error"></span>
                     <li>Dirección</li>
                     <input type="text" id="direccion" name="direccion" readonly>
+                    <span class="error"></span>
                     <li>Teléfono Móvil</li>
-                    <input type="number" id="telefono" name="telefono" readonly>
+                    <input type="tel" id="telefono" name="telefono" readonly>
+                    <span class="error"></span>
                     <li>DNI</li>
-                    <input type="number" id="dni" name="dni" readonly>
+                    <input type="text" id="dni" name="dni" readonly>
+                    <span class="error"></span>
                     <li>Correo Electrónico</li>                    
-                    <input type="text" id="email" name="email" readonly>
+                    <input type="email" id="email" name="email" readonly>
+                    <span class="error"></span>
                 </ul>  
                 
                 <button type="button" class="button_formulario" id="editarPerfil"><label>Editar Perfil</label></button>
-            </form>
+        </form>
 
         <aegee-footer></aegee-footer>
     </body>
