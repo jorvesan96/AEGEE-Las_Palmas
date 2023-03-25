@@ -9,8 +9,8 @@
   width: 35vw;
   height: 25vw;
   background: white;
-  border: 2px solid #000000;
-  border-top: 5px solid rgb(212, 0, 0);
+  border: 0.2vw solid #000000;
+  border-top: 0.3vw solid rgb(212, 0, 0);
 }
 .Container .titulo {
   margin-left: 5vw;
@@ -65,10 +65,10 @@ form .boton:hover {
   background-color: #c5c6c6;
 }
 form .text {
+  margin-left: 6.5vw;
   color: #1468c5;
   font-size: 0.9vw;
   cursor: pointer;
-  margin-left: 6.5vw;
 }
 form .text:hover {
   color: #163e7a;
@@ -81,11 +81,116 @@ form .text:hover {
   width: 11vw;
   background-color: transparent;
   border: transparent;
-  border-bottom: 2px black solid;
+  border-bottom: 0.1vw black solid;
   letter-spacing: 0.5vw;
 }
 
 footer {
   position: absolute;
   bottom: 0;
+}
+
+@media (max-width: 1024px) and (min-width: 641px) {
+  .rectangulo {
+    height: 15vw;
+  }
+  .Container {
+    width: 70vw;
+    height: 50vw;
+    margin-top: -7.3vw;
+  }
+  .Container .titulo {
+    font-size: 2.5vw;
+    margin: 1.5vw 0 0 10vw;
+  }
+  .Container .introduce {
+    margin: 10vw 0 -12vw 5vw;
+    font-size: 2vw;
+    width: 60vw;
+  }
+  .Container .Registro {
+    width: 35vw;
+    margin-left: 35vw;
+    height: 7vw;
+  }
+  .Container .Registro p {
+    font-size: 2.5vw;
+    margin: 1.5vw 0 0 11vw;
+  }
+  .codigo {
+    text-align: center;
+    margin: 10vw auto 5vw 18vw;
+    font-size: 2vw;
+    width: 20vw;
+    letter-spacing: 1.5vw;
+  }
+  form {
+    margin: 12vw 0 0 5vw;
+  }
+  form .campo {
+    height: 5vw;
+    width: 60vw;
+    font-size: 2vw;
+    margin-top: 2vw;
+  }
+  form .boton {
+    font-size: 2vw;
+    margin-left: 23vw;
+  }
+  form .text {
+    font-size: 2vw;
+    margin-left: 17vw;
+  }
+}
+@media (max-width: 640px) {
+  .rectangulo {
+    height: 20vw;
+  }
+  .Container {
+    width: 90vw;
+    height: 100vw;
+    margin-top: -12vw;
+  }
+  .Container .titulo {
+    font-size: 5vw;
+    margin: 2vw 0 0 8vw;
+  }
+  .Container .introduce {
+    margin: 15vw 0 -25vw 5vw;
+    font-size: 3.5vw;
+    width: 80vw;
+  }
+  .Container .Registro {
+    width: 45vw;
+    margin-left: 45vw;
+    height: 11.7vw;
+  }
+  .Container .Registro p {
+    font-size: 5vw;
+    margin: 2vw 0 0 10vw;
+  }
+  .codigo {
+    text-align: center;
+    margin: 20vw auto 5vw 17.5vw;
+    font-size: 5vw;
+    width: 40vw;
+    letter-spacing: 2.5vw;
+  }
+  form {
+    margin: 12vw 0 0 5vw;
+  }
+  form .campo {
+    height: 15vw;
+    width: 80vw;
+    font-size: 6vw;
+    margin-top: 15vw;
+  }
+  form .boton {
+    font-size: 5vw;
+    margin-left: 28vw;
+  }
+  form .text {
+    font-size: 5vw;
+    margin-left: 10vw;
+  }
 }/*# sourceMappingURL=Login.css.map */
