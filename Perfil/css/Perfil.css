@@ -33,7 +33,7 @@ h1 {
 
 .button_formulario {
     font-size: 100%;
-    margin-left: 35%;
+    margin-left: 25%;
     font-family: "Bebas neue", sans-serif;
     background-color: white;
     color: #CF9800;
@@ -41,3 +41,22 @@ h1 {
     border: 3px solid #CF9800;
     padding: 1vw 2vw;
 }
+
+/*Validación*/
+input.invalid {
+    border-color: red;
+  }
+  
+  .alerta {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .alerta.rojo {
+    background-color: #ffcccc;
+    color: #cc0000;
+  }
+  
