@@ -1,5 +1,9 @@
-h1 {
+body{
+
     font-family: "Open sans", sans-serif;
+}
+
+h1 {
     font-size: 2vw;
     margin-left: 30vw;
 }
