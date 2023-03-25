@@ -102,6 +102,9 @@ form .boton {
   margin: auto auto 5vw 16vw;
   font-size: 1.2vw;
 }
+form .boton:hover {
+  background-color: #dddddd;
+}
 form .eleccion {
   margin-bottom: 4vw;
   display: flex;
