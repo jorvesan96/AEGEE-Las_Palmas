@@ -90,7 +90,7 @@ footer {
   bottom: 0;
 }
 
-@media (max-width: 1024px) and (min-width: 641px) {
+@media (max-width: 1023px) and (min-width: 641px) {
   .rectangulo {
     height: 15vw;
   }
