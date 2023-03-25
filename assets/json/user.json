@@ -1,0 +1,15 @@
+{
+    "nombre": "Juan",
+    "apellidos": "Pérez Gómez",
+    "dni": "12345678A",
+    "fecha_nacimiento": "1990-01-01",
+    "pais": "España",
+    "localidad": "Madrid",
+    "estudia_actualmente": true,
+    "universidad": "Universidad Complutense de Madrid",
+    "estudios": "Ingeniería Informática",
+    "telefono": "123456789",
+    "correo_electronico": "juan.perez@gmail.com",
+    "contraseña": "mi_contraseña_secreta"
+  }
+  

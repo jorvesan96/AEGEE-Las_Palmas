@@ -23,89 +23,102 @@
 
     <aegee-header></aegee-header>
 
-    <nav>
-        <div class="rectangulo"></div>
-        <div class="Container">
-            <a class="Iniciar_sesion" href="/Log in/Login.html">
-                <p>Iniciar sesión</p>
-            </a>
-            <p class="titulo">Registrarse</p>
-        </div>
-    </nav>
+    <div class="rectangulo"></div>
+    <div class="Container">
+        <a class="Iniciar_sesion" href="/Log in/Login.html">
+            <p>Iniciar sesión</p>
+        </a>
+        <p class="titulo">Registrarse</p>
+    </div>
 
     <section>
         <h1>Bienvenido a AEGEE-Las Palmas</h1>
+
         <hr class="separator">
-        <p class="seccion"> <img src="" alt="">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum.family
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum.
-        </p>
+
+        <div class="seccion">
+            <img src="" alt="">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.family
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
     </section>
 
+    <hr class="separator">
 
     <form action="/Recepcion_documentos/Recepcion_documentos.html" method="get">
+
         <section>
-            <input class="campo" type="text" name="nombre" size="30"  placeholder="Nombre">
-            <input class="campo" type="text" name="apellidos" size="60" placeholder="Apellidos">
+
+            <input class="campo" type="text" name="nombre" size="30" placeholder="Nombre">
+            <input class="campo" type="text" name="apellidos" size="45" placeholder="Apellidos">
+
             <br>
+
             <input class="campo" type="text" name="dni" size="30" placeholder="DNI">
             <label for="date">Fecha de nacimiento</label>
-            <input class="campo" type="date" name="fecha" >
+            <input class="campo" type="date" name="fecha">
+
             <br>
-            <label for="pais" >País</label>
-            <select name="pais" >
+
+            <label for="pais">País</label>
+            <select name="pais">
                 <option value="opcion">Selccionar un país</option>
                 <option value="opcion">Opción #1</option>
                 <option value="opcion">Opción #2</option>
                 <option value="opcion">Opción #3</option>
             </select>
-            <input class="campo" type="text" name="localidad"  placeholder="Localidad">
-        </section>
-        <br>
-        <section>
+
+            <input class="campo" type="text" name="localidad" placeholder="Localidad">
+
             <div class="eleccion">
                 <p>¿Realiza estudios universitarios actualmente?</p>
-                    <label for="">
-                        Si
-                    </label>
+                <label for="">
+                    Si
+                </label>
                 <input type="radio" name="radio" id="">
-                    <label for="">
-                        No
-                    </label>
-                    <input type="radio" name="radio" id="">
+                <label for="">
+                    No
+                </label>
+                <input type="radio" name="radio" id="">
             </div>
-            
-            <input class="campo" type="text" name="universidad" size="72" placeholder="Universidad">
+
+            <input class="campo" type="text" name="universidad" size="75" placeholder="Universidad">
+
+            <input class="campo" type="text" name="estudios" size="75" placeholder="Estudios que realiza">
+
             <br>
-            <input class="campo" type="text" name="estudios"  size="72" placeholder="Estudios que realiza">
-            <br>
+
             <input class="campo" type="tel" name="estudios" size="30" placeholder="Teléfono">
-        </section>
-        <br>
-        <section>
-            <input class="campo" type="text" name="correo" size="72" placeholder="Correo electrónico">
+
             <br>
-            <input class="campo" type="text" name="rep_correo" size="72" placeholder="Repetir Correo electrónico">
+
+            <input class="campo" type="text" name="correo" size="75" placeholder="Correo electrónico">
+
+            <input class="campo" type="text" name="rep_correo" size="75" placeholder="Repetir Correo electrónico">
+
             <br>
+
             <input class="campo" type="password" name="contraseña" size="30" placeholder="Contraseña">
             <input class="campo" type="password" name="rep_contraseña" size="30" placeholder="Repetir Contraseña">
             <p>
