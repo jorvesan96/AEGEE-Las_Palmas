@@ -1,3 +1,12 @@
+var users = ''
+
+fetch('/assets/json/user.json')
+    .then(results => results.json())
+    .then(data => {
+        users = data;
+    })
+
+
 const correo = document.getElementById("email")
 const contraseña = document.getElementById("password")
 const boton = document.getElementById("acceso")
@@ -26,9 +35,10 @@ contraseña.addEventListener("blur", (e) => {
 
 function canSubmit() {
 
-    if (err.includes(1)) {
-        return false
-    } else {
-        return true
+    for (let i = 0; i < users.usuarios.length; i++) {
+        if (users.usuarios[i].email === correo.value && users.usuarios[i].contraseña === contraseña.value && !err.includes(1)) {
+            return true;
+        }
     }
+    return false;
 }
