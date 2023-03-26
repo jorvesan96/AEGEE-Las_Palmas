@@ -19,6 +19,7 @@
     <meta name="viewport" content="width=device-width">
 
     <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
+    <script defer src="/assets/js/login.js"></script>
 
 </head>
 
@@ -33,15 +34,15 @@
                 <p>Registrarse</p>
             </a>
 
-            <form action="/Home/Home.html" method="get">
-                <input class="campo" type="text" name="correo" size="40" placeholder="Correo electrónico">
-                <input class="campo" type="password" name="contraseña" size="40" placeholder="Contraseña">
+                <form action="/Home/Home.html" onsubmit="return canSubmit()" method="get">
+                <input class="campo" type="text" name="correo" id="email" size="40" placeholder="Correo electrónico" required>
+                <input class="campo" type="password" name="contraseña" id="password" size="40" placeholder="Contraseña" required>
 
                 <br>
 
                 <a href="Contraseña_olvidada.html" class="text">He olvidado mi contraseña</a>
                 <p>
-                    <input class="boton" type="submit" value="Acceder">
+                    <input class="boton" type="submit" id="acceso" value="Acceder">
                 </p>
             </form>
         </div>

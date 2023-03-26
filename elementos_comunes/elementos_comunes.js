@@ -8,7 +8,7 @@ class MyHeader extends HTMLElement {
             <dt><a class="texto" href="/Actividades/actividades.html">Actividades</a></dt>
             <dt><a class="texto" href="/Buddy Program/Buddy program.html">Buddy program</a></dt>
             <dt><a class="boton_header" href="/Registro/Registro.html">Únete a aegee-las Palmas</a></dt>
-            <dt><a class="boton_header" href="/Log in/Login.html">Accede a tu cuenta</a></dt>
+            <dt><a class="boton_header" id="btn-acceder" href="/Log in/Login.html">Accede a tu cuenta</a></dt>
         </dl>
     </header>
         `;

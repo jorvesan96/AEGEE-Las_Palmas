@@ -65,7 +65,13 @@ h1 {
 form {
   width: 60vw;
   margin: auto;
-  margin-top: 5vw;
+  margin-top: 2vw;
+}
+form h2 {
+  color: red;
+  font-size: 1.5vw;
+  text-align: center;
+  margin-bottom: 3vw;
 }
 form label {
   height: 2vw;
@@ -95,6 +101,9 @@ form .boton {
   cursor: pointer;
   margin: auto auto 5vw 16vw;
   font-size: 1.2vw;
+}
+form .boton:hover {
+  background-color: #dddddd;
 }
 form .eleccion {
   margin-bottom: 4vw;
