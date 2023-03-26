@@ -7,7 +7,9 @@ window.onload = function() {
     xhr.onload = function() {
       var status = xhr.status;
       if (status === 200) {
-        var user = xhr.response;
+        var users = xhr.response.usuarios;
+        var user = users[0]; //Seleccionamos el primer usuario de la matriz de usuarios.
+        
         document.getElementById('pais').value = user.pais;
         document.getElementById('ciudad').value = user.ciudad;
         document.getElementById('postal').value = user.postal;
@@ -19,7 +21,7 @@ window.onload = function() {
         const nombre = user.nombre;
         const apellidos = user.apellidos;
         document.getElementById('nombre').textContent = `${nombre}, ${apellidos}`;
-        
+          
       } else {
         console.error('Error al obtener el archivo JSON.');
       }
