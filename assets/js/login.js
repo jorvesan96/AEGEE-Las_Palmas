@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
     const boton = document.getElementById("acceso");
+    var aux = true;
 
     boton.addEventListener("click" , function() {
         
@@ -37,9 +38,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
                     //Redirijo al usuario a la página de inicio
                     window.location.assign('/Home/Home.html');
-                } else {
-                    //Muestro un mensaje de error al usuario
-                    alert('El correo electrónico o la contraseña ingresados son incorrectos.');
+                    aux=false;
+                } 
+
+                if (aux) {
+                    console.log('vuelva a introducir todo');
+                    alert("El correo y/o contraseña son incorrectos.");
                 }
             });
         });
