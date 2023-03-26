@@ -1,3 +1,11 @@
+const pais = document.getElementById("pais")
+const ciudad = document.getElementById("ciudad")
+const postal = document.getElementById("postal")
+const direccion = document.getElementById("direccion")
+const telefono = document.getElementById("telefono")
+const dni = document.getElementById("dni")
+const correo = document.getElementById("email")
+
 //Expresiones regulares para la validación
 const expresiones = {
 	pais:  /^[a-zA-Z]{2,50}$/ ,
@@ -9,7 +17,7 @@ const expresiones = {
 	email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 }
 
-document.getElementById("pais").addEventListener("blur", function () {
+pais.addEventListener("blur", function () {
     if (!expresiones.pais.test(pais.value)) {
       alerta("El campo País solo permite letras.", "rojo");
       pais.classList.add("invalid");
@@ -18,7 +26,7 @@ document.getElementById("pais").addEventListener("blur", function () {
     }
 });
   
-document.getElementById("ciudad").addEventListener("blur", function () {
+ciudad.addEventListener("blur", function () {
     if (!expresiones.ciudad.test(ciudad.value)) {
         alerta("El campo Ciudad solo permite letras.", "rojo");
         ciudad.classList.add("invalid");
@@ -27,7 +35,7 @@ document.getElementById("ciudad").addEventListener("blur", function () {
     }
 });
 
-document.getElementById("postal").addEventListener("blur", function () {
+postal.addEventListener("blur", function () {
     if (!expresiones.codigoPostal.test(postal.value)) {
         alerta("El campo Codigo Postal es inválido.", "rojo");
         postal.classList.add("invalid");
@@ -36,7 +44,7 @@ document.getElementById("postal").addEventListener("blur", function () {
     }
 });
 
-document.getElementById("direccion").addEventListener("blur", function () {
+direccion.addEventListener("blur", function () {
     if (!expresiones.direccion.test(direccion.value)) {
         alerta("El campo Direccion solo permite letras y espacios.", "rojo");
         direccion.classList.add("invalid");
@@ -45,7 +53,7 @@ document.getElementById("direccion").addEventListener("blur", function () {
     }
 });
 
-document.getElementById("telefono").addEventListener("blur", function () {
+telefono.addEventListener("blur", function () {
     if (!expresiones.telefono.test(telefono.value)) {
         alerta("El campo Telefono solo permite números.", "rojo");
         telefono.classList.add("invalid");
@@ -54,7 +62,7 @@ document.getElementById("telefono").addEventListener("blur", function () {
     }
 });
 
-document.getElementById("dni").addEventListener("blur", function () {
+dni.addEventListener("blur", function () {
     if (!expresiones.dni.test(dni.value)) {
         alerta("El campo DNI solo permite números y una letra.", "rojo");
         dni.classList.add("invalid");
@@ -63,7 +71,7 @@ document.getElementById("dni").addEventListener("blur", function () {
     }
 });
 
-document.getElementById("email").addEventListener("blur", function () {
+correo.addEventListener("blur", function () {
     if (!expresiones.email.test(email.value)) {
         alerta("El campo Email solo permite letras.", "rojo");
         email.classList.add("invalid");

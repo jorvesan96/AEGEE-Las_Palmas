@@ -4,12 +4,14 @@
     "dni": "12345678A",
     "fecha_nacimiento": "1990-01-01",
     "pais": "España",
-    "localidad": "Madrid",
+    "ciudad": "Madrid",
+    "postal": "28042",
+    "direccion": "Calle 5 Norte",
     "estudia_actualmente": true,
     "universidad": "Universidad Complutense de Madrid",
     "estudios": "Ingeniería Informática",
     "telefono": "123456789",
-    "correo_electronico": "juan.perez@gmail.com",
+    "email": "juan.perez@gmail.com",
     "contraseña": "mi_contraseña_secreta"
   }
   
