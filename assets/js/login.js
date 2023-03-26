@@ -1,52 +1,34 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
-    const boton = document.getElementById("acceso");
-    var aux = true;
+const correo = document.getElementById("email")
+const contraseña = document.getElementById("password")
+const boton = document.getElementById("acceso")
 
-    boton.addEventListener("click" , function() {
-        
-        //Cargar el archivo JSON de usuario y convertirlo en un objeto JavaScript
-        fetch('assets/json/user.json')
+var err = []
 
-        .then(response => response.json())
-        .then(usuario => {
-            //Utilizo el objeto de usuario cargado
-            console.log(usuario);
-
-            //Agrego un evento 'submit' al formulario
-            document.querySelector('form').addEventListener("onclik", (event) => {
-                //Prevenir que se envíe el formulario
-                event.preventDefault();
-
-                //Obtengo los valores ingresados por el usuario
-                const correo = document.querySelector('input[name="correo"]').value;
-                const contraseña = document.querySelector('input[name="contraseña"]').value;
-
-                //Verifico si las credenciales son correctas
-                if (correo != usuario.correo_electronico && contraseña != usuario.contraseña) {
-                    //Guardo el objeto de usuario en el almacenamiento local del navegador
-                    localStorage.setItem('usuarioActual', JSON.stringify(usuario));
-                    
-                    //Remuevo el botón de "Accede a tu cuenta" y agrego el botón de perfil
-                    const botonAcceder = document.getElementById("btn-acceder");
-                    const padreBotonAcceder = botonAcceder.parentNode;
-                    const botonPerfil = document.createElement('a');
-                    botonPerfil.textContent = 'Mi perfil';
-                    botonPerfil.href = './Perfil.Perfil.html';
-                    botonPerfil.classList.add('boton_header');
-                    padreBotonAcceder.removeChild(botonAcceder);
-                    padreBotonAcceder.appendChild(botonPerfil);
-
-                    //Redirijo al usuario a la página de inicio
-                    window.location.assign('/Home/Home.html');
-                    aux=false;
-                } 
-
-                if (aux) {
-                    console.log('vuelva a introducir todo');
-                    alert("El correo y/o contraseña son incorrectos.");
-                }
-            });
-        });
-    });
+const email_reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+correo.addEventListener("blur", (e) => {
+    if (correo.value === '' || correo.value === null || (!email_reg.test(correo.value))) {
+        correo.style.backgroundColor = "#ffb3b3"
+        err[0] = 1
+    } else {
+        err[0] = 0
+        correo.style.backgroundColor = "white"
+    }
+});
+contraseña.addEventListener("blur", (e) => {
+    if (contraseña.value === '' || contraseña.value === null) {
+        contraseña.style.backgroundColor = "#ffb3b3"
+        err[0] = 1
+    } else {
+        err[1] = 0
+        contraseña.style.backgroundColor = "white"
+    }
 });
 
+function canSubmit() {
+
+    if (err.includes(1)) {
+        return false
+    } else {
+        return true
+    }
+}

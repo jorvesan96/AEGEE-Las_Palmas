@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width">
 
     <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
-    <script src="/assets/js/login.js"></script>
+    <script defer src="/assets/js/login.js"></script>
 
 </head>
 
@@ -34,9 +34,9 @@
                 <p>Registrarse</p>
             </a>
 
-            <form action="/Home/Home.html" method="get">
-                <input class="campo" type="text" name="correo" id="email" size="40" placeholder="Correo electrónico">
-                <input class="campo" type="password" name="contraseña" id="password" size="40" placeholder="Contraseña">
+                <form action="/Home/Home.html" onsubmit="return canSubmit()" method="get">
+                <input class="campo" type="text" name="correo" id="email" size="40" placeholder="Correo electrónico" required>
+                <input class="campo" type="password" name="contraseña" id="password" size="40" placeholder="Contraseña" required>
 
                 <br>
 

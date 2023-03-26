@@ -11,7 +11,6 @@ const correo = document.getElementById("correo")
 const rep_correo = document.getElementById("rep_correo")
 const contraseña = document.getElementById("contraseña")
 const rep_contraseña = document.getElementById("rep_contraseña")
-const form = document.getElementById("form")
 
 const regex = {
     texto_regex: /^[A-Z][a-z]*([\s]|[A-Z]|[a-z])*$/,
