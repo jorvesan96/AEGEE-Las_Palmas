@@ -68,3 +68,89 @@ h2{
     flex-direction: row;
     align-items: center;
 }
+
+.data_bank {
+    margin-right: 5%;
+}
+@media screen and (min-width: 1920px) {
+    .general{
+        font-size: xx-large;
+    }
+    
+    .titulo{
+        font-size: xxx-large;
+    }
+    
+    #dni{
+        font-size: x-large;
+    }
+    
+    #fichero{
+        font-size: x-large;
+
+    }
+    #boton{
+        font-size: xx-large; 
+        margin-left: 0.5vw;
+    }
+
+    .seleccion input[type="radio"]#cbox1 {
+        background-color: red;
+        color: white;
+      }
+      
+      .seleccion input[type="radio"]#cbox2 {
+        background-color: blue;
+        color: white;
+      }
+}
+  
+@media screen and (max-width: 601px) {
+    .general{
+        font-size: small;
+        margin-top: 0%;
+    }
+
+    .seleccion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seleccion .opciones{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .opciones label{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+
+    .documento{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .documento p{
+        margin-bottom: 5%;
+    }   
+    .campo_dni{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #fichero{
+        width: 70%;
+    }
+
+    .enviar{
+        margin-top: 5%;
+    }
+
+}
