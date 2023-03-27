@@ -60,6 +60,7 @@ h2{
     background-color: transparent;
     border: 2px solid black;
     border-radius: 12px;
+    
 }
 .correo{
     margin-top: 3%;
@@ -72,6 +73,13 @@ h2{
 .data_bank {
     margin-right: 5%;
 }
+
+.enviar{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
 @media screen and (min-width: 1920px) {
     .general{
         font-size: xx-large;
@@ -102,6 +110,12 @@ h2{
       .seleccion input[type="radio"]#cbox2 {
         background-color: blue;
         color: white;
+      }
+
+      .opciones input[type=radio]{
+        height: 1vw;
+        width: 1vw;
+        border-radius: 100%;
       }
 }
   
