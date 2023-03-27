@@ -89,3 +89,36 @@ footer .elementos_footer .lista_footer img {
   width: 2vw;
   aspect-ratio: 1/1;
 }/*# sourceMappingURL=elementos_comunes.css.map */
+@media screen and (max-width: 601px) {
+
+  footer {
+    background-color: #434242;
+    height: 8vw;
+    width: 100%;
+    margin-top: auto;
+  }
+  footer .elementos_footer {
+    justify-content: space-between;
+    height: 100%;
+    display: flex;
+    width: 80vw;
+    margin-left: 10.2vw;
+  }
+  footer .elementos_footer .texto_footer {
+    margin: 2vw 0 0 0;
+    font-family: "Bebas neue", sans-serif;
+    font-size: 3vw;
+    color: white;
+  }
+  footer .elementos_footer .lista_footer {
+    margin: 1vw;
+    height: 100%;
+    display: flex;
+  }
+  footer .elementos_footer .lista_footer img {
+    margin-top: 0.5vw;
+    opacity: 50%;
+    width: 5vw;
+    aspect-ratio: 1/1;
+  }
+}
