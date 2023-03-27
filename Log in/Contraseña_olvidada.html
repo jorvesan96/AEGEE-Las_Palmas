@@ -34,8 +34,8 @@
 
             <p class="introduce">Introduce tu correo electrónico y te mandaremos un código de recuperación de contraseña
             </p>
-            <form action="Enviar_codigo.html" method="get">
-                <input class="campo" type="text" name="correo" size="40" placeholder="Correo electrónico">
+            <form action="Enviar_codigo.html" method="get" onsubmit="return canSubmit()">
+                <input id="email" class="campo" type="text" name="correo" size="40" placeholder="Correo electrónico">
                 <a href="Login.html" class="text">Volver a inicio de sesión</a>
                 <p>
                     <input class="boton" type="submit" value="Enviar">
@@ -44,6 +44,7 @@
         </div>
     </section>
 
+    <script type="" src="/assets/js/validacionContraseñaOlvidada.js"></script>
 
     <aegee-footer></aegee-footer>
 </body>
