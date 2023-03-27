@@ -1,30 +1,21 @@
-body{
-
-    font-family: "Open sans", sans-serif;
-}
-
-h1 {
-    font-size: 2vw;
-    text-align: center;
-}
-
 .formulario {
     margin-block: 6vw;
     margin-left: 27vw;
     border-radius: 20px;
-    font-size: 2vw;
     border: 3px solid #000000;
     width: 30%;
     padding: 1vw 9vw;
 }
 
-.formulario p{
-    font-family: "Open sans", sans-serif;
+.formulario h2{
     text-align: center;
 }
 
 .formulario ul{
     margin-left: -10%;
+}
+.formulario p{
+    font-size: 2vw;
 }
 
 .formulario input { 
@@ -33,6 +24,7 @@ h1 {
     border: 3px solid #000000;
     width: 55%; 
     padding: 1vw 8vw;
+    font-size: 2vw;
 }
 
 .button_formulario {

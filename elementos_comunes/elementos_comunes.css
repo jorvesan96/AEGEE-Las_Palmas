@@ -59,6 +59,39 @@ header {
   background: linear-gradient(90deg, #c51c13 19%, white 19% 20%, #a0c514 20% 39%, white 39% 40%, #931991 40% 59%, white 59% 60%, #fbba00 60% 79%, white 79% 80%, #1468c5 80%);
 }
 
+* h1 {
+  font-family: "Open sans", sans-serif;
+  font-size: 4.5vw;
+  text-align: center;
+}
+
+* h2 {
+  font-family: "Bebas neue", sans-serif;
+  font-size: 3.5vw;
+}
+
+* p {
+  font-family: "Open sans", sans-serif;
+  font-size: 1.2vw;
+  text-align: justify;
+}
+
+@media all and (max-width: 600px) {
+  * h1 {
+    font-size: 6vw;
+  }
+  * h2 {
+    font-size: 5vw;
+  }
+  * p {
+    font-size: 4vw;
+  }
+}
+@media all and (max-width: 1024px) and (min-width: 601px) {
+  * p {
+    font-size: 2vw;
+  }
+}
 footer {
   background-color: #434242;
   height: 3vw;
@@ -89,36 +122,3 @@ footer .elementos_footer .lista_footer img {
   width: 2vw;
   aspect-ratio: 1/1;
 }/*# sourceMappingURL=elementos_comunes.css.map */
-@media screen and (max-width: 601px) {
-
-  footer {
-    background-color: #434242;
-    height: 8vw;
-    width: 100%;
-    margin-top: auto;
-  }
-  footer .elementos_footer {
-    justify-content: space-between;
-    height: 100%;
-    display: flex;
-    width: 80vw;
-    margin-left: 10.2vw;
-  }
-  footer .elementos_footer .texto_footer {
-    margin: 2vw 0 0 0;
-    font-family: "Bebas neue", sans-serif;
-    font-size: 3vw;
-    color: white;
-  }
-  footer .elementos_footer .lista_footer {
-    margin: 1vw;
-    height: 100%;
-    display: flex;
-  }
-  footer .elementos_footer .lista_footer img {
-    margin-top: 0.5vw;
-    opacity: 50%;
-    width: 5vw;
-    aspect-ratio: 1/1;
-  }
-}
