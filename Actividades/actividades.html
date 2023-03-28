@@ -11,7 +11,6 @@
 
         <!--Import del css-->
         <link rel="stylesheet" href="/elementos_comunes/elementos_comunes.css">
-        <link rel="stylesheet" href="css/voluntariado.css">
         <link rel="stylesheet" href="css/actividades.css">
 
         <link rel="icon" type="image/x-icon"
@@ -26,68 +25,66 @@
     <body>
 
         <aegee-header></aegee-header>
+        <div id="filtro_actividades_grupo">
 
-        <div id="grupo">
-            <div id="fila_grupo">
-                <a href="/MisActividades/MisActividades.html" class="button_misactividades" id="boton_centrado, celda_fila_grupo"><label>Mis Actividades</label></a>
+            <aside class="filtro">
+                <a href="/MisActividades/MisActividades.html" class="button_misactividades"><label>Mis Actividades</label></a>
+                <section class="fila_filtro">
+                    <article class="celda_fila_filtro">
+                        <p>Tipo</p>
+                        <label for="radio1">
+                            <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"> Locales
+                        </label>
+                        <label for ="radio2">
+                            <input type="radio" id="cbox2" name="opcion" value="second_radio"> Europeas
+                        </label>
+                    </article>
 
-                <div id="celda_fila_grupo">
+                    <article class="celda_fila_filtro">
+                        <p>Fecha</p>
+                        <label for="radio1">
+                            <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"> Recientes
+                        </label>
+                        <label for ="radio2">
+                            <input type="radio" id="cbox2" name="opcion" value="second_radio"> Antiguas
+                        </label>
+                    </article>
+
+                    <article class="celda_fila_filtro">
+                        <p>Usuario</p>
+                        <label for="radio1">
+                            <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"> Registrado
+                        </label>
+                        <label for ="radio2">
+                            <input type="radio" id="cbox2" name="opcion" value="second_radio"> No Registrado
+                        </label>
+                    </article>
+
+                    <article class="celda_fila_filtro">
+                        <p>Participantes</p>
+                        <label for="radio1">
+                            <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true"> 0-20
+                        </label>
+                        <label for ="radio2">
+                            <input type="radio" id="cbox2" name="opcion" value="second_radio"> 20-40
+                        </label>
+                        <label for="radio3">
+                            <input type="radio" id="cbox3" name="opcion" value="third_radio"> 40-60
+                        </label>
+                    </article>
+                </section>
+            </aside>
+
+            <section id="grupo_actividades">
+                <div id="titulo_1">
                     <h1>Actividades Locales</h1>
                     <hr class="separator">
                 </div>
-            </div>
-        </div>
-
-        <div id="filtro_actividades_grupo">
-            <div id="fila_filtro_actividades_grupo">
-                <aside class="filtro" id="celda_filtro_actividades_fila_grupo">
-                    <section class="fila_filtro">
-                        <article class="celda_fila_filtro">
-                            <p>Tipo</p>
-
-                            <ul>
-                                <li>Locales</li>
-                                <li>Europeas</li>
-                            </ul>
-                        </article>
-
-                        <article class="celda_fila_filtro">
-                            <p>Fecha</p>
-
-                            <ul>
-                                <li>Recientes</li>
-                                <li>Antiguas</li>
-                            </ul>
-                        </article>
-                    </section>
-                    
-                    <section class="fila_filtro">
-                        <article class="celda_fila_filtro">
-                            <p>Usuario</p>
-
-                            <ul>
-                                <li>Registrado</li>
-                                <li>No Registrado</li>
-                            </ul>
-                        </article>
-
-                        <article class="celda_fila_filtro">
-                            <p>Participantes</p>
-
-                            <ul>
-                                <li>0-20</li>
-                                <li>20-40</li>
-                                <li>40-60</li>
-                            </ul>
-                        </article>
-                    </section>
-                </aside>
-
-                <section id="grupo_actividades, celda_filtro_actividades_fila_grupo">
-                    <article class="actividad">
+                <article class="actividad">
+                    <div class="contenedor_actividades">
                         <a > <img src="" alt="" width="200" height="200"></a>
                         <div>
-                            <h2>Actividad 1</h2>
+                            <h2 id="titulo_actividad">Actividad 1</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                                 dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
@@ -96,48 +93,58 @@
                                 qui officia deserunt mollit anim id est laborum.
                             </p>
                         </div>
-                    </article>
-
-                    <article class="actividad">
-                        <div>
-                            <h2>Actividad 2</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                                in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
-                        <a> <img src="" alt="" width="200" height="200"></a>
-                    </article>
-
-                    <article class="actividad">
-                        <a> <img src="" alt="" width="200" height="200"></a>
-                        <div>
-                            <h2>Actividad 3</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                                in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
-                    </article>
-
-                    <button type="button" class="button_desplegar"><label>V</label></button>
-                    
-                    <div>
-                        <h1>Actividades Europeas</h1>
-                        <hr class="separator">
                     </div>
+                </article>
 
+                <article class="actividad">
+                    <div class="contenedor_actividades">
+                        <a> <img src="" alt="" width="200" height="200"></a>
+                        <div>
+                            <h2 id="titulo_actividad">Actividad 2</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </article>
 
-                    <article class="actividad">
+                <article class="actividad">
+                    <div class="contenedor_actividades">
+                        <a> <img src="" alt="" width="200" height="200"></a>
+                        <div>
+                            <h2 id="titulo_actividad">Actividad 3</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <div class="my-container">
+                <button type="button" class="button_desplegar">v</button>
+            </div>
+                
+            <section id="grupo_actividades">
+                <div id="titulo_1">
+                    <h1>Actividades Europeas</h1>
+                    <hr class="separator">
+                </div>
+
+                <article class="actividad">
+                    <div class="contenedor_actividades">
                         <a > <img src="" alt="" width="200" height="200"></a>
                         <div>
-                            <h2>Actividad 1</h2>
+                            <h2 id="titulo_actividad">Actividad 1</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                                 dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
@@ -146,26 +153,14 @@
                                 qui officia deserunt mollit anim id est laborum.
                             </p>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <div class="actividad">
-                        <div>
-                            <h2>Actividad 2</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                                in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
-                        <a> <img src="" alt="" width="200" height="200"></a>
-                    </article>
-
-                    <article class="actividad">
+                <article class="actividad">
+                    <div class="contenedor_actividades">
                         <a> <img src="" alt="" width="200" height="200"></a>
                         <div>
-                            <h2>Actividad 3</h2>
+                            <h2 id="titulo_actividad">Actividad 2</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                                 dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
@@ -174,14 +169,32 @@
                                 qui officia deserunt mollit anim id est laborum.
                             </p>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <button type="button" class="button_desplegar"><label>V</label></button>
-                </section>
+                <article class="actividad">
+                    <div class="contenedor_actividades">
+                        <a> <img src="" alt="" width="200" height="200"></a>
+                        <div>
+                            <h2 id="titulo_actividad">Actividad 3</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <div class="my-container">
+                <button type="button" class="button_desplegar">^</button>
             </div>
+
         </div>
-        
+
         <aegee-footer></aegee-footer>
     </body>
-
 </html>
