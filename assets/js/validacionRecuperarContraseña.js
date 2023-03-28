@@ -1,26 +1,32 @@
-function validarFormulario() {
-    var nuevaContraseña = document.forms["formulario"]["contraseña"].value;
-    var repetirContraseña = document.forms["formulario"]["contraseñaRepetida"].value;
-    var err = '';
 
-    if (nuevaContraseña == "" || repetirContraseña == "") {
+const nuevaContraseña = document.getElementById("contraseña");
+const repetirContraseña = document.getElementById("contraseñaRepetida");
+var err = []
+
+
+nuevaContraseña.addEventListener("blur", (e) => {
+    if (nuevaContraseña.value === '' || nuevaContraseña.value === null) {
         nuevaContraseña.style.backgroundColor = "#ffb3b3";
+        err[0] = 1;
+    }else{
+        err[0] = 0;
+        nuevaContraseña.style.backgroundColor = "white";
+    }
+});
+
+repetirContraseña.addEventListener("blur", (e) => {
+    if (repetirContraseña.value === '' || repetirContraseña.value === null || nuevaContraseña.value != repetirContraseña.value) {
         repetirContraseña.style.backgroundColor = "#ffb3b3";
-        err = 1;
+        err[1] = 1;
     }else{
-        err = 0;
-        correo.style.backgroundColor = "white";
+        err[1] = 0;
+        repetirContraseña.style.backgroundColor = "white";
     }
+});
 
-    if (nuevaContraseña != repetirContraseña) {
-        correo.style.backgroundColor = "#ffb3b3";
-        err = 1;
-    }else{
-        err = 0;
-        correo.style.backgroundColor = "white";
-    }
+function canSubmit() {
 
-    if(err !== 1){
+    if(nuevaContraseña.value === repetirContraseña.value && !err.includes(1)){
         return true;
     }else{
         return false;
