@@ -1,32 +1,30 @@
 h1 {
   width: 75%;
-  margin: 2vw auto 0 auto;
-  text-align: center;
+  margin: auto;
 }
 
 #primero {
   width: 85%;
-  margin: auto;
   text-align: justify;
   margin: 2vw auto 2vw auto;
 }
 
-article {
+section {
   margin: auto;
   display: flex;
   width: 85%;
   margin: 2vw auto 2vw auto;
 }
-article h2 {
+section h2 {
   margin: 2% 0 -2% 0;
 }
-article p {
+section p {
   width: 80%;
 }
-article img {
-  width: 100vw;
+section img {
   aspect-ratio: 3/2;
   margin: auto;
+  width: 100vw;
   background-color: lightgrey;
 }
 

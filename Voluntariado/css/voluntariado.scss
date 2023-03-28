@@ -1,35 +1,33 @@
 h1 {
-  width: 75%;
-  margin: 2vw auto 0 auto;
-  text-align: center;
+    width: 75%;
+    margin: auto;
 }
 
 #primero {
-  width: 85%;
-  margin: auto;
-  text-align: justify;
-  margin: 2vw auto 2vw auto;
+    width: 85%;
+    text-align: justify;
+    margin: 2vw auto 2vw auto
 }
 
-article {
-  margin: auto;
-  display: flex;
-  width: 85%;
-  margin: 2vw auto 2vw auto;
-  h2 {
-    margin: 2% 0 -2% 0;
-  }
-  p {
-    width: 80%;
-  }
-  img {
-    width: 100vw;
-    aspect-ratio: 3/2;
+section {
     margin: auto;
-    background-color: lightgrey;
-  }
+    display: flex;
+    width: 85%;
+    margin: 2vw auto 2vw auto;
+    
+    h2 {
+        margin: 2% 0 -2% 0;
+    }
+    p {
+        width: 80%;
+    }
+    img {
+        aspect-ratio: 3/2;
+        margin: auto;
+        width: 100vw;
+        background-color: lightgrey;
+    }
 }
-
 @media all and (max-width: 600px){
   h1{
     width: 100%;
