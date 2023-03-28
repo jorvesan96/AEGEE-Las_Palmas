@@ -4,7 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <title>AEGEE Las Palmas</title>
+        <meta name="viewport" content="width=device-width">
 
+        
         <!--Import de las fuentes-->
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
@@ -30,29 +32,29 @@
 
         <hr class="separator">
 
-        <form class="formulario">
-            <p><b>Iniciar Sesión</b></p>
+        <form class="formulario" onsubmit="return canSubmit()">
+            <h2><b>Mi Perfil</b></h2>
             
                 <ul>
-                    <li>País</li>
+                    <li> <p> País </p></li>
                     <input type="text" id="pais" name="pais" readonly>
 
-                    <li>Ciudad</li>
+                    <li> <p>Ciudad</p> </li>
                     <input type="text" id="ciudad" name="ciudad" readonly>
 
-                    <li>Código Postal</li>
+                    <li> <p>Código Postal</p> </li>
                     <input type="text" id="postal" name="postal" readonly>
 
-                    <li>Dirección</li>
+                    <li> <p>Dirección</p> </li>
                     <input type="text" id="direccion" name="direccion" readonly>
 
-                    <li>Teléfono Móvil</li>
+                    <li> <p>Teléfono Móvil</p> </li>
                     <input type="tel" id="telefono" name="telefono" readonly>
 
-                    <li>DNI</li>
+                    <li> <p>DNI</p> </li>
                     <input type="text" id="dni" name="dni" readonly>
 
-                    <li>Correo Electrónico</li>                    
+                    <li> <p>Correo Electrónico</p> </li>                    
                     <input type="email" id="email" name="email" readonly>
 
                 </ul>  

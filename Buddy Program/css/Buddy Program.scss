@@ -1,51 +1,55 @@
-body{
+body {
     height: 100%;
 }
-.imagen{
+.imagen {
     height: 15vw;
-    background-color: #C5C6C6;
+    background-color: #c5c6c6;
 }
-h1{
-    font-family: "Open Sans",sans-serif;
+h1 {
     text-align: center;
-    font-size: 4.5vw;
     margin: 2vw auto 0 auto;
 }
-.seccion{
-
+.seccion {
     width: 80vw;
     margin: 1.5vw auto 1.5vw auto;
-    font-family: "Open Sans",sans-serif;
-    text-align: justify;
-    font-size: 1.2vw;
-    height: fit-content;
-    h2{
-        font-family: "Bebas neue", sans-serif;
-        font-size: 2vw;
-    }
-    p{
-        font-size: 1vw;
-    }
-    #primera{
-        
+    #primera {
         display: flex;
-        font-size: 1.5vw;
         width: 100%;
         justify-content: space-between;
-        p{
-            width: 40%;
+        p {
+            width: 50%;
         }
-        img{
-            aspect-ratio: 4/2 ;
+        img {
+            aspect-ratio: 4/2;
             width: 30vw;
         }
     }
 }
-a{
-    color: #1468C5;
+a {
+    color: #1468c5;
     text-decoration: underline;
 }
-a:hover{
+a:hover {
     cursor: pointer;
     color: #163e7a;
+}
+
+@media all and (max-width: 600px) {
+
+
+    .seccion {
+        h2{
+            text-align: center;
+        }
+        #primera {
+
+            p {
+                width: 100%;
+            }
+
+            img {
+                display: none;
+            }
+        }
+    }
 }

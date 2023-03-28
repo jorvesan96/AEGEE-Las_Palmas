@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const dni = document.getElementById("dni")
     const correo = document.getElementById("email")
 
+    var err = []
+
     //Expresiones regulares para la validación
     const expresiones = {
         pais:  /^[a-zA-Z]{2,50}$/ ,
@@ -21,7 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
     pais.addEventListener("blur", (e) => {
         if (!expresiones.pais.test(pais.value)) {
             pais.style.backgroundColor = "#ffb3b3"
+            err[0] = 1
         } else {
+            err[0] = 0
             pais.style.backgroundColor = "white"
         }
     });
@@ -29,7 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
     ciudad.addEventListener("blur", (e) => {
         if (!expresiones.ciudad.test(ciudad.value)) {
             ciudad.style.backgroundColor = "#ffb3b3"
+            err[1] = 1
         } else {
+            err[1] = 0
             ciudad.style.backgroundColor = "white"
         }
     });
@@ -37,7 +43,9 @@ document.addEventListener("DOMContentLoaded", function() {
     postal.addEventListener("blur", (e) => {
         if (!expresiones.codigoPostal.test(postal.value)) {
             postal.style.backgroundColor = "#ffb3b3"
+            err[2] = 1
         } else {
+            err[2] = 0
             postal.style.backgroundColor = "white"
         }
     });
@@ -45,7 +53,9 @@ document.addEventListener("DOMContentLoaded", function() {
     direccion.addEventListener("blur", (e) => {
         if (!expresiones.direccion.test(direccion.value)) {
             direccion.style.backgroundColor = "#ffb3b3"
+            err[3] = 1
         } else {
+            err[3] = 0
             direccion.style.backgroundColor = "white"
         }
     });
@@ -53,7 +63,9 @@ document.addEventListener("DOMContentLoaded", function() {
     telefono.addEventListener("blur", (e) => {
         if (!expresiones.telefono.test(telefono.value)) {
             telefono.style.backgroundColor = "#ffb3b3"
+            err[4] = 1
         } else {
+            err[4] = 0
             telefono.style.backgroundColor = "white"
         }
     });
@@ -61,7 +73,9 @@ document.addEventListener("DOMContentLoaded", function() {
     dni.addEventListener("blur", (e) => {
         if (!expresiones.dni.test(dni.value)) {
             dni.style.backgroundColor = "#ffb3b3"
+            err[5] = 1
         } else {
+            err[5] = 0
             dni.style.backgroundColor = "white"
         }
     });
@@ -69,8 +83,19 @@ document.addEventListener("DOMContentLoaded", function() {
     correo.addEventListener("blur", (e) => {
         if (!expresiones.email.test(email.value)) {
             correo.style.backgroundColor = "#ffb3b3"
+            err[6] = 1
         } else {
+            err[6] = 0
             correo.style.backgroundColor = "white"
         }
     });
+
+    function canSubmit(){
+
+        if (!err.includes(1)) {
+            return true;
+        }
+        return false;
+    }
 });
+

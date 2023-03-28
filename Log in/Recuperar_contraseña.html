@@ -29,15 +29,17 @@
         <div class="Container">
             <p class="titulo">Establecer nueva contraseña</p>
 
-            <form action="Login.html " method="get">
-                <input class="campo" type="text" name="correo" size="40" placeholder="Nueva contraseña">
-                <input class="campo" type="password" name="contraseña" size="40" placeholder="Repetir contraseña">
+            <form name="formulario" action="Login.html " onsubmit="return canSubmit()" method="get">
+                <input class="campo" type="password" id="contraseña" size="40" placeholder="Nueva contraseña" required>
+                <input class="campo" type="password" id="contraseñaRepetida" size="40" placeholder="Repetir contraseña" required>
                 <p>
                     <input class="boton" type="submit" value="Establecer">
                 </p>
             </form>
         </div>
     </section>
+    
+    <script type="" src="/assets/js/validacionRecuperarContraseña.js"></script>
     <aegee-footer></aegee-footer>
 </body>
 

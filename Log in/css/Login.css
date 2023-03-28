@@ -4,8 +4,7 @@
 }
 
 .Container {
-  font-family: "Open sans", sans-serif;
-  margin: -4.6vw auto;
+  margin: -4.6vw auto auto auto;
   width: 35vw;
   height: 25vw;
   background: white;
@@ -15,18 +14,15 @@
 .Container .titulo {
   margin-left: 5vw;
   position: absolute;
-  font-size: 1.2vw;
 }
 .Container .introduce {
   margin: 6vw auto -6.5vw 5vw;
-  font-size: 1vw;
   width: 25vw;
 }
 .Container .Registro {
   margin-right: 3.5vw;
   position: absolute;
   background-color: #ebecec;
-  font-size: 1.2vw;
   width: 17.5vw;
   position: absolute;
   margin-left: 17.5vw;
@@ -46,11 +42,11 @@ form {
 }
 form .campo {
   margin-bottom: 2vw;
-  font-size: 1.5vw;
   width: 80%;
   background-color: transparent;
   border: 0.15vw solid black;
-  border-radius: 0.8vw;
+  border-radius: 0.6vw;
+  font-size: 1.5vw;
 }
 form .boton {
   font-size: 1.5vw;
@@ -65,6 +61,7 @@ form .boton:hover {
   background-color: #c5c6c6;
 }
 form .text {
+  font-family: "Open sans", sans-serif;
   margin-left: 6.5vw;
   color: #1468c5;
   font-size: 0.9vw;
@@ -77,17 +74,12 @@ form .text:hover {
 .codigo {
   text-align: center;
   margin: auto auto 1vw 6vw;
-  font-size: 1.5vw;
   width: 11vw;
   background-color: transparent;
   border: transparent;
   border-bottom: 0.1vw black solid;
   letter-spacing: 0.5vw;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
+  font-size: 1.5vw;
 }
 
 @media (max-width: 1023px) and (min-width: 641px) {
@@ -100,12 +92,10 @@ footer {
     margin-top: -7.3vw;
   }
   .Container .titulo {
-    font-size: 2.5vw;
-    margin: 1.5vw 0 0 10vw;
+    margin: 2vw 0 0 11vw;
   }
   .Container .introduce {
     margin: 10vw 0 -12vw 5vw;
-    font-size: 2vw;
     width: 60vw;
   }
   .Container .Registro {
@@ -114,8 +104,7 @@ footer {
     height: 7vw;
   }
   .Container .Registro p {
-    font-size: 2.5vw;
-    margin: 1.5vw 0 0 11vw;
+    margin: 2vw 0 0 12vw;
   }
   .codigo {
     text-align: center;
@@ -125,7 +114,7 @@ footer {
     letter-spacing: 1.5vw;
   }
   form {
-    margin: 12vw 0 0 5vw;
+    margin: 12vw 0 auto 5vw;
   }
   form .campo {
     height: 5vw;
@@ -152,12 +141,10 @@ footer {
     margin-top: -12vw;
   }
   .Container .titulo {
-    font-size: 5vw;
-    margin: 2vw 0 0 8vw;
+    margin: 3vw 0 0 10vw;
   }
   .Container .introduce {
     margin: 15vw 0 -25vw 5vw;
-    font-size: 3.5vw;
     width: 80vw;
   }
   .Container .Registro {
@@ -166,8 +153,7 @@ footer {
     height: 11.7vw;
   }
   .Container .Registro p {
-    font-size: 5vw;
-    margin: 2vw 0 0 10vw;
+    margin: 3vw 0 0 12vw;
   }
   .codigo {
     text-align: center;
@@ -182,7 +168,7 @@ footer {
   form .campo {
     height: 15vw;
     width: 80vw;
-    font-size: 6vw;
+    font-size: 5vw;
     margin-top: 15vw;
   }
   form .boton {
@@ -190,7 +176,7 @@ footer {
     margin-left: 28vw;
   }
   form .text {
-    font-size: 5vw;
-    margin-left: 10vw;
+    font-size: 3vw;
+    margin-left: 20vw;
   }
 }/*# sourceMappingURL=Login.css.map */
