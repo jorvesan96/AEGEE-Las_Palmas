@@ -1,9 +1,3 @@
-h1{
-    font-family: "Open Sans", sans-serif;
-    text-align: center;
-    font-size: xxx-large;
-}
-
 #pregunta, #texto_plano,
 #checklist, #desplegable{
     background-color: #D9D9D9;
@@ -22,14 +16,11 @@ h1{
 .contenedor{
     position: relative;
     display: inline-block;
-    text-align: center; 
-
 }
 .texto_centrado{
     position: absolute;
     top: 37%;
     left: 12%;
-    font-family: "Open Sans", sans-serif;   
     color: black;
 }
 
