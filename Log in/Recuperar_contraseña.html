@@ -19,6 +19,7 @@
     <meta name="viewport" content="width=device-width">
 
     <script type="" src="/elementos_comunes/elementos_comunes.js"></script>
+    <script type="" src="/assets/js/validacionRecuperarContraseña.js"></script>
 </head>
 
 <body>
@@ -29,9 +30,9 @@
         <div class="Container">
             <p class="titulo">Establecer nueva contraseña</p>
 
-            <form action="Login.html " method="get">
-                <input class="campo" type="text" name="correo" size="40" placeholder="Nueva contraseña">
-                <input class="campo" type="password" name="contraseña" size="40" placeholder="Repetir contraseña">
+            <form name="formulario" action="Login.html " method="get">
+                <input class="campo" type="text" name="contraseña" size="40" placeholder="Nueva contraseña">
+                <input class="campo" type="password" name="contraseñaRepetida" size="40" placeholder="Repetir contraseña">
                 <p>
                     <input class="boton" type="submit" value="Establecer">
                 </p>
