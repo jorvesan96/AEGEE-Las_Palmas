@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+}
+
+header {
+  width: 100%;
+  height: 10vw;
+  background-color: #1468c5;
+}
+header * {
+  font-family: fantasy;
+  font-size: 1.5vw;
+}
+
+#header_elements {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 7%;
+}
+
+#header_elements a {
+  width: 20%;
+  height: 100%;
+}
+
+#aegee_logo {
+  margin-top: 0.5vw;
+  height: 90%;
+}
+#burger_menu,
+#close {
+  aspect-ratio: 1/1;
+  height: 60%;
+}
+
+#header_elements ul * {
+  margin-right: 1.5vw;
+}
+
+#header_elements ul a {
+  color: white;
+  text-decoration: none;
+}
+
+#header_elements ul a:hover {
+  cursor: pointer;
+  color: #163e7a;
+}
+
+#header_elements ul button {
+  color: #163e7a;
+  background-color: white;
+  border: 2px solid #163e7a;
+  border-radius: 5px;
+  padding: 1vh 1vw;
+}
+
+#header_elements ul button:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .menu-nav-bar {
+    display: none;
+  }
+
+  .is-open {
+    height: 15vw;
+    display: flex;
+    background-color: #c5c6c6;
+    align-items: center;
+  }
+  .elements {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .elements a {
+    color: #931991;
+    text-decoration: none;
+    font-size: 3vw;
+  }
+  .elements a:hover{
+    color: #5c0159;
+  }
+
+  .elements img {
+    height: 6vw;
+  }
+}

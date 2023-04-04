@@ -1,1 +1,44 @@
-<p>header works!</p>
+<header *ngIf="getScreenWidth >= 1024">
+  <nav id="header_elements">
+    <a href=""> <img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></a>
+    <ul>
+      <a href="">Actividades</a>
+      <a href="">Buddy program</a>
+
+      <a href=""><button>Únete a AEGEE-Las Palmas</button></a>
+      <a href=""><button>Accede a tu cuenta</button></a>
+    </ul>
+  </nav>
+</header>
+
+<header *ngIf="getScreenWidth < 1024 && getScreenWidth >= 640">
+  <nav id="header_elements">
+    <a href=""> <img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco">
+    </a>
+    <ul>
+      <a href=""><button>Únete a AEGEE-Las Palmas</button></a>
+      <a href=""><button>Accede a tu cuenta</button></a>
+    </ul>
+    <img id="burger_menu" src="../../../assets/icons/burger menu.png" alt="menu desplegable">
+  </nav>
+</header>
+
+<header *ngIf="getScreenWidth < 640">
+  <nav id="header_elements">
+    <a href=""> <img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco">
+    </a>
+    <img (click)="toggleMenu()" id="burger_menu" src="{{source}}" alt="menu desplegable">
+  </nav>
+
+  <nav class="menu-nav-bar" [class.is-open]="isOpen">
+    <div class="elements">
+        <a href="#">Actividades</a>
+        <a href="#">Buddy program</a>
+        <a href="#"><img src="../../../assets/icons/Registro.png" alt=""></a>
+        <a href="#"><img src="../../../assets/icons/Log in.png" alt=""></a>
+
+    </div>
+
+  </nav>
+</header>
+
