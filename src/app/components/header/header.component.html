@@ -19,7 +19,15 @@
       <a href=""><button>Únete a AEGEE-Las Palmas</button></a>
       <a href=""><button>Accede a tu cuenta</button></a>
     </ul>
-    <img id="burger_menu" src="../../../assets/icons/burger menu.png" alt="menu desplegable">
+    <img (click)="toggleMenu()" id="burger_menu" src="{{source}}" alt="menu desplegable">
+  </nav>
+
+  <nav class="menu-nav-bar" [class.is-open]="isOpen">
+    <div class="elements">
+        <a href="#">Actividades</a>
+        <a href="#">Buddy program</a>
+    </div>
+
   </nav>
 </header>
 
@@ -42,3 +50,4 @@
   </nav>
 </header>
 
+<p>Hola mundo</p>
