@@ -1,0 +1,50 @@
+footer{
+  display: block;
+  height: 6vh;
+  width: 100%;
+  background-color: #434342;
+  color: white;
+}
+
+#footer-elements{
+  height: 100%;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#footer-elements p{
+  font-family: "Bebas neue", sans-serif;
+  margin: auto 0 auto 0;
+  font-size: 3vh;
+}
+#social{
+  display: flex;
+}
+
+#social a {
+  margin: auto 0 auto 0;
+  height: 4vh;
+}
+
+img{
+  margin-left: .5vw;
+  aspect-ratio: 1/1;
+  height: 4vh;
+  opacity: 50%;
+}
+
+@media all and (max-width: 640px){
+  footer{
+    height: 3vh;
+  }
+  #footer-elements p{
+    font-size: 2vh;
+  }
+  #social a{
+    height: 2.5vh;
+  }
+  img{
+    height: 2.5vh;
+  }
+}
