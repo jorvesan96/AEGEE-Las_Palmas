@@ -1,0 +1,17 @@
+hr {
+  width: 90%;
+  height: 0.2vw;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    #c51c13 19%,
+    white 19% 20%,
+    #a0c514 20% 39%,
+    white 39% 40%,
+    #931991 40% 59%,
+    white 59% 60%,
+    #fbba00 60% 79%,
+    white 79% 80%,
+    #1468c5 80%
+  );
+}
