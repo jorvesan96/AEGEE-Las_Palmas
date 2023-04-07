@@ -1,0 +1,52 @@
+#banner {
+  height: 15vw;
+  background-color: lightgrey;
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+section {
+  width: 85%;
+  margin: 2vw auto 2vw auto;
+}
+
+#primera {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+#primera img {
+  aspect-ratio: 3/2;
+  width: 30vw;
+  background-color: lightgrey;
+}
+#primera p {
+  width: 45%;
+}
+
+.buddy-section h2{
+  margin-bottom: 0;
+}
+
+.buddy-section p {
+  margin-top: 0;
+}
+
+@media all and (max-width: 640px){
+  #primera img{
+    display: none;
+  }
+
+  #primera p {
+    width: 100%;
+  }
+
+  .buddy-section h2{
+    text-align: center;
+  }
+}
