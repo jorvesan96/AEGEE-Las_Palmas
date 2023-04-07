@@ -15,6 +15,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { ActividadesComponent } from './pages/actividades/actividades.component';
 import { CreadorActividadesComponent } from './pages/creador-actividades/creador-actividades.component';
 import { RecepcionDocumentosComponent } from './pages/recepcion-documentos/recepcion-documentos.component';
+import { SeparadorComponent } from './components/separador/separador.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RecepcionDocumentosComponent } from './pages/recepcion-documentos/recep
     RegistroComponent,
     ActividadesComponent,
     CreadorActividadesComponent,
-    RecepcionDocumentosComponent
+    RecepcionDocumentosComponent,
+    SeparadorComponent
   ],
   imports: [
     BrowserModule,
