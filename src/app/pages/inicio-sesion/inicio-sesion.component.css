@@ -1,0 +1,73 @@
+#banner {
+  height: 10vw;
+  background-color: lightgrey;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#login {
+  height: 50vh;
+  width: 40vw;
+  border: 2px solid black;
+  margin: 5vw auto;
+}
+#acciones a {
+  font-family: "Open sans", sans-serif;
+  font-size: 1.2vw;
+  text-decoration: none;
+  color: black;
+}
+
+#login-container {
+  background-color: white;
+}
+#acciones {
+  width: 70%;
+  height: 4.9vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#login-form {
+  width: 80%;
+  margin: 3vw auto;
+  height: 30vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#login-form .login-field {
+  font-family: "Open sans", sans-serif;
+  font-size: 1.2vw;
+  border: 2px solid black;
+  border-radius: 0.5vw;
+  width: 95%;
+  height: 5vh;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2vw;
+  font-weight: bold;
+  padding: .5vh .5vw;
+}
+#login-form .login-field:hover {
+  background-color: lightgray;
+}
+#boton {
+  background-color: transparent;
+  font-family: "Open sans", sans-serif;
+  font-size: 1.2vw;
+  border: 2px solid black;
+  border-radius: 0.5vw;
+  width: 10vw;
+  align-self: center;
+  padding: 1vh 1vw;
+}
+
+#boton:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
