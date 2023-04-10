@@ -1,0 +1,353 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: auto;
+    font-size: large;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .grupo_junta {
+    display: flex;
+    width: 95%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  
+  #imagen_junta {
+    margin-left: 10%;
+    margin-right: 5%;
+  }
+  
+  .grupo_junta p {
+    width: 80%;
+  }
+  
+  /* POSICION DE LOS MIEMBROS DE LA JUNTA*/
+  
+  .miembros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .miembros p {
+    text-align: justify;
+  }
+  .miembros h2 {
+    text-align: left;
+  }
+  .presidente {
+    grid-column: 1;
+    grid-row: 1;
+    margin: auto;
+  }
+  
+  .texto_presi {
+    grid-column: 2 / span 3;
+    grid-row: 1;
+    margin: auto;
+  }
+  
+  .secretario {
+    grid-column: 3;
+    grid-row: 2;
+    margin: auto;
+  }
+  
+  .texto_secretario {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    margin: auto;
+  }
+  
+  .tesorero {
+    grid-column: 1;
+    grid-row: 3;
+    margin: auto;
+  }
+  
+  .texto_tesorero {
+    grid-column: 2 / span 3;
+    grid-row: 3;
+    margin: auto;
+  }
+  
+  .rrhh {
+    grid-column: 3;
+    grid-row: 4;
+    margin: auto;
+  }
+  
+  .texto_rrhh {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    margin: auto;
+  }
+  
+  .diseñador {
+    grid-column: 1;
+    grid-row: 5;
+    margin: auto;
+  }
+  
+  .texto_diseñador {
+    grid-column: 2 / span 3;
+    grid-row: 5;
+    margin: auto;
+  }
+  
+  .local_activities {
+    grid-column: 3;
+    grid-row: 6;
+    margin: auto;
+  }
+  
+  .texto_local_activities {
+    grid-column: 1 / span 2;
+    grid-row: 6;
+    margin: auto;
+  }
+  
+  .advisor1 {
+    grid-column: 1;
+    grid-row: 7;
+    margin: auto;
+  }
+  
+  .texto_advisor1 {
+    grid-column: 2 / span 3;
+    grid-row: 7;
+    margin: auto;
+  }
+
+  .advisor2 {
+    grid-column: 3;
+    grid-row: 8;
+    margin: auto;
+  }
+  
+  .texto_advisor2 {
+    grid-column: 1 / span 2;
+    grid-row: 8;
+    margin: auto;
+  }
+
+  /*-----------------------------*/
+  
+  .boton_desplazamiento {
+    background-color: #c5c6c6;
+    color: #222224;
+    text-align: center;
+    margin: 0 auto;
+    width: 85%;
+    display: block;
+    font-size: xx-large;
+    border-radius: 25px;
+  }
+  
+  .queHacemos {
+    margin-top: 5%;
+  }
+  
+  .contenedor_queHacemos {
+    border: 3px solid #931991;
+    border-style: dashed;
+    border-radius: 30px;
+    text-align: center;
+    width: 40%;
+    padding: 2%;
+    padding-bottom: 3%;
+    margin: 3% auto;
+  }
+  
+  .contenedor_queHacemos p {
+    text-align: center;
+  }
+  
+  .boton_actividades {
+    border: 3px solid #cf9800;
+    border-radius: 25px;
+    box-shadow: 0 0 5px #000000;
+    color: #cf9800;
+    font-size: x-large;
+    padding: 10px;
+  }
+  
+  .boton_buddy_program {
+    border: 3px solid #647a16;
+    border-radius: 25px;
+    box-shadow: 0 0 5px #000000;
+    color: #647a16;
+    font-size: x-large;
+    padding: 10px;
+  }
+  
+  .boton_voluntariado {
+    border: 3px solid #163e7a;
+    border-radius: 25px;
+    box-shadow: 0 0 5px #000000;
+    color: #163e7a;
+    font-size: x-large;
+    padding: 10px;
+  }
+  
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+  
+  .contacta {
+    display: inline-flex;
+    margin-right: 5%;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+  }
+  
+  .contacta img {
+    aspect-ratio: 2/1;
+    margin-right: 5%;
+    width: 20vw;
+  }
+  
+  .contacta p {
+    margin-right: 20%;
+  }
+  /* Css del carrusel */
+  .imagenCarrusel {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .texto_encima {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  .carrusel {
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (max-width: 601px) {
+    .grupo_junta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .grupo_junta p {
+      margin-left: 5%;
+    }
+  
+    .contacta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .contacta p {
+      margin-left: 5%;
+    }
+  
+    .contenedor_queHacemos {
+      width: 50%;
+      padding-bottom: 5%;
+    }
+  
+    .contenedor_queHacemos p,
+    .contenedor_queHacemos a {
+      font-size: 4vw;
+    }
+    .miembros img {
+      display: none;
+    }
+    .miembros {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .miembros h2 {
+      text-align: center;
+    }
+  
+    .miembros p {
+      text-align: center;
+    }
+    #contacta{
+      display: none;
+    }
+  }
