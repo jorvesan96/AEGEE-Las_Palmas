@@ -7,12 +7,19 @@
       <a id="registro" href="">Registro</a>
     </div>
 
-    <div if="form">
-      <form action="" id="login-form">
+    <div id="form">
+      <form [formGroup]="form" (ngSubmit)="login()" id="login-form">
         <div id="fields">
 
-          <input type="email" formControlName="correo" placeholder="Correo eléctronico" class="login-field">
-          <input type="password" formControlName="contraseña" placeholder="Contraseña" class="login-field">
+          <input type="email" formControlName="correo" placeholder="Correo eléctronico" class="form-control">
+          <div *ngIf="f['correo'].touched && f['correo'].invalid" class="alert">
+            <div *ngIf="f['correo'].touched && f['correo'].errors">*Se debe introducir un correo válido.</div>
+          </div>
+          <input type="password" formControlName="contraseña" placeholder="Contraseña" class="form-control">
+          <div *ngIf="f['contraseña'].touched && f['contraseña'].invalid" class="alert">
+            <div *ngIf="f['contraseña'].errors && f['contraseña'].errors['required']">*Se necesita una contraseña.</div>
+            <div *ngIf="f['contraseña'].errors && f['contraseña'].errors['minlength']">*La contraseña debe tener al menos 5 caracteres</div>
+        </div>
         </div>
         <input type="submit" value="Acceder" id="boton">
       </form>
