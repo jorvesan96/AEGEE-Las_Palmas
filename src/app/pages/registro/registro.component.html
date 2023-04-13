@@ -1,4 +1,4 @@
-<form id="form" action="/Recepcion_documentos/Recepcion_documentos.html" method="get">
+<!-- <form id="form" action="/Recepcion_documentos/Recepcion_documentos.html" method="get">
 
   <h2>Todos los campos son obligatorios</h2>
 
@@ -57,4 +57,62 @@
       <input class="boton" type="submit" (click)="registrar()" value="Realizar pago" id="submit">
   </p>
 
-</form>
+</form> -->
+
+<div>
+  <h1>Formulario de Registro</h1>
+  <form [formGroup]="registroForm" (ngSubmit)="enviarRegistro()">
+    <mat-form-field >
+      <input matInput placeholder="Nombre" formControlName="nombre" required>
+      <mat-error *ngIf="registroForm.get('nombre')?.invalid && (registroForm.get('nombre')?.dirty || registroForm.get('nombre')?.touched)">
+        Nombre es requerido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Apellidos" formControlName="apellidos" required>
+      <mat-error *ngIf="registroForm.get('apellidos')?.invalid && (registroForm.get('apellidos')?.dirty || registroForm.get('apellidos')?.touched)">
+        Apellidos son requeridos.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="DNI" formControlName="dni" required>
+      <mat-error *ngIf="registroForm.get('dni')?.invalid && (registroForm.get('dni')?.dirty || registroForm.get('dni')?.touched)">
+        DNI es requerido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Fecha de nacimiento</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Elige una fecha" formControlName="fechaNacimiento" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="registroForm.get('fechaNacimiento')?.invalid && (registroForm.get('fechaNacimiento')?.dirty || registroForm.get('fechaNacimiento')?.touched)">
+        Fecha de nacimiento es requerida.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>País:</mat-label>
+      <mat-select placeholder="Selecciona un país" formControlName="pais" required>
+        <mat-option *ngFor="let pais of paises" [value]="pais.value">{{pais.viewValue}}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="registroForm.get('pais')?.invalid && (registroForm.get('pais')?.dirty || registroForm.get('pais')?.touched)">
+        País es requerido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Localidad" formControlName="localidad" required>
+      <mat-error *ngIf="registroForm.get('localidad')?.invalid && (registroForm.get('localidad')?.dirty || registroForm.get('localidad')?.touched)">
+        Localidad es requerida.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Teléfono" formControlName="telefono" required>
+      <mat-error *ngIf="registroForm.get('telefono')?.invalid && (registroForm.get('telefono')?.dirty || registroForm.get('telefono')?.touched)">
+        Teléfono es requerido.
+      </mat-error>
+    </mat-form-field>
