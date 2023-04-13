@@ -1,64 +1,3 @@
-<!-- <form id="form" action="/Recepcion_documentos/Recepcion_documentos.html" method="get">
-
-  <h2>Todos los campos son obligatorios</h2>
-
-  <input class="campo" type="text" name="nombre" size="30" placeholder="Nombre" id="nombre" required>
-  <input class="campo" type="text" name="apellidos" size="45" placeholder="Apellidos" id="apellidos" required>
-
-  <br>
-
-  <input class="campo" type="text" name="dni" size="30" placeholder="DNI" id="dni" required>
-  <label for="date">Fecha de nacimiento</label>
-  <input class="campo" type="date" name="fecha" id="nacimiento" required>
-
-  <br>
-
-  <label for="pais">País</label>
-  <select name="pais" id="pais" required>
-      <option value="">Selccionar un país</option>
-      <option value="opcion">Opción #1</option >
-      <option value="opcion">Opción #2</option>
-      <option value="opcion">Opción #3</option>
-  </select>
-
-  <input class="campo" type="text" name="localidad" placeholder="Localidad" id="localidad" required>
-
-  <div class="eleccion" name="estudios" >
-      <p>¿Realiza estudios universitarios actualmente?</p>
-      <label for="">
-          Si
-      </label>
-      <input type="radio" name="radio" required value="si">
-      <label for="">
-          No
-      </label>
-      <input type="radio" name="radio" value="no">
-  </div>
-
-  <input class="campo" type="text" name="universidad" size="75" placeholder="Universidad" id="universidad" required>
-
-  <input class="campo" type="text" name="carrera" size="75" placeholder="Estudios que realiza" id="estudios" required>
-
-  <br>
-
-  <input class="campo" type="tel" name="telefono" size="30" placeholder="Teléfono" id="telefono" required>
-
-  <br>
-
-  <input class="campo" type="text" name="correo" size="75" placeholder="Correo electrónico" id="correo" required>
-
-  <input class="campo" type="text" name="rep_correo" size="75" placeholder="Repetir Correo electrónico" id="rep_correo" required>
-
-  <br>
-
-  <input class="campo" type="password" name="contraseña" size="30" placeholder="Contraseña" id="contraseña" required>
-  <input class="campo" type="password" name="rep_contraseña" size="30" placeholder="Repetir Contraseña" id="rep_contraseña" required>
-  <p>
-      <input class="boton" type="submit" (click)="registrar()" value="Realizar pago" id="submit">
-  </p>
-
-</form> -->
-
 <div>
   <h1>Formulario de Registro</h1>
   <form [formGroup]="registroForm" (ngSubmit)="enviarRegistro()">
@@ -116,3 +55,33 @@
         Teléfono es requerido.
       </mat-error>
     </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Correo" formControlName="correo" required>
+      <mat-error *ngIf="registroForm.get('correo')?.invalid && (registroForm.get('correo')?.dirty || registroForm.get('correo')?.touched)">
+        Correo es requerido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="repetirCorreo" formControlName="repetirCorreo" required>
+      <mat-error *ngIf="registroForm.get('repetirCorreo')?.invalid && (registroForm.get('repetirCorreo')?.dirty || registroForm.get('repetirCorreo')?.touched)">
+        Repetir correo es requerido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Contraseña" formControlName="Contraseña" required>
+      <mat-error *ngIf="registroForm.get('contrasena')?.invalid && (registroForm.get('contrasena')?.dirty || registroForm.get('contrasena')?.touched)">
+        Contraseña es requerido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="repetirContraseña" formControlName="repetirContraseña" required>
+      <mat-error *ngIf="registroForm.get('repetirContrasena')?.invalid && (registroForm.get('repetirContrasena')?.dirty || registroForm.get('repeetirContrasena')?.touched)">
+        Contraseña es requerido.
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
