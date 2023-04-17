@@ -35,11 +35,13 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
   }
+
+  
   .miembros p {
     text-align: justify;
   }
