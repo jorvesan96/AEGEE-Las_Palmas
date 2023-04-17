@@ -59,8 +59,10 @@
             </div>
         </section>
 
-        <a class="boton_desplazamiento">v</a>
-        <section class="miembros">
+        <button class="boton_desplazamiento" (click)="showInfo = true" *ngIf="!showInfo" >
+            <img src="../../../assets/icons/arrow_down.png" class="icono-boton"/>
+        </button>
+        <section class="miembros" *ngIf="showInfo" [@showHide]="showInfo ? 'show' : 'hide'">
             <article class="presidente">
                 <img src="assets/images/home/Angel.jpg"
                 alt="Imagen Presidente de la junta"
@@ -71,7 +73,8 @@
             <article class="texto_presi">
                 <h2>PRESIDENTE</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adivqua.
+                    ¡Ey! Soy Ángel, Presidente de AEGEE Las Palmas. Mi función es ser la cara pública y el responsable de la asociación de carácter público y privado. 
+                    Además de organizar la Junta Directiva y tomar las decisiones importantes junto con mi gran equipo. Si tienes alguna duda sobre la asociación,  ¡no dudes en comentármelo!
                 </p>
             </article>
 
@@ -85,7 +88,8 @@
             <article class="texto_secretario">
                 <h2>SECRETARIO</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adivqua.
+                    ¡Hola! Soy el secretario de AEGEE Las Palmas y básicamente, me encargo de mantener registros de las reuniones, ayudo en la coordinacion de correos y documentos oficiales de la asociación, y trabajo con el resto de la junta para planificar eventos divertidos para nuestros miembros. 
+                    Además, me aseguro de que todos nuestros papeles estén en regla con la universidad y el registro de asociaciones.
                 </p>
             </article>
 
@@ -99,7 +103,8 @@
             <article class="texto_tesorero">
                 <h2>TESORERO</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adivqua.
+                    ¡Hola! Soy Jorge, el tesorero de AEGEE-Las Palmas. Me encargo de que se realicen los pagos y cobroscorrectamente, de llevar el libro de contabilidad y de las realaciones con los bancos. 
+                    Todos los pagos están al día. ¡Nos vemos en la antena!
                 </p>
             </article>
 
@@ -113,7 +118,8 @@
             <article class="texto_rrhh">
                 <h2>RECURSOS HUMANOS</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adivqua.
+                    ¡Hola! Soy Laura, la Recursos Humanos de AEGEE-Las Palmas. Mi labor es asegurarme de que todos los miembros estén motivados y formados para afrontar cualquier reto que se presente. 
+                    Si necesitas ayuda para integrarte o resolver algún conflicto, estoy aquí para escucharte y apoyarte en todo lo que necesites. ¡Nos vemos en la antena!
                 </p>
             </article>
 
@@ -127,7 +133,8 @@
             <article class="texto_diseñador">
                 <h2>RRPP +  CM</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adivqua.
+                    ¡Buenas! Soy María, la Community Manager y Relaciones Públicas de AEGEE-Las Palmas. Me encargo de administrar las redes sociales de la asociación publicando las actividades que hemos realizado tanto por Facebook como en Instagram etc... También tengo la labor de difundir y hacer promoción de los diferentes eventos que ofrece AEGEE.
+                         tienes cualquier duda de alguna actividad o de cómo participar no dudes en contactarme. ¡Te esperamos!
                 </p>
             </article>
 
@@ -141,7 +148,8 @@
             <article class="texto_local_activities">
                 <h2>LOCAL ACTIVITIES</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adivqua.
+                    Mi nombre es Carla y soy la local activities. Me encargo de crear y organizar junto con mis compañeros de AEGEE-Las Palmas eventos y experiencias emocionantes. 
+                    Solo tienes que decírmelo y haremos de tus sueños una realidad. ¡Espero verte pronto!
                 </p>
             </article>
 
@@ -175,7 +183,9 @@
 
         </section>
 
-        <a class="boton_desplazamiento">^</a>
+        <button class="boton_desplazamiento" (click)="showInfo = false" *ngIf="showInfo">
+            <img src="../../../assets/icons/arrow_up.png" class="icono-boton"/>
+          </button>
 
         <section class="queHacemos">
             <h1>¿Qué hacemos?</h1>
