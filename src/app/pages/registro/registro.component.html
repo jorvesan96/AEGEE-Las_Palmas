@@ -71,17 +71,19 @@
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Contraseña" formControlName="Contraseña" required>
+      <input matInput placeholder="Contrasena" formControlName="contrasena" type="password" required>
       <mat-error *ngIf="registroForm.get('contrasena')?.invalid && (registroForm.get('contrasena')?.dirty || registroForm.get('contrasena')?.touched)">
         Contraseña es requerido.
       </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="repetirContraseña" formControlName="repetirContraseña" required>
+      <input matInput placeholder="repetirContrasena" formControlName="repetirContrasena" type="password" required>
       <mat-error *ngIf="registroForm.get('repetirContrasena')?.invalid && (registroForm.get('repetirContrasena')?.dirty || registroForm.get('repeetirContrasena')?.touched)">
         Contraseña es requerido.
       </mat-error>
     </mat-form-field>
+
+    <button>Enviar</button>
   </form>
 </div>

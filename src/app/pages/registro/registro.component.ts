@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import * as FileSaver from 'file-saver';
 
 @Component({
   selector: 'app-registro',
@@ -10,7 +12,7 @@ export class RegistroComponent implements OnInit {
 
   registroForm: FormGroup = new FormGroup({});
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,private http: HttpClient) { }
 
   paises = [
     { value: 'mx', viewValue: 'México' },
@@ -38,7 +40,21 @@ export class RegistroComponent implements OnInit {
   }
 
   enviarRegistro() {
-    console.log(this.registroForm.value);
-  }
+    if (this.registroForm) {
+      const usuario = {
+        nombre: this.registroForm.get('nombre')?.value,
+        apellidos: this.registroForm.get('apellidos')?.value,
+        dni: this.registroForm.get('dni')?.value,
+        fechaNacimiento: this.registroForm.get('fechaNacimiento')?.value,
+        pais: this.registroForm.get('pais')?.value,
+        localidad: this.registroForm.get('localidad')?.value,
+        telefono: this.registroForm.get('telefono')?.value,
+        correo: this.registroForm.get('correo')?.value,
+        contrasena: this.registroForm.get('contrasena')?.value
+      };
 
+      const blob = new Blob([JSON.stringify(usuario)], { type: 'application/json' });
+      FileSaver.saveAs(blob, 'usuario.json');
+    }
+  }
 }
