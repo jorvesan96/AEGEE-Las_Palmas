@@ -9,7 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule,  } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -64,7 +64,8 @@ const routes: Routes = [
     FormsModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    SlickCarouselModule
 
   ],
   providers: [],
