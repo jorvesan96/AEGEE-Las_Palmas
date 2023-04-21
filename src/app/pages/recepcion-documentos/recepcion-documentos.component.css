@@ -1,0 +1,176 @@
+.general{
+    font-family: "Open Sans", sans-serif;
+    margin: auto;
+    font-size: large;
+}
+
+.titulo{
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: x-large;
+}
+
+h2{
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    font-size: x-large;
+}
+
+.data_bank{
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.seleccion p, .seleccion label{
+    margin-top: 3%;
+    margin-left: 5%;
+    display:inline-block;
+    margin-right: 5%;
+}
+
+#dni{
+    margin-top: 1%;
+    margin-left: 5%;
+    width: 50%;
+    padding: 0.5%;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.documento {
+    margin-top: 3%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.documento p {
+    margin-right: 10px;
+}
+
+.documento input[type="submit"] {
+    margin-left: 10px;
+}
+
+#fichero{
+    width: 50%;
+    padding: 0.5%;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 12px;
+    
+}
+.correo{
+    margin-top: 3%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.data_bank {
+    margin-right: 5%;
+}
+
+.enviar{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#error-message {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 6%;
+  }
+
+
+@media screen and (min-width: 1920px) {
+    .general{
+        font-size: xx-large;
+    }
+    
+    .titulo{
+        font-size: xxx-large;
+    }
+    
+    #dni{
+        font-size: x-large;
+    }
+    
+    #fichero{
+        font-size: x-large;
+
+    }
+    #boton{
+        font-size: xx-large; 
+        margin-left: 0.5vw;
+    }
+
+    .seleccion input[type="radio"]#cbox1 {
+        background-color: red;
+        color: white;
+      }
+      
+      .seleccion input[type="radio"]#cbox2 {
+        background-color: blue;
+        color: white;
+      }
+
+      .opciones input[type=radio]{
+        height: 1vw;
+        width: 1vw;
+        border-radius: 100%;
+      }
+}
+  
+@media screen and (max-width: 601px) {
+    .general{
+        font-size: small;
+        margin-top: 0%;
+    }
+
+    .seleccion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seleccion .opciones{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .opciones label{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+
+    .documento{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .documento p{
+        margin-bottom: 5%;
+    }   
+    .campo_dni{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #fichero{
+        width: 70%;
+    }
+
+    .enviar{
+        margin-top: 5%;
+    }
+
+}

@@ -28,7 +28,6 @@ import { RecepcionDocumentosComponent } from './pages/recepcion-documentos/recep
 import { SeparadorComponent } from './components/separador/separador.component';
 import { MatNativeDateModule } from '@angular/material/core';
 
-
 const routes: Routes = [
   { path: 'voluntariado', component: VoluntariadoComponent },
   { path: 'buddyProgram', component: BuddyProgramComponent },
