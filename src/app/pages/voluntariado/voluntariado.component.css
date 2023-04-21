@@ -1,0 +1,55 @@
+h1 {
+    width: 75%;
+    margin: 2vw auto 0 auto;
+    text-align: center;
+  }
+  
+  #primero {
+    width: 85%;
+    margin: auto;
+    text-align: justify;
+    margin: 2vw auto 2vw auto;
+  }
+  
+  article {
+    margin: auto;
+    display: flex;
+    width: 85%;
+    margin: 2vw auto 2vw auto;
+  }
+  article h2 {
+    margin: 2% 0 -2% 0;
+  }
+  article p {
+    width: 80%;
+  }
+  article img {
+    width: 50vw;
+    aspect-ratio: 3/2;
+    margin: auto;
+    background-color: lightgrey;
+  }
+  
+  @media all and (max-width: 600px) {
+    h1 {
+      width: 100%;
+      font-size: 6vw;
+    }
+    article {
+      width: 100%;
+    }
+    article img {
+      display: none;
+    }
+    article h2 {
+      text-align: center;
+    }
+    article p {
+      margin: 2vw auto 2vw auto;
+    }
+  }
+  @media all and (max-width: 1024px) and (min-width: 601px) {
+    section img {
+      width: 270vw;
+    }
+  }/*# sourceMappingURL=voluntariado.css.map */

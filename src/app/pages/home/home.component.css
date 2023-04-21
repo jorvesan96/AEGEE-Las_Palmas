@@ -35,8 +35,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
     margin-top: 5%;
     margin-bottom: 5%;
   }
@@ -58,6 +58,7 @@ body {
     grid-column: 2 / span 3;
     grid-row: 1;
     margin: auto;
+    margin-right: 15%;
   }
   
   .secretario {
@@ -70,6 +71,7 @@ body {
     grid-column: 1 / span 2;
     grid-row: 2;
     margin: auto;
+    margin-left: 15%;
   }
   
   .tesorero {
@@ -82,6 +84,7 @@ body {
     grid-column: 2 / span 3;
     grid-row: 3;
     margin: auto;
+    margin-right: 15%;
   }
   
   .rrhh {
@@ -94,6 +97,7 @@ body {
     grid-column: 1 / span 2;
     grid-row: 4;
     margin: auto;
+    margin-left: 15%;
   }
   
   .diseñador {
@@ -106,6 +110,7 @@ body {
     grid-column: 2 / span 3;
     grid-row: 5;
     margin: auto;
+    margin-right: 15%;
   }
   
   .local_activities {
@@ -118,18 +123,21 @@ body {
     grid-column: 1 / span 2;
     grid-row: 6;
     margin: auto;
+    margin-left: 15%;
   }
   
   .advisor1 {
     grid-column: 1;
     grid-row: 7;
     margin: auto;
+    
   }
   
   .texto_advisor1 {
     grid-column: 2 / span 3;
     grid-row: 7;
     margin: auto;
+    margin-right: 15%;
   }
 
   .advisor2 {
@@ -142,6 +150,7 @@ body {
     grid-column: 1 / span 2;
     grid-row: 8;
     margin: auto;
+    margin-left: 15%;
   }
 
   /*-----------------------------*/
