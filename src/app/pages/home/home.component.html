@@ -1,200 +1,198 @@
 
-<body>
-    <div class="body-carousel">
-        <button (click)="slickModal.slickPrev()"><i class="fa-solid fa-circle-chevron-left prev-btn"></i></button>
-        <ngx-slick-carousel class="carousel"
-                                #slickModal="slick-carousel"
-                                [config]="slideConfig"
-                                (init)="slickInit($event)"
-                                (breakpoint)="breakpoint($event)"
-                                (afterChange)="afterChange($event)"
-                                (beforeChange)="beforeChange($event)">
-                <div ngxSlickItem *ngFor="let slide of " class="slide">
-                        <img src="{{ slide }}" alt="" width="99%">
-                </div>
-        </ngx-slick-carousel>
-        <button (click)="slickModal.slickNext()"><i class="fa-solid fa-circle-chevron-right next-btn"></i></button>
-        </div>
+<div class="body-carousel">
+    <button (click)="slickModal.slickPrev()"><i class="fa-solid fa-circle-chevron-left prev-btn"></i></button>
+    <ngx-slick-carousel class="carousel"
+                            #slickModal="slick-carousel"
+                            [config]="slideConfig"
+                            (init)="slickInit($event)"
+                            (breakpoint)="breakpoint($event)"
+                            (afterChange)="afterChange($event)"
+                            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of " class="slide">
+                    <img src="{{ slide }}" alt="" width="99%">
+            </div>
+    </ngx-slick-carousel>
+    <button (click)="slickModal.slickNext()"><i class="fa-solid fa-circle-chevron-right next-btn"></i></button>
+    </div>
 
-    <section>
-        <h1>¿Quiénes somos?</h1>
-        <components-separador></components-separador>
-
-        <div class="grupo_junta">
-            <img src="assets/images/home/Junta.jpg"
-                id="imagen_junta" alt="Imagen de la junta" height="375px" >
-            <p>
-                AEGEE es una organización de estudiantes sin fines de lucro que se fundó en 1985 para promover la unión
-                y la cooperación entre jóvenes de toda Europa. Desde entonces, ha crecido y se ha expandido a más de 200 antenas locales en 40 países,
-                convirtiéndose en una de las asociaciones de estudiantes más grandes de Europa. AEGEE organiza una amplia variedad de actividades,
-                incluyendo conferencias, eventos culturales, proyectos de voluntariado y misiones de estudio en el extranjero.
-                También trabaja en temas de actualidad, como la democracia, el medio ambiente y la diversidad cultural.
-                AEGEE es completamente independiente y está abierta a todos los estudiantes de Europa, independientemente de su género,
-                raza, orientación sexual o creencia política.
-            <br>
-                Nosotros representamos AEGEE en Las Palmas de Gran Canaria. Somos estudiantes
-                y jóvenes como tú, con inquietudes y abiertos a conocer gente nueva.
-                Aquí siempre te recibiremos con los brazos abiertos.
-            </p>
-        </div>
-    </section>
-
+<section>
+    <h1>¿Quiénes somos?</h1>
     <components-separador></components-separador>
-    <section class="miembros" [ngStyle]="{ 'max-height': contentHeight }">
-        <article class="presidente">
-            <img src="assets/images/home/Angel.jpg"
-            alt="Imagen Presidente de la junta"
-            width="300"
-            height="300">
-        </article>
 
-        <article class="texto_presi">
-            <h2>PRESIDENTE</h2>
-            <p>
-                ¡Ey! Soy Ángel, Presidente de AEGEE Las Palmas. Mi función es ser la cara pública y el responsable de la asociación de carácter público y privado.
-                Además de organizar la Junta Directiva y tomar las decisiones importantes junto con mi gran equipo. Si tienes alguna duda sobre la asociación,  ¡no dudes en comentármelo!
-            </p>
-        </article>
+    <div class="grupo_junta">
+        <img src="assets/images/home/Junta.jpg"
+            id="imagen_junta" alt="Imagen de la junta" height="375px" >
+        <p>
+            AEGEE es una organización de estudiantes sin fines de lucro que se fundó en 1985 para promover la unión
+            y la cooperación entre jóvenes de toda Europa. Desde entonces, ha crecido y se ha expandido a más de 200 antenas locales en 40 países,
+            convirtiéndose en una de las asociaciones de estudiantes más grandes de Europa. AEGEE organiza una amplia variedad de actividades,
+            incluyendo conferencias, eventos culturales, proyectos de voluntariado y misiones de estudio en el extranjero.
+            También trabaja en temas de actualidad, como la democracia, el medio ambiente y la diversidad cultural.
+            AEGEE es completamente independiente y está abierta a todos los estudiantes de Europa, independientemente de su género,
+            raza, orientación sexual o creencia política.
+        <br>
+            Nosotros representamos AEGEE en Las Palmas de Gran Canaria. Somos estudiantes
+            y jóvenes como tú, con inquietudes y abiertos a conocer gente nueva.
+            Aquí siempre te recibiremos con los brazos abiertos.
+        </p>
+    </div>
+</section>
 
-        <article class="secretario">
-            <img src="assets/images/home/Carlos.jpg"
-            alt="Imagen Secretario de la junta"
-            width="300"
-            height="300">
-        </article>
+<components-separador></components-separador>
+<section class="miembros" [ngStyle]="{ 'max-height': contentHeight }">
+    <article class="presidente">
+        <img src="assets/images/home/Angel.jpg"
+        alt="Imagen Presidente de la junta"
+        width="300"
+        height="300">
+    </article>
 
-        <article class="texto_secretario">
-            <h2>SECRETARIO</h2>
-            <p>
-                ¡Hola! Soy el secretario de AEGEE Las Palmas y básicamente, me encargo de mantener registros de las reuniones, ayudo en la coordinacion de correos y documentos oficiales de la asociación, y trabajo con el resto de la junta para planificar eventos divertidos para nuestros miembros.
-                Además, me aseguro de que todos nuestros papeles estén en regla con la universidad y el registro de asociaciones.
-            </p>
-        </article>
+    <article class="texto_presi">
+        <h2>PRESIDENTE</h2>
+        <p>
+            ¡Ey! Soy Ángel, Presidente de AEGEE Las Palmas. Mi función es ser la cara pública y el responsable de la asociación de carácter público y privado.
+            Además de organizar la Junta Directiva y tomar las decisiones importantes junto con mi gran equipo. Si tienes alguna duda sobre la asociación,  ¡no dudes en comentármelo!
+        </p>
+    </article>
 
-        <article class="tesorero">
-            <img src="assets/images/home/Jorge.jpg"
-            alt="Imagen Tesorero de la junta"
-            width="300"
-            height="300">
-        </article>
+    <article class="secretario">
+        <img src="assets/images/home/Carlos.jpg"
+        alt="Imagen Secretario de la junta"
+        width="300"
+        height="300">
+    </article>
 
-        <article class="texto_tesorero">
-            <h2>TESORERO</h2>
-            <p>
-                ¡Hola! Soy Jorge, el tesorero de AEGEE-Las Palmas. Me encargo de que se realicen los pagos y cobroscorrectamente, de llevar el libro de contabilidad y de las realaciones con los bancos.
-                Todos los pagos están al día. ¡Nos vemos en la antena!
-            </p>
-        </article>
+    <article class="texto_secretario">
+        <h2>SECRETARIO</h2>
+        <p>
+            ¡Hola! Soy el secretario de AEGEE Las Palmas y básicamente, me encargo de mantener registros de las reuniones, ayudo en la coordinacion de correos y documentos oficiales de la asociación, y trabajo con el resto de la junta para planificar eventos divertidos para nuestros miembros.
+            Además, me aseguro de que todos nuestros papeles estén en regla con la universidad y el registro de asociaciones.
+        </p>
+    </article>
 
-        <article class="rrhh">
-            <img src="assets/images/home/Laura.jpg"
-            alt="Imagen RRHH de la junta"
-            width="300"
-            height="300">
-        </article>
+    <article class="tesorero">
+        <img src="assets/images/home/Jorge.jpg"
+        alt="Imagen Tesorero de la junta"
+        width="300"
+        height="300">
+    </article>
 
-        <article class="texto_rrhh">
-            <h2>RECURSOS HUMANOS</h2>
-            <p>
-                ¡Hola! Soy Laura, la Recursos Humanos de AEGEE-Las Palmas. Mi labor es asegurarme de que todos los miembros estén motivados y formados para afrontar cualquier reto que se presente.
-                Si necesitas ayuda para integrarte o resolver algún conflicto, estoy aquí para escucharte y apoyarte en todo lo que necesites. ¡Nos vemos en la antena!
-            </p>
-        </article>
+    <article class="texto_tesorero">
+        <h2>TESORERO</h2>
+        <p>
+            ¡Hola! Soy Jorge, el tesorero de AEGEE-Las Palmas. Me encargo de que se realicen los pagos y cobroscorrectamente, de llevar el libro de contabilidad y de las realaciones con los bancos.
+            Todos los pagos están al día. ¡Nos vemos en la antena!
+        </p>
+    </article>
 
-        <article class="diseñador">
-            <img src="assets/images/home/Maria.jpg"
-            alt="Imagen DiseñodeImagenes de la junta"
-            width="300"
-            height="300">
-        </article>
+    <article class="rrhh">
+        <img src="assets/images/home/Laura.jpg"
+        alt="Imagen RRHH de la junta"
+        width="300"
+        height="300">
+    </article>
 
-        <article class="texto_diseñador">
-            <h2>RRPP +  CM</h2>
-            <p>
-                ¡Buenas! Soy María, la Community Manager y Relaciones Públicas de AEGEE-Las Palmas. Me encargo de administrar las redes sociales de la asociación publicando las actividades que hemos realizado tanto por Facebook como en Instagram etc... También tengo la labor de difundir y hacer promoción de los diferentes eventos que ofrece AEGEE.
-                        tienes cualquier duda de alguna actividad o de cómo participar no dudes en contactarme. ¡Te esperamos!
-            </p>
-        </article>
+    <article class="texto_rrhh">
+        <h2>RECURSOS HUMANOS</h2>
+        <p>
+            ¡Hola! Soy Laura, la Recursos Humanos de AEGEE-Las Palmas. Mi labor es asegurarme de que todos los miembros estén motivados y formados para afrontar cualquier reto que se presente.
+            Si necesitas ayuda para integrarte o resolver algún conflicto, estoy aquí para escucharte y apoyarte en todo lo que necesites. ¡Nos vemos en la antena!
+        </p>
+    </article>
 
-        <article class="local_activities">
-            <img src="assets/images/home/Carla.jpg"
-            alt="Imagen local activities de la junta"
-            width="300"
-            height="300">
-        </article>
+    <article class="diseñador">
+        <img src="assets/images/home/Maria.jpg"
+        alt="Imagen DiseñodeImagenes de la junta"
+        width="300"
+        height="300">
+    </article>
 
-        <article class="texto_local_activities">
-            <h2>LOCAL ACTIVITIES</h2>
-            <p>
-                Mi nombre es Carla y soy la local activities. Me encargo de crear y organizar junto con mis compañeros de AEGEE-Las Palmas eventos y experiencias emocionantes.
-                Solo tienes que decírmelo y haremos de tus sueños una realidad. ¡Espero verte pronto!
-            </p>
-        </article>
+    <article class="texto_diseñador">
+        <h2>RRPP +  CM</h2>
+        <p>
+            ¡Buenas! Soy María, la Community Manager y Relaciones Públicas de AEGEE-Las Palmas. Me encargo de administrar las redes sociales de la asociación publicando las actividades que hemos realizado tanto por Facebook como en Instagram etc... También tengo la labor de difundir y hacer promoción de los diferentes eventos que ofrece AEGEE.
+                    tienes cualquier duda de alguna actividad o de cómo participar no dudes en contactarme. ¡Te esperamos!
+        </p>
+    </article>
 
-        <article class="advisor1">
-            <img src="assets/images/home/Noelia.jpg"
-            alt="Imagen Advisor1 de la junta"
-            width="300"
-            height="300">
-        </article>
+    <article class="local_activities">
+        <img src="assets/images/home/Carla.jpg"
+        alt="Imagen local activities de la junta"
+        width="300"
+        height="300">
+    </article>
 
-        <article class="texto_advisor1">
-            <h2>ADVISOR</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adivqua.
-            </p>
-        </article>
+    <article class="texto_local_activities">
+        <h2>LOCAL ACTIVITIES</h2>
+        <p>
+            Mi nombre es Carla y soy la local activities. Me encargo de crear y organizar junto con mis compañeros de AEGEE-Las Palmas eventos y experiencias emocionantes.
+            Solo tienes que decírmelo y haremos de tus sueños una realidad. ¡Espero verte pronto!
+        </p>
+    </article>
 
-        <article class="advisor2">
-            <img src="assets/images/home/Jocelyn.jpg"
-            alt="Imagen Advisor2 de la junta"
-            width="300"
-            height="300">
-        </article>
+    <article class="advisor1">
+        <img src="assets/images/home/Noelia.jpg"
+        alt="Imagen Advisor1 de la junta"
+        width="300"
+        height="300">
+    </article>
 
-        <article class="texto_advisor2">
-            <h2>ADVISOR</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adivqua.
-            </p>
-        </article>
+    <article class="texto_advisor1">
+        <h2>ADVISOR</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adivqua.
+        </p>
+    </article>
 
-    </section>
-    <button class="boton_desplazamiento" (click)="accionarBoton()">
-        <i id="icono" class="fa-solid fa-sort-down" style="color: #ffffff"></i>
-        </button>
-    <section class="queHacemos">
-        <h1>¿Qué hacemos?</h1>
-        <components-separador></components-separador>
+    <article class="advisor2">
+        <img src="assets/images/home/Jocelyn.jpg"
+        alt="Imagen Advisor2 de la junta"
+        width="300"
+        height="300">
+    </article>
 
-        <nav class="contenedor_queHacemos">
+    <article class="texto_advisor2">
+        <h2>ADVISOR</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna adivqua.
+        </p>
+    </article>
 
-            <p>Conoce nuestras actividades</p>
+</section>
+<button class="boton_desplazamiento" (click)="accionarBoton()">
+    <i id="icono" class="fa-solid fa-sort-down" style="color: #ffffff"></i>
+    </button>
+<section class="queHacemos">
+    <h1>¿Qué hacemos?</h1>
+    <components-separador></components-separador>
 
-            <a class="boton_actividades" routerLink="/actividades">Actividades</a>
+    <nav class="contenedor_queHacemos">
 
-            <p>Apúntate a nuestras actividades de mentor</p>
+        <p>Conoce nuestras actividades</p>
 
-            <a class="boton_buddy_program" routerLink="/buddyProgram">Buddy Program</a>
+        <a class="boton_actividades" routerLink="/actividades">Actividades</a>
 
-            <p>Las actividades más humanas de Aegee-LasPalmas</p>
+        <p>Apúntate a nuestras actividades de mentor</p>
 
-            <a class="boton_voluntariado" routerLink="/voluntariado">Voluntariado</a>
-        </nav>
-    </section>
+        <a class="boton_buddy_program" routerLink="/buddyProgram">Buddy Program</a>
 
-    <section>
-        <h1>Contacta con nosotros</h1>
-        <components-separador></components-separador>
-        <div class="contacta">
-            <img id="contacta" src="https://comerciodelaño.es/wp-content/uploads/2021/01/contacta-con-nosotros.jpg"
-                    alt="Imagen Amigos todos">
-            <p>Direccion: <a href="https://goo.gl/maps/3mNQcY4rua1hha8u8">intermedia.ulpgc, Edificio Anexo a La Granja - Campus Universitario de San Cristobal,
-                Avenida Marítima de Canarias s/n, 35016 Las Palmas de Gran Canaria.</a>
-            <br><br>
-            O si prefieres nuestro <a href="mailto:aegee.laspalmas@gmail.com">e-mail</a>.
-            </p>
-        </div>
-    </section>
-</body>
+        <p>Las actividades más humanas de Aegee-LasPalmas</p>
+
+        <a class="boton_voluntariado" routerLink="/voluntariado">Voluntariado</a>
+    </nav>
+</section>
+
+<section>
+    <h1>Contacta con nosotros</h1>
+    <components-separador></components-separador>
+    <div class="contacta">
+        <img id="contacta" src="https://comerciodelaño.es/wp-content/uploads/2021/01/contacta-con-nosotros.jpg"
+                alt="Imagen Amigos todos">
+        <p>Direccion: <a href="https://goo.gl/maps/3mNQcY4rua1hha8u8">intermedia.ulpgc, Edificio Anexo a La Granja - Campus Universitario de San Cristobal,
+            Avenida Marítima de Canarias s/n, 35016 Las Palmas de Gran Canaria.</a>
+        <br><br>
+        O si prefieres nuestro <a href="mailto:aegee.laspalmas@gmail.com">e-mail</a>.
+        </p>
+    </div>
+</section>
 
