@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,6 +15,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from 'src/environment/environment';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +34,11 @@ import { RecepcionDocumentosComponent } from './pages/recepcion-documentos/recep
 import { SeparadorComponent } from './components/separador/separador.component';
 import { MatNativeDateModule } from '@angular/material/core';
 
+const routes: Routes = [
+  { path: 'voluntariado', component: VoluntariadoComponent },
+  { path: 'buddyProgram', component: BuddyProgramComponent },
+  { path: 'actividades', component: ActividadesComponent }
+];
 
 @NgModule({
   declarations: [
@@ -67,8 +74,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireDatabaseModule
-
+    AngularFireDatabaseModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

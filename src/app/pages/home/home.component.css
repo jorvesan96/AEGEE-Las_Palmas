@@ -30,15 +30,18 @@ body {
   
   /* POSICION DE LOS MIEMBROS DE LA JUNTA*/
   
-  .miembros {
+  .miembros{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    margin-right: 10%;
-    margin-left: 10%;
-    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 2.5%;
     margin-bottom: 5%;
+    transition: max-height 1.5s ease-out;
+    overflow: hidden;
+
   }
 
   
@@ -58,6 +61,7 @@ body {
     grid-column: 2 / span 3;
     grid-row: 1;
     margin: auto;
+    margin-right: 15%;
   }
   
   .secretario {
@@ -70,6 +74,7 @@ body {
     grid-column: 1 / span 2;
     grid-row: 2;
     margin: auto;
+    margin-left: 15%;
   }
   
   .tesorero {
@@ -82,6 +87,7 @@ body {
     grid-column: 2 / span 3;
     grid-row: 3;
     margin: auto;
+    margin-right: 15%;
   }
   
   .rrhh {
@@ -94,6 +100,7 @@ body {
     grid-column: 1 / span 2;
     grid-row: 4;
     margin: auto;
+    margin-left: 15%;
   }
   
   .diseñador {
@@ -106,6 +113,7 @@ body {
     grid-column: 2 / span 3;
     grid-row: 5;
     margin: auto;
+    margin-right: 15%;
   }
   
   .local_activities {
@@ -118,18 +126,21 @@ body {
     grid-column: 1 / span 2;
     grid-row: 6;
     margin: auto;
+    margin-left: 15%;
   }
   
   .advisor1 {
     grid-column: 1;
     grid-row: 7;
     margin: auto;
+    
   }
   
   .texto_advisor1 {
     grid-column: 2 / span 3;
     grid-row: 7;
     margin: auto;
+    margin-right: 15%;
   }
 
   .advisor2 {
@@ -142,12 +153,13 @@ body {
     grid-column: 1 / span 2;
     grid-row: 8;
     margin: auto;
+    margin-left: 15%;
   }
 
   /*-----------------------------*/
   
-  .boton_desplazamiento {
-    background-color: #c5c6c6;
+  .boton_desplazamiento{
+    background-color: #C5C6C6;
     color: #222224;
     text-align: center;
     margin: 0 auto;
@@ -155,6 +167,10 @@ body {
     display: block;
     font-size: xx-large;
     border-radius: 25px;
+    padding-bottom: 1%;
+    padding-top: 0.8%;
+    position: relative;
+    margin-top: 0%;
   }
   
   .queHacemos {
@@ -243,59 +259,56 @@ body {
     box-sizing: border-box;
   }
   
-  .carrusel {
+  .carousel {
     width: 100%;
-    position: relative;
-    margin: auto;
   }
-  
-  .prev,
-  .next {
-    cursor: pointer;
+
+  .carousel img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+  }
+
+  .body-carousel button {
+    background: none;
+    border: none;
+  }
+
+  .next-btn, .prev-btn {
+    background-color: rgba(255,255,255,0.5);
+    color: #1468C5;
+    font-size: 30px;
     position: absolute;
+    z-index: 100;
     top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
     border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+    padding: 0.2em;
   }
-  
-  .active,
-  .dot:hover {
-    background-color: #717171;
+
+  .next-btn {
+    right: 0;
   }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+
+  .prev-btn {
+    left: 0;
   }
+
+  .next-btn:hover, .prev-btn:hover {
+    cursor: pointer;
+  }
+
+  :host ::ng-deep .slick-dots li button:before {
+    color: #1468C5; /* Cambia aquí el color deseado */
+    opacity: 0.5;
+    font-size: 15px;
+  }
+
+  :host ::ng-deep .slick-dots li.slick-active button:before {
+    color: #1468C5; /* Cambia aquí el color deseado */
+    opacity: 1;
+    font-size: 20px;
+  }
+
   
   @keyframes fade {
     from {

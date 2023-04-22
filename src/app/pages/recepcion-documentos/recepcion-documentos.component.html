@@ -1,1 +1,66 @@
-<p>recepcion-documentos works!</p>
+<body>
+    <section class="general">
+        <div class="titulo">
+            <h1>Recepción de documentos</h1>
+            <hr class="separator">
+        </div>
+
+        <section>
+            <div class="data_bank">
+                <p><strong>Titular:</strong> AEGEE-LasPalmas</p>
+                <p><strong>IBAN:</strong> ES77 1491 0001 2830</p>
+                <p><strong>SWIFT:</strong> TRIOESMMXXX</p>
+                <p><strong>Concepto:</strong> “Nombre de la persona + Pago membresía/Pago actividad X”
+                    (en caso de realizarse el pago en nombre de otras personas añadir el nombre de esas personas en este
+                    concepto)</p>
+                <p><strong>Importe:</strong> 20€</p>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <form [formGroup]="formulario" (ngSubmit)="enviarDatos()">
+                <section>
+                    <div class="seleccion">
+                        <p>¿Cuál es el motivo de su transferencia?</p>
+                        <div class="opciones">
+                            <label for="radio1">
+                                <input type="radio" id="cbox1" name="opcion" value="first_radio" checked="true">
+                                Registro
+                            </label>
+                            <label for="radio2">
+                                <input type="radio" id="cbox2" name="opcion" value="second_radio"> Actividad
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="campo_dni">
+                        <input id="dni" type="text" formControlName="dni" placeholder="Introduzca su DNI">
+                        <div *ngIf="formulario.get('dni')?.invalid && (formulario.get('dni')?.dirty || formulario.get('dni')?.touched)" class="error">
+                            <div id="error-message" *ngIf="formulario.get('dni')?.errors?.['required']">El DNI es obligatorio</div>
+                            </div>
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="documento">
+                        <p>Espacio para cargar el justificante de transferencia:</p>
+                        <input id="fichero" type="file" formControlName="archivo" (change)="onArchivoSeleccionado($event)">
+                        <div *ngIf="formulario.get('archivo')?.invalid && (formulario.get('archivo')?.dirty || formulario.get('archivo')?.touched)" class="error">
+                            <div id="error-message" *ngIf="formulario.get('archivo')?.errors?.['required']">Debe seleccionar un archivo</div>
+                          </div>
+                          <div class="enviar">
+                            <button id="boton" type="submit" [disabled]="formulario.invalid">Enviar</button>
+                          </div>
+                    </div>
+                </section>
+            </form>
+            <div class="correo">
+                <p>
+                    En caso de no poder cargar el fichero con la justificación de la transferencia,
+                    mandar un e-mail al correo <a href="mailto:aegee.laspalmas@gmail.com">aegee.lasplamas@gmail.com</a>.
+                </p>
+            </div>
+        </section>
+    </section>
+</body>
