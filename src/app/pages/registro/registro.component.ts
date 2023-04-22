@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import * as FileSaver from 'file-saver';
+import { AuthService } from 'src/app/services/auth.service';
+import { registerVersion } from 'firebase/app';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Component({
   selector: 'app-registro',
@@ -12,7 +14,8 @@ export class RegistroComponent implements OnInit {
 
   registroForm: FormGroup = new FormGroup({});
 
-  constructor(private fb: FormBuilder,private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private http: HttpClient,
+    private authService: AuthService, private db: AngularFireDatabase) { }
 
   paises = [
     { value: 'mx', viewValue: 'México' },
@@ -39,22 +42,28 @@ export class RegistroComponent implements OnInit {
     });
   }
 
-  enviarRegistro() {
-    if (this.registroForm) {
-      const usuario = {
-        nombre: this.registroForm.get('nombre')?.value,
-        apellidos: this.registroForm.get('apellidos')?.value,
-        dni: this.registroForm.get('dni')?.value,
-        fechaNacimiento: this.registroForm.get('fechaNacimiento')?.value,
-        pais: this.registroForm.get('pais')?.value,
-        localidad: this.registroForm.get('localidad')?.value,
-        telefono: this.registroForm.get('telefono')?.value,
-        correo: this.registroForm.get('correo')?.value,
-        contrasena: this.registroForm.get('contrasena')?.value
-      };
+  enviarRegistro(registroForm: any): void {
 
-      const blob = new Blob([JSON.stringify(usuario)], { type: 'application/json' });
-      FileSaver.saveAs(blob, 'usuario.json');
-    }
+    const users = this.db.list('/usuarios');
+
+    users.push(registroForm.value)
+      .then(() => {
+        console.log("Usuario añadido")
+      })
+      .catch((error) => {
+        console.log("No se ha añadir el usuario")
+      });
+
+    this.authService.creteUserWIthEmail(registroForm.value.correo, registroForm.value.contrasena)
+      .then(() => {
+        console.log("Usuario creado")
+      })
+      .catch((error) => {
+        console.log("No se ha podido crear el usuario")
+      });
+
+    console.log(registroForm.value)
+
   }
 }
+

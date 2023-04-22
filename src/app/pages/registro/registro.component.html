@@ -1,6 +1,6 @@
 <div>
   <h1>Formulario de Registro</h1>
-  <form [formGroup]="registroForm" (ngSubmit)="enviarRegistro()">
+  <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
     <mat-form-field >
       <input matInput placeholder="Nombre" formControlName="nombre" required>
       <mat-error *ngIf="registroForm.get('nombre')?.invalid && (registroForm.get('nombre')?.dirty || registroForm.get('nombre')?.touched)">
