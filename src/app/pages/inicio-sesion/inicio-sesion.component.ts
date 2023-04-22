@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'pages-inicio-sesion',
@@ -8,7 +9,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class InicioSesionComponent {
 
-  form = new FormGroup({
+  constructor (private authService: AuthService){}
+
+  correo: string | undefined;
+
+  loginForm = new FormGroup({
     correo: new FormControl('', Validators.compose([
       Validators.required,
       Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
@@ -21,10 +26,24 @@ export class InicioSesionComponent {
   });
 
   get f() {
-    return this.form.controls;
+    return this.loginForm.controls;
   }
 
-  login() {
-    console.log(this.form.value);
+  login(loginForm: any): void {
+
+    const usuario = {
+      Correo: loginForm.correo,
+      Contraseña: loginForm.contraseña
+    }
+
+    this.authService.signInWithEmail(usuario.Correo, usuario.Contraseña)
+      .then(() => {
+        // El usuario se ha autenticado correctamente
+        console.log("Autenticado con exito")
+      })
+      .catch((error) => {
+        // Ha habido un error al autenticar al usuario
+        console.log("Fallo el autenticar")
+      });
   }
 }
