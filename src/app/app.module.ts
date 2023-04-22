@@ -33,6 +33,7 @@ import { CreadorActividadesComponent } from './pages/creador-actividades/creador
 import { RecepcionDocumentosComponent } from './pages/recepcion-documentos/recepcion-documentos.component';
 import { SeparadorComponent } from './components/separador/separador.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { FlechaSubidaComponent } from './components/flecha-subida/flecha-subida.component';
 
 const routes: Routes = [
   { path: 'voluntariado', component: VoluntariadoComponent },
@@ -55,7 +56,8 @@ const routes: Routes = [
     ActividadesComponent,
     CreadorActividadesComponent,
     RecepcionDocumentosComponent,
-    SeparadorComponent
+    SeparadorComponent,
+    FlechaSubidaComponent
   ],
   imports: [
     BrowserModule,
