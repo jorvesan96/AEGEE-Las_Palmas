@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>
+  <span style="margin-left: auto;">Confirmar acción</span>
+
+  <button style="margin-left: 56%; background: none; border: transparent;" mat-dialog-close>
+    <i class="fa-regular fa-circle-xmark" style="font-size: 20px"></i>
+  </button>
+
+</h2>
+
+<div mat-dialog-content>
+  <hr style="border-top: 1px solid #ccc; margin: 20px 0;">
+  <p>{{ data }}</p>
+  <hr style="border-top: 1px solid #ccc; margin: 20px 0;">
+</div>
+
+<button style="background-color: #3AC976; color: black; padding: 5px 10px; border-radius: 60px; border: none; margin-left: 64%; margin-right: 10px; margin-bottom: 10px; font-size: 15px; font-weight: bold" [mat-dialog-close]="true">Aceptar</button>
+<button style="background-color: #C8371E; color: black; padding: 5px 10px; border-radius: 60px; border: none; font-size: 15px; font-weight: bold" mat-dialog-close>Cancelar</button>
+
