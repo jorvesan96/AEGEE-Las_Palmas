@@ -16,6 +16,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from 'src/environment/environment';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +36,7 @@ import { RecepcionDocumentosComponent } from './pages/recepcion-documentos/recep
 import { SeparadorComponent } from './components/separador/separador.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FlechaSubidaComponent } from './components/flecha-subida/flecha-subida.component';
+import { PopUpComponent } from './components/pop-up/pop-up.component';
 
 const routes: Routes = [
   { path: 'voluntariado', component: VoluntariadoComponent },
@@ -57,7 +60,8 @@ const routes: Routes = [
     CreadorActividadesComponent,
     RecepcionDocumentosComponent,
     SeparadorComponent,
-    FlechaSubidaComponent
+    FlechaSubidaComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +81,9 @@ const routes: Routes = [
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    MatDialogModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
