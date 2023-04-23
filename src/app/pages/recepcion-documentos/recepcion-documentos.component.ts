@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ValidatorFn, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-recepcion-documentos',
@@ -7,50 +7,23 @@ import { FormBuilder, FormGroup, Validators, ValidatorFn, FormControl } from '@a
   styleUrls: ['./recepcion-documentos.component.css']
 })
 export class RecepcionDocumentosComponent implements OnInit{
-  formulario = new FormGroup({
-    dni: new FormControl<string | null>(null, [
-      Validators.required,
-      Validators.pattern(/[a-zA-Z0-9]+/),
-    ]),
-    archivo: new FormControl<string | null>(null),
-  });
-  archivoSeleccionado?: File;
+  formulario: FormGroup = new FormGroup({});
+      
 
-
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.formulario = this.formBuilder.group({
-      dni: ['', Validators.required],
-      archivo: ['', Validators.required, { updateOn: 'submit' }]
+    this.formulario = this.fb.group({
+      dni: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]*$/)]],
+      archivo: [null, Validators.required]
     });
   }
 
-  esAlfanumerico(control: FormControl): { [key: string]: any } | null {
-    const patron = /^[A-Z0-9]*$/;
-    if (!control.value || patron.test(control.value)) {
-      return null;
-    } else {
-      return { 'noAlfanumerico': true };
-    }
+  enviarDatos() {
+    // Código para enviar los datos del formulario
   }
-  
 
-  onArchivoSeleccionado(evento: Event): void {
-    const archivoSeleccionado = (evento.target as HTMLInputElement).files?.[0];
-    if (archivoSeleccionado) {
-      const lector = new FileReader();
-      lector.readAsDataURL(archivoSeleccionado);
-      lector.onload = () => {
-        this.formulario.patchValue({
-          archivo: lector.result?.toString() || null
-        });
-      };
-    }
-  }
-  
-
-  enviarDatos(): void {
-    // Código para enviar los datos
+  onArchivoSeleccionado(event: Event) {
+    // Código para procesar la selección del archivo
   }
 }
