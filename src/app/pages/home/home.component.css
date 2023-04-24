@@ -3,33 +3,33 @@ body {
     margin: auto;
     font-size: large;
   }
-  
+
   h1 {
     text-align: center;
   }
-  
+
   h2 {
     text-align: center;
   }
-  
+
   .grupo_junta {
     display: flex;
     width: 95%;
     margin-bottom: 5%;
     margin-top: 5%;
   }
-  
+
   #imagen_junta {
     margin-left: 10%;
     margin-right: 5%;
   }
-  
+
   .grupo_junta p {
     width: 80%;
   }
-  
+
   /* POSICION DE LOS MIEMBROS DE LA JUNTA*/
-  
+
   .miembros{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -44,7 +44,7 @@ body {
 
   }
 
-  
+
   .miembros p {
     text-align: justify;
   }
@@ -56,86 +56,86 @@ body {
     grid-row: 1;
     margin: auto;
   }
-  
+
   .texto_presi {
     grid-column: 2 / span 3;
     grid-row: 1;
     margin: auto;
     margin-right: 15%;
   }
-  
+
   .secretario {
     grid-column: 3;
     grid-row: 2;
     margin: auto;
   }
-  
+
   .texto_secretario {
     grid-column: 1 / span 2;
     grid-row: 2;
     margin: auto;
     margin-left: 15%;
   }
-  
+
   .tesorero {
     grid-column: 1;
     grid-row: 3;
     margin: auto;
   }
-  
+
   .texto_tesorero {
     grid-column: 2 / span 3;
     grid-row: 3;
     margin: auto;
     margin-right: 15%;
   }
-  
+
   .rrhh {
     grid-column: 3;
     grid-row: 4;
     margin: auto;
   }
-  
+
   .texto_rrhh {
     grid-column: 1 / span 2;
     grid-row: 4;
     margin: auto;
     margin-left: 15%;
   }
-  
+
   .diseñador {
     grid-column: 1;
     grid-row: 5;
     margin: auto;
   }
-  
+
   .texto_diseñador {
     grid-column: 2 / span 3;
     grid-row: 5;
     margin: auto;
     margin-right: 15%;
   }
-  
+
   .local_activities {
     grid-column: 3;
     grid-row: 6;
     margin: auto;
   }
-  
+
   .texto_local_activities {
     grid-column: 1 / span 2;
     grid-row: 6;
     margin: auto;
     margin-left: 15%;
   }
-  
+
   .advisor1 {
     grid-column: 1;
     grid-row: 7;
     margin: auto;
-    
+
   }
-  
+
   .texto_advisor1 {
     grid-column: 2 / span 3;
     grid-row: 7;
@@ -148,7 +148,7 @@ body {
     grid-row: 8;
     margin: auto;
   }
-  
+
   .texto_advisor2 {
     grid-column: 1 / span 2;
     grid-row: 8;
@@ -157,7 +157,7 @@ body {
   }
 
   /*-----------------------------*/
-  
+
   .boton_desplazamiento{
     background-color: #C5C6C6;
     color: #222224;
@@ -172,11 +172,11 @@ body {
     position: relative;
     margin-top: 0%;
   }
-  
+
   .queHacemos {
     margin-top: 5%;
   }
-  
+
   .contenedor_queHacemos {
     border: 3px solid #931991;
     border-style: dashed;
@@ -187,11 +187,11 @@ body {
     padding-bottom: 3%;
     margin: 3% auto;
   }
-  
+
   .contenedor_queHacemos p {
     text-align: center;
   }
-  
+
   .boton_actividades {
     border: 3px solid #cf9800;
     border-radius: 25px;
@@ -200,7 +200,7 @@ body {
     font-size: x-large;
     padding: 10px;
   }
-  
+
   .boton_buddy_program {
     border: 3px solid #647a16;
     border-radius: 25px;
@@ -209,7 +209,7 @@ body {
     font-size: x-large;
     padding: 10px;
   }
-  
+
   .boton_voluntariado {
     border: 3px solid #163e7a;
     border-radius: 25px;
@@ -218,12 +218,12 @@ body {
     font-size: x-large;
     padding: 10px;
   }
-  
+
   a:link,
   a:visited {
     text-decoration: none;
   }
-  
+
   .contacta {
     display: inline-flex;
     margin-right: 5%;
@@ -231,13 +231,13 @@ body {
     margin-top: 5%;
     margin-bottom: 3%;
   }
-  
+
   .contacta img {
     aspect-ratio: 2/1;
     margin-right: 5%;
     width: 20vw;
   }
-  
+
   .contacta p {
     margin-right: 20%;
   }
@@ -258,7 +258,7 @@ body {
   * {
     box-sizing: border-box;
   }
-  
+
   .carousel {
     width: 100%;
   }
@@ -309,7 +309,7 @@ body {
     font-size: 20px;
   }
 
-  
+
   @keyframes fade {
     from {
       opacity: 0.4;
@@ -318,7 +318,7 @@ body {
       opacity: 1;
     }
   }
-  
+
   @media screen and (max-width: 601px) {
     .grupo_junta {
       display: flex;
@@ -328,7 +328,7 @@ body {
     .grupo_junta p {
       margin-left: 5%;
     }
-  
+
     .contacta {
       display: flex;
       flex-direction: column;
@@ -337,12 +337,12 @@ body {
     .contacta p {
       margin-left: 5%;
     }
-  
+
     .contenedor_queHacemos {
       width: 50%;
       padding-bottom: 5%;
     }
-  
+
     .contenedor_queHacemos p,
     .contenedor_queHacemos a {
       font-size: 4vw;
@@ -358,7 +358,7 @@ body {
     .miembros h2 {
       text-align: center;
     }
-  
+
     .miembros p {
       text-align: center;
     }
