@@ -13,7 +13,8 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 export class RegistroComponent implements OnInit {
 
   registroForm: FormGroup = new FormGroup({});
-
+  paso1Completo = false;
+  pasoActual=1;
   constructor(private fb: FormBuilder, private http: HttpClient,
     private authService: AuthService, private db: AngularFireDatabase) { }
 
@@ -40,6 +41,15 @@ export class RegistroComponent implements OnInit {
       contrasena: ['', [Validators.required, Validators.minLength(8)]],
       repetirContrasena: ['', [Validators.required, Validators.minLength(8)]]
     });
+  }
+
+  enviarPaso1() {
+    if (this.registroForm.get('nombre')?.invalid || this.registroForm.get('apellidos')?.invalid ||
+        this.registroForm.get('dni')?.invalid || this.registroForm.get('fechaNacimiento')?.invalid ||
+        this.registroForm.get('pais')?.invalid || this.registroForm.get('localidad')?.invalid) {
+      return;
+    }
+    this.paso1Completo = true;
   }
 
   enviarRegistro(registroForm: any): void {

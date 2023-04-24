@@ -1,6 +1,6 @@
-<div>
   <h1>Formulario de Registro</h1>
   <components-separador></components-separador>
+  <div *ngIf="pasoActual === 1">
   <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
     <mat-form-field >
       <input matInput placeholder="Nombre" formControlName="nombre" required>
@@ -50,13 +50,14 @@
       </mat-error>
     </mat-form-field>
   </form>
+  <button type="submit">Siguiente</button>
   </div>
 
 
 
 
 
-  <div >
+  <div *ngIf="pasoActual === 2">
     <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
     <mat-form-field>
       <input matInput placeholder="Teléfono" formControlName="telefono" required>
@@ -92,7 +93,7 @@
         Contraseña es requerido.
       </mat-error>
     </mat-form-field>
-
-    <button>Enviar</button>
+    <button type="button" (click)="pasoActual = 1">Anterior</button>
+    <button type="submit">Enviar</button>
   </form>
 </div>
