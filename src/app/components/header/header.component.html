@@ -2,11 +2,11 @@
   <nav id="header_elements">
     <a href=""> <img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></a>
     <ul>
-      <a href="">Actividades</a>
-      <a href="">Buddy program</a>
+      <a routerLink="/actividades">Actividades</a>
+      <a routerLink="/buddy-program">Buddy program</a>
 
-      <a href=""><button>Únete a AEGEE-Las Palmas</button></a>
-      <a href=""><button>Accede a tu cuenta</button></a>
+      <a routerLink="/registro"><button>Únete a AEGEE-Las Palmas</button></a>
+      <a routerLink="/inicio-sesion"><button>Accede a tu cuenta</button></a>
     </ul>
   </nav>
 </header>
@@ -16,8 +16,8 @@
     <a href=""> <img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco">
     </a>
     <ul>
-      <a href=""><button>Únete a AEGEE-Las Palmas</button></a>
-      <a href=""><button>Accede a tu cuenta</button></a>
+      <a routerLink="/registro"><button>Únete a AEGEE-Las Palmas</button></a>
+      <a routerLink="/inicio-sesion"><button>Accede a tu cuenta</button></a>
     </ul>
     <img (click)="toggleMenu()" id="burger_menu" src="{{source}}" alt="menu desplegable">
   </nav>

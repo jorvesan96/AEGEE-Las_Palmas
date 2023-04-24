@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -37,12 +36,6 @@ import { SeparadorComponent } from './components/separador/separador.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FlechaSubidaComponent } from './components/flecha-subida/flecha-subida.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
-
-const routes: Routes = [
-  { path: 'voluntariado', component: VoluntariadoComponent },
-  { path: 'buddyProgram', component: BuddyProgramComponent },
-  { path: 'actividades', component: ActividadesComponent }
-];
 
 @NgModule({
   declarations: [

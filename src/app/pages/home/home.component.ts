@@ -9,7 +9,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     trigger('expandCollapse', [
       state('collapsed', style({ height: '0px', overflow: 'hidden' })),
       state('expanded', style({ height: '*', overflow: 'hidden' })),
-      transition('collapsed <=> expanded', animate('300ms ease-out'))
+      transition('collapsed <=> expanded', animate('2s ease-out'))
     ])
   ]
 })
