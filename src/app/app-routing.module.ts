@@ -10,6 +10,9 @@ import { PerfilUsuarioComponent } from './pages/perfil-usuario/perfil-usuario.co
 import { RecepcionDocumentosComponent } from './pages/recepcion-documentos/recepcion-documentos.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { VoluntariadoComponent } from './pages/voluntariado/voluntariado.component';
+import { NuevaContrasenaComponent } from './pages/nueva-contrasena/nueva-contrasena.component';
+import { ContrasenaOlvidadaComponent } from './pages/contrasena-olvidada/contrasena-olvidada.component';
+import { CodigoContrasenaComponent } from './pages/codigo-contrasena/codigo-contrasena.component';
 
 const routes: Routes = [
   {
@@ -51,6 +54,18 @@ const routes: Routes = [
   {
     path: 'voluntariado',
     component: VoluntariadoComponent
+  },
+  {
+    path: 'contrasena-olvidada',
+    component: ContrasenaOlvidadaComponent
+  },
+  {
+    path: 'nueva-contrasena',
+    component: NuevaContrasenaComponent
+  },
+  {
+    path: 'condigo-contrasena',
+    component: CodigoContrasenaComponent
   }
 ];
 
