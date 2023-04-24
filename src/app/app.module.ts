@@ -36,6 +36,9 @@ import { SeparadorComponent } from './components/separador/separador.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FlechaSubidaComponent } from './components/flecha-subida/flecha-subida.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
+import { NuevaContrasenaComponent } from './pages/nueva-contrasena/nueva-contrasena.component';
+import { ContrasenaOlvidadaComponent } from './pages/contrasena-olvidada/contrasena-olvidada.component';
+import { CodigoContrasenaComponent } from './pages/codigo-contrasena/codigo-contrasena.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,10 @@ import { PopUpComponent } from './components/pop-up/pop-up.component';
     RecepcionDocumentosComponent,
     SeparadorComponent,
     FlechaSubidaComponent,
-    PopUpComponent
+    PopUpComponent,
+    NuevaContrasenaComponent,
+    ContrasenaOlvidadaComponent,
+    CodigoContrasenaComponent
   ],
   imports: [
     BrowserModule,
