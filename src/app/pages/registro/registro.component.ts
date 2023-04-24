@@ -14,7 +14,6 @@ export class RegistroComponent implements OnInit {
 
   registroForm: FormGroup = new FormGroup({});
   paso1Completo = false;
-  pasoActual=1;
   constructor(private fb: FormBuilder, private http: HttpClient,
     private authService: AuthService, private db: AngularFireDatabase) { }
 
@@ -75,5 +74,9 @@ export class RegistroComponent implements OnInit {
     console.log(registroForm.value)
 
   }
+  anterior_siguiente(){
+    
+  }
+
 }
 
