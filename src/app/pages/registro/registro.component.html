@@ -1,5 +1,6 @@
 <div>
   <h1>Formulario de Registro</h1>
+  <components-separador></components-separador>
   <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
     <mat-form-field >
       <input matInput placeholder="Nombre" formControlName="nombre" required>
@@ -48,7 +49,15 @@
         Localidad es requerida.
       </mat-error>
     </mat-form-field>
+  </form>
+  </div>
 
+
+
+
+
+  <div >
+    <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
     <mat-form-field>
       <input matInput placeholder="Teléfono" formControlName="telefono" required>
       <mat-error *ngIf="registroForm.get('telefono')?.invalid && (registroForm.get('telefono')?.dirty || registroForm.get('telefono')?.touched)">
