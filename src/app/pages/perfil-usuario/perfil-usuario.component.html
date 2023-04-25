@@ -1,4 +1,4 @@
-<h1 id="nombre">Nombres, Primer Apellido, Segundo Apellido</h1>
+<h1 id="nombre">{{ usuario.nombre }} {{ usuario.apellidos }}</h1>
 
 <components-separador></components-separador>
 
@@ -7,22 +7,22 @@
 
         <ul>
             <li> <p>Fecha de Nacimiento</p> </li>
-            <input type="text" id="direccion" name="direccion" readonly>
+            <input type="text" id="nacimiento" name="nacimiento" [value]="usuario.nacimiento" readonly>
 
             <li> <p> País </p></li>
-            <input type="text" id="pais" name="pais" readonly>
+            <input type="text" id="pais" name="pais" [value]="usuario.pais" readonly>
 
             <li> <p>Localidad</p> </li>
-            <input type="text" id="ciudad" name="ciudad" readonly>
+            <input type="text" id="localidad" name="localidad" [value]="usuario.localidad" readonly>
 
             <li> <p>Teléfono Móvil</p> </li>
-            <input type="tel" id="telefono" name="telefono" readonly>
+            <input type="tel" id="telefono" name="telefono" [value]="usuario.telefono" readonly>
 
             <li> <p>DNI</p> </li>
-            <input type="text" id="dni" name="dni" readonly>
+            <input type="text" id="dni" name="dni" [value]="usuario.dni" readonly>
 
             <li> <p>Correo Electrónico</p> </li>
-            <input type="email" id="email" name="email" readonly>
+            <input type="email" id="email" name="email" [value]="usuario.correo" readonly>
 
         </ul>
 
