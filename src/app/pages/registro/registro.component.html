@@ -1,6 +1,16 @@
   <h1>Formulario de Registro</h1>
 
   <components-separador></components-separador>
+<div class="center">
+  <svg width="56vw" height="16vw">
+    <rect id="rectangle" x="5vw" y="7.5vw" width="50vw" height="3vw" stroke="black" fill="#A0C514" stroke-width="0.5"/>
+    <circle id="circle1" cx="7vw" cy="9vw" r="6.5vw" stroke="black" stroke-width="0.5" fill=" #C2DE5D" />
+    <circle id="circle2" cx="51.7vw" cy="9vw" r="4vw" stroke="black" stroke-width="0.5" fill="#A0C514" />
+  </svg>
+    <p id="paso2">2</p>
+    <p id="paso1">1</p>
+</div>
+
 
   <div *ngIf="!paso1Completo">
     <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
@@ -61,8 +71,6 @@
   </form>
 </div>  
 
-<a id="siguiente" type="submit" (click)="paso1Completo=true "(ngSubmit)="anterior_siguiente()">Siguiente<span ngNonBindable>>>></span></a>
-
 <div *ngIf="paso1Completo">
   <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
     <mat-form-field>
@@ -95,6 +103,8 @@
   </form>
 </div>
 
-<a id="anterior" type="button" (click)="paso1Completo=false" (ngSubmit)="anterior_siguiente()"><span ngNonBindable><<<</span>Anterior</a>
-<button id="enviarBoton" type="submit">Enviar</button>
- 
+<nav>
+  <a id="siguiente" *ngIf="!paso1Completo" type="submit" (click)="paso1Completo=true "(ngSubmit)="anterior_siguiente()">Siguiente<span ngNonBindable>>>></span></a>
+  <a id="anterior" *ngIf="paso1Completo" type="button" (click)="paso1Completo=false" (ngSubmit)="anterior_siguiente()"><span ngNonBindable><<<</span>Anterior</a>
+  <button *ngIf="paso1Completo" id="enviarBoton" type="submit">Enviar</button>
+</nav>

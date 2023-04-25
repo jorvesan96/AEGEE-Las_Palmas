@@ -4,22 +4,55 @@ form{
   flex-direction: column;
   width: 50%;
   margin-left: 25%;
-  margin-bottom: 30px;
+  margin-bottom: 10%;
 }
+h1 {
+  font-size: 4.5vw;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:5%;
+  
+}
+
+#paso2{
+  position:absolute;
+  top:33vw;
+  left: 72.5vw;
+  font-size: 2vw;
+}
+
+#paso1{
+  position:absolute;
+  top:30vw;
+  left:27.5vw;
+  font-size: 4vw;
+}
+
+nav{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
 #siguiente{
-  float: right;
-  margin-right: 15%;
-  margin-bottom: 5%;
+  grid-column: 4;
+  grid-row: 1;
 }
 
 #anterior{
-  display:none;
-  margin-left:15%;
-  margin-bottom: 5%;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 #enviarBoton {
-  display: none;
-  margin-bottom: 5%;
+  grid-column: 4;
+  grid-row: 1;
+  width: 25%;
+  height: 25%;
 }
+
 

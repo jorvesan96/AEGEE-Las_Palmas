@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'pages-inicio-sesion',
   templateUrl: './inicio-sesion.component.html',
@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class InicioSesionComponent {
 
-  constructor (private authService: AuthService){}
+  constructor (private authService: AuthService, private router: Router){}
 
   correo: string | undefined;
 
@@ -29,7 +29,7 @@ export class InicioSesionComponent {
     return this.loginForm.controls;
   }
 
-  login(loginForm: any): void {
+  login(loginForm: any): any {
 
     const usuario = {
       Correo: loginForm.correo,
@@ -40,10 +40,12 @@ export class InicioSesionComponent {
       .then(() => {
         // El usuario se ha autenticado correctamente
         console.log("Autenticado con exito")
+        this.router.navigate(["/"]);
       })
       .catch((error) => {
         // Ha habido un error al autenticar al usuario
         console.log("Fallo el autenticar")
+        return false;
       });
   }
 }

@@ -17,7 +17,7 @@ export class AuthService {
     return this._auth.signInWithEmailAndPassword(email, password);
   }
 
-  creteUserWIthEmail(email: string, password: string){
+  createUserWIthEmail(email: string, password: string) {
     return this._auth.createUserWithEmailAndPassword(email, password);
   }
 
@@ -30,4 +30,14 @@ export class AuthService {
     );
   }
 
+  userExists(correo: string) {
+    this._auth.fetchSignInMethodsForEmail(correo)
+      .then((signInMethods: string[]) => {
+        if (signInMethods && signInMethods.length > 0) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+  }
 }

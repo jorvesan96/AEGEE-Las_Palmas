@@ -365,4 +365,41 @@ body {
     #contacta{
       display: none;
     }
+
+    .texto_presi {
+      margin-right: 0%;
+    }
+  
+
+  
+    .texto_secretario {
+      margin-left: 0%;
+    }
+
+  
+    .texto_tesorero {
+      margin-right: 0%;
+    }
+
+  
+    .texto_rrhh {
+      margin-left: 0%;
+    }
+  
+    .texto_diseñador {
+      margin-right: 0%;
+    }
+  
+    .texto_local_activities {
+      margin-left: 0%;
+    }
+  
+  
+    .texto_advisor1 {
+      margin-right: 0%;
+    }
+    .texto_advisor2 {
+      margin-left: 0%;
+    }
+
   }
