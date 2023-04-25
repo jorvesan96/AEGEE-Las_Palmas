@@ -7,14 +7,14 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   styleUrls: ['./home.component.css'],
   animations: [
     trigger('expandCollapse', [
-      state('collapsed', style({ height: '0px', overflow: 'hidden' })),
+      state('collapsed', style({ height: '0', overflow: 'hidden' })),
       state('expanded', style({ height: '*', overflow: 'hidden' })),
       transition('collapsed <=> expanded', animate('2s ease-out'))
     ])
   ]
 })
 export class HomeComponent implements OnInit{
-  contentHeight = '0px';
+  contentHeight = "45vw";
   isContentVisible = false;
 
   ngOnInit(): void {
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit{
     icono?.classList.toggle("fa-sort-down");
     icono?.classList.toggle("fa-sort-up");
     this.isContentVisible = !this.isContentVisible;
-    this.contentHeight = this.isContentVisible ? '2800px' : '0px';
+    this.contentHeight = this.isContentVisible ? '2800px' : '45vw';
     
   }
 
