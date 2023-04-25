@@ -46,3 +46,5 @@ Thumbs.db
 *-debug.log
 .runtimeconfig.json
 node_modules/__ngcc_entry_points__.json
+node_modules/.cli-ngcc/f222b3c9c2bb6e70cc94dd62d84b9eabf0a5728a3dca733cdfecc88e599585b4.lock
+node_modules/.cli-ngcc/d0bf33d0677c2346ec343e9faa3767306c0edfe690d87c75e56098c2b8a8a3f1.lock
