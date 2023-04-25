@@ -64,7 +64,7 @@ const routes: Routes = [
     component: NuevaContrasenaComponent
   },
   {
-    path: 'condigo-contrasena',
+    path: 'codigo-contrasena',
     component: CodigoContrasenaComponent
   }
 ];
