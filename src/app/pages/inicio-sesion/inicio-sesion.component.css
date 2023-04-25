@@ -41,10 +41,10 @@
   margin: 0;
   padding: 0;
   margin-bottom: 2vw;
-  font-weight: bold;
   padding: .5vh .5vw;
 }
 #login-form {
+  font-weight: 0;
   width: 80%;
   margin: 3vw auto;
   height: 30vh;
@@ -78,5 +78,16 @@
   color: coral;
   position: absolute;
   margin-top: -1.8vw;
+
+}
+.olvidada{
+  display: flex;
+  text-decoration: none;
+  color: darkblue;
+  font-size: .8vw;
+  text-align: center;
+  font-weight: normal;
+  width: fit-content;
+  margin-top: -3vh;
 
 }
