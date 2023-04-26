@@ -104,7 +104,7 @@
 </div>
 
 <nav>
-  <a id="siguiente" *ngIf="!paso1Completo" type="submit" (click)="paso1Completo=true "(ngSubmit)="anterior_siguiente()">Siguiente<span ngNonBindable>>>></span></a>
-  <a id="anterior" *ngIf="paso1Completo" type="button" (click)="paso1Completo=false" (ngSubmit)="anterior_siguiente()"><span ngNonBindable><<<</span>Anterior</a>
+  <a id="siguiente" *ngIf="!paso1Completo" (click)="paso1Completo=true; siguiente()">Siguiente<span ngNonBindable>>>></span></a>
+  <a id="anterior" *ngIf="paso1Completo" (click)="paso1Completo=false; anterior()"><span ngNonBindable><<<</span>Anterior</a>
   <button *ngIf="paso1Completo" id="enviarBoton" type="submit">Enviar</button>
 </nav>

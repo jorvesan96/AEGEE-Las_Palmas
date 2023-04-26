@@ -14,6 +14,8 @@ export class RegistroComponent implements OnInit {
 
   registroForm: FormGroup = new FormGroup({});
   paso1Completo = false;
+  circle1 = document.getElementById('circle1');
+  circle2 = document.getElementById('circle2');
   constructor(private fb: FormBuilder, private http: HttpClient,
     private authService: AuthService, private db: AngularFireDatabase) { }
 
@@ -74,9 +76,17 @@ export class RegistroComponent implements OnInit {
     console.log(registroForm.value)
 
   }
-  anterior_siguiente(){
-
+  anterior(){
+    this.circle1?.setAttribute('r', '6.5px');
+    this.circle2?.setAttribute('r', '4px');
+    this.circle1?.setAttribute('fill', '#C2DE5D');
+    this.circle2?.setAttribute('fill', '#A0C514');
   }
-
+  siguiente(){
+    this.circle1?.setAttribute('r', '4px');
+    this.circle2?.setAttribute('r', '6.5px');
+    this.circle1?.setAttribute('fill', '#A0C514');
+    this.circle2?.setAttribute('fill', '#C2DE5D');
+  }
 }
 
