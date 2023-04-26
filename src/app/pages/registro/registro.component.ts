@@ -63,7 +63,7 @@ export class RegistroComponent implements OnInit {
         console.log("No se ha añadir el usuario")
       });
 
-    this.authService.creteUserWIthEmail(registroForm.value.correo, registroForm.value.contrasena)
+    this.authService.createUserWIthEmail(registroForm.value.correo, registroForm.value.contrasena)
       .then(() => {
         console.log("Usuario creado")
       })
@@ -75,7 +75,7 @@ export class RegistroComponent implements OnInit {
 
   }
   anterior_siguiente(){
-    
+
   }
 
 }
