@@ -1,9 +1,11 @@
 footer{
-  display: block;
+  display: flex;
+  flex-direction: row;
   height: 6vh;
   width: 100%;
   background-color: #434342;
   color: white;
+  margin-bottom: 0;
 }
 
 #footer-elements{
@@ -37,6 +39,8 @@ img{
 @media all and (max-width: 640px){
   footer{
     height: 3vh;
+    margin-top: auto;
+    margin-bottom: 0;
   }
   #footer-elements p{
     font-size: 2vh;
