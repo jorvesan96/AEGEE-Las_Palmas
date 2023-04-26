@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AEGEE-Las_Palmas';
+
+  isLoading: boolean = true;
+
+  ngOnInit(){
+    this.isLoading = false;
+  }
 }

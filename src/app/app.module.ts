@@ -39,6 +39,9 @@ import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { NuevaContrasenaComponent } from './pages/nueva-contrasena/nueva-contrasena.component';
 import { ContrasenaOlvidadaComponent } from './pages/contrasena-olvidada/contrasena-olvidada.component';
 import { CodigoContrasenaComponent } from './pages/codigo-contrasena/codigo-contrasena.component';
+import { provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { initializeApp } from 'firebase/app';
 
 @NgModule({
   declarations: [
@@ -82,7 +85,10 @@ import { CodigoContrasenaComponent } from './pages/codigo-contrasena/codigo-cont
     AngularFireDatabaseModule,
     SlickCarouselModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    provideAuth(() => getAuth()),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
