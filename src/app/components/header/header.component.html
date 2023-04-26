@@ -5,8 +5,10 @@
       <a routerLink="/actividades">Actividades</a>
       <a routerLink="/buddy-program">Buddy program</a>
 
-      <a routerLink="/registro"><button>Únete a AEGEE-Las Palmas</button></a>
-      <a routerLink="/inicio-sesion"><button>Accede a tu cuenta</button></a>
+      <a *ngIf="isLogged" routerLink="/perfil-usuario">Mi perfil</a>
+      <a *ngIf="isLogged" (click)="cerrarSesion()" routerLink="/">Cerrar sesión</a>
+      <a *ngIf="!isLogged" routerLink="/registro"><button>Únete a AEGEE-Las Palmas</button></a>
+      <a *ngIf="!isLogged" routerLink="/inicio-sesion"><button>Accede a tu cuenta</button></a>
     </ul>
   </nav>
 </header>

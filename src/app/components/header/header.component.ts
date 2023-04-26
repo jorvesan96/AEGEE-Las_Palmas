@@ -1,4 +1,5 @@
-import { Component, HostListener,  } from '@angular/core';
+import { Component, HostListener, } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'components-header',
@@ -6,30 +7,50 @@ import { Component, HostListener,  } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  public getScreenWidth: any;
-  public getScreenHeight: any;
+  getScreenWidth: number;
+  getScreenHeight: number;
+
   public source: String = "../../../assets/icons/burger menu.png";
 
   isOpen = false;
+  isLogged: boolean = false;
 
-  ngOnInit() {
+  constructor(private afAuth: AngularFireAuth) {
     this.getScreenWidth = window.innerWidth;
     this.getScreenHeight = window.innerHeight;
   }
 
-  @HostListener('window:resize', ['$event'])
+  ngOnInit() {
+    this.afAuth.authState.subscribe(user => {
+      // Actualizar el valor de loggedIn basado en si el usuario está logueado o no
+      this.isLogged = !!user;
 
-  onWindowResize() {
+      console.log(this.isLogged);
+    });
+
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    // Actualizar el tamaño de pantalla cuando ocurra el evento de redimensionamiento
     this.getScreenWidth = window.innerWidth;
     this.getScreenHeight = window.innerHeight;
   }
 
   toggleMenu(): void {
     this.isOpen = !this.isOpen
-    if (this.isOpen){
+    if (this.isOpen) {
       this.source = "../../../assets/icons/close-logo.png";
     } else {
       this.source = "../../../assets/icons/burger menu.png";
     }
   }
+
+  cerrarSesion() {
+    this.afAuth.signOut()
+    .then(() => {
+    })
+    .catch((error) => {
+      console.error('Error al cerrar sesión:', error);
+    });  }
 }
