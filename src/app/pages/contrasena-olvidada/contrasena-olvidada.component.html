@@ -1,1 +1,31 @@
-<p>contrasena-olvidada works!</p>
+<div id="banner"></div>
+<section id="olvidada">
+
+  <div id="olvidada-container">
+    <div id="acciones">
+      <p>
+        <a routerLink="/inicio-sesion"> Iniciar sesión</a>
+      </p>
+      <a id="registro" routerLink='/registro'>Registro</a>
+    </div>
+
+    <div id="form">
+
+      <form [formGroup]="olvidadaForm" name="olvidadaForm" (ngSubmit)="enviarCodigo(olvidadaForm.value)"
+        id="olvidada-form">
+
+        <p id="introduce">Introduce tu correo electrónico y se te mandará un código para poder restablecer.</p>
+        <div id="fields">
+
+          <input matInput type="email" formControlName="correo" placeholder="Correo eléctronico" class="form-control">
+          <div *ngIf="f['correo'].touched && f['correo'].invalid" class="alert">
+            <div *ngIf="f['correo'].touched && f['correo'].errors">*Se debe introducir un correo válido.</div>
+          </div>
+          <a routerLink="/inicio-sesion" class="olvidada">Volver a inicio de sesión</a>
+        </div>
+        <input type="submit" value="Enviar" id="boton" routerLink="/codigo-contrasena">
+      </form>
+    </div>
+
+  </div>
+</section>
