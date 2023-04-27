@@ -11,7 +11,6 @@
     <p id="paso1">1</p>
 </div>
 
-
   <div *ngIf="!paso1Completo">
     <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
       <mat-form-field >
@@ -106,5 +105,5 @@
 <nav>
   <a id="siguiente" *ngIf="!paso1Completo" (click)="paso1Completo=true; siguiente()">Siguiente<span ngNonBindable>>>></span></a>
   <a id="anterior" *ngIf="paso1Completo" (click)="paso1Completo=false; anterior()"><span ngNonBindable><<<</span>Anterior</a>
-  <button *ngIf="paso1Completo" id="enviarBoton" type="submit">Enviar</button>
+  <button *ngIf="paso1Completo" id="enviarBoton" type="submit" (click)="enviarRegistro(registroForm)">Enviar</button>
 </nav>
