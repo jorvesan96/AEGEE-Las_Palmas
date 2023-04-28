@@ -22,9 +22,7 @@ export class HeaderComponent {
 
   ngOnInit() {
     this.afAuth.authState.subscribe(user => {
-      // Actualizar el valor de loggedIn basado en si el usuario está logueado o no
       this.isLogged = !!user;
-
       console.log(this.isLogged);
     });
 
