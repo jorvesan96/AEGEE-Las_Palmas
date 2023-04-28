@@ -1,14 +1,21 @@
-export const environment = {
-  firebase: {
+import { initializeApp } from 'firebase/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
-    apiKey: "AIzaSyA-GoDukZ1p1SpAmQ_j6cKEBSxZCc37jf0",
-    authDomain: "aegee-las-palmas.firebaseapp.com",
-    databaseURL:"https://aegee-las-palmas-default-rtdb.europe-west1.firebasedatabase.app/",
-    projectId: "aegee-las-palmas",
-    storageBucket: "aegee-las-palmas.appspot.com",
-    messagingSenderId: "425511324657",
-    appId: "1:425511324657:web:60202ffe07bd9d6cb95250",
-    measurementId: "G-7DSD2W6KGQ"
-  },
-  production: false
+// Import the functions you need from the SDKs you need
+export const firebaseConfig = {
+
+  firebase : {
+
+
+    apiKey: "AIzaSyBstD2_vKv_WXt1qm5WnuqBy0-iqThKDro",
+    authDomain: "aegee-las-palmas-370b7.firebaseapp.com",
+    projectId: "aegee-las-palmas-370b7",
+    storageBucket: "aegee-las-palmas-370b7.appspot.com",
+    messagingSenderId: "466542820130",
+    appId: "1:466542820130:web:f85beac5df4b3b6765837b",
+    databaseURL: "https://aegee-las-palmas-370b7.firebaseio.com"
+  }
 };
+
+const app = initializeApp(firebaseConfig.firebase);

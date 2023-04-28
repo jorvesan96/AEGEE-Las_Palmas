@@ -3,8 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFireDatabase, AngularFireObject } from '@angular/fire/compat/database';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs';
-import { Auth, authState, signOut } from '@angular/fire/auth';
-import { take } from 'rxjs';
+import { Auth } from '@angular/fire/auth';
 @Injectable({
   providedIn: 'root'
 })
@@ -41,11 +40,4 @@ export class AuthService {
       });
   }
 
-  isLogged(): boolean {
-    this._auth.authState.pipe(take(1)).subscribe(_user => {
-      console.log(_user);
-    });
-
-    return false;
-  }
 }
