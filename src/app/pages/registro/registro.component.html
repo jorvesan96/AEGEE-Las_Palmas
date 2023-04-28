@@ -35,7 +35,7 @@
 
       <mat-form-field>
         <mat-label>Fecha de nacimiento</mat-label>
-        <input matInput [matDatepicker]="picker" placeholder="Elige una fecha" formControlName="fechaNacimiento" required>
+        <input matInput [matDatepicker]="picker" placeholder="Elige una fecha" formControlName="nacimiento" required>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
         <mat-error *ngIf="registroForm.get('fechaNacimiento')?.invalid && (registroForm.get('fechaNacimiento')?.dirty || registroForm.get('fechaNacimiento')?.touched)">
@@ -58,7 +58,7 @@
         <mat-error *ngIf="registroForm.get('localidad')?.invalid && (registroForm.get('localidad')?.dirty || registroForm.get('localidad')?.touched)">
           Localidad es requerida.
         </mat-error>
-      </mat-form-field>  
+      </mat-form-field>
 
       <mat-form-field>
         <input matInput placeholder="Teléfono" formControlName="telefono" required>
@@ -67,7 +67,7 @@
         </mat-error>
       </mat-form-field>
   </form>
-</div>  
+</div>
 
 <div *ngIf="paso1Completo">
   <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
@@ -104,5 +104,5 @@
 <nav>
   <a id="siguiente" *ngIf="!paso1Completo" (click)="paso1Completo=true; siguiente()">Siguiente<span ngNonBindable>>>></span></a>
   <a id="anterior" *ngIf="paso1Completo" (click)="paso1Completo=false; anterior()"><span ngNonBindable><<<</span>Anterior</a>
-  <button *ngIf="paso1Completo" id="enviarBoton" type="submit" (click)="enviarRegistro(registroForm)">Enviar</button>
+  <button routerLink="/" *ngIf="paso1Completo" id="enviarBoton" type="submit" (click)="enviarRegistro(registroForm)">Enviar</button>
 </nav>

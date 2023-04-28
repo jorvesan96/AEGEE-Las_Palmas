@@ -1,9 +1,13 @@
-import { Component, OnInit,ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
 import { registerVersion } from 'firebase/app';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import firebase from 'firebase/compat/app';
+import { onAuthStateChanged } from 'firebase/auth';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-registro',
@@ -17,7 +21,8 @@ export class RegistroComponent implements OnInit {
   @ViewChild('circle1') circle1!: ElementRef;
   @ViewChild('circle2') circle2!: ElementRef;
   constructor(private fb: FormBuilder, private http: HttpClient,
-    private authService: AuthService, private db: AngularFireDatabase) { }
+    private authService: AuthService, private db: AngularFireDatabase,
+    private fbs: AngularFirestore) { }
 
   paises = [
     { value: 'mx', viewValue: 'México' },
@@ -33,7 +38,7 @@ export class RegistroComponent implements OnInit {
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
       dni: ['', Validators.required],
-      fechaNacimiento: ['', Validators.required],
+      nacimiento: ['', Validators.required],
       pais: ['', Validators.required],
       localidad: ['', Validators.required],
       telefono: ['', Validators.required],
@@ -46,28 +51,18 @@ export class RegistroComponent implements OnInit {
 
   enviarPaso1() {
     if (this.registroForm.get('nombre')?.invalid || this.registroForm.get('apellidos')?.invalid ||
-        this.registroForm.get('dni')?.invalid || this.registroForm.get('fechaNacimiento')?.invalid ||
-        this.registroForm.get('pais')?.invalid || this.registroForm.get('localidad')?.invalid) {
+      this.registroForm.get('dni')?.invalid || this.registroForm.get('fechaNacimiento')?.invalid ||
+      this.registroForm.get('pais')?.invalid || this.registroForm.get('localidad')?.invalid) {
       return;
     }
     this.paso1Completo = true;
   }
 
-  enviarRegistro(registroForm: any): void {
-
-    const users = this.db.list('/usuarios');
-
-    users.push(registroForm.value)
-      .then(() => {
-        console.log("Usuario añadido")
-      })
-      .catch((error) => {
-        console.log("No se ha añadir el usuario")
-      });
+  enviarRegistro(registroForm: any) {
 
     this.authService.createUserWIthEmail(registroForm.value.correo, registroForm.value.contrasena)
       .then(() => {
-        console.log("Usuario creado")
+        console.log("Usuario creado:")
       })
       .catch((error) => {
         console.log("No se ha podido crear el usuario")
@@ -75,14 +70,39 @@ export class RegistroComponent implements OnInit {
 
     console.log(registroForm.value)
 
+    const fechaNacimiento = this.registroForm.value.nacimiento;
+    const fechaFormateada = moment(fechaNacimiento).format('DD-MM-YYYY');
+
+    this.registroForm.value.nacimiento = fechaFormateada;
+
+    const auth = firebase.auth();
+    let userID !: string;
+    const db = firebase.firestore();
+
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        userID = user.uid;
+        console.log('ID de usuario:', userID);
+
+        const usuariosRef = db.collection('usuarios').doc(userID);
+        usuariosRef.set(registroForm.value)
+          .then(docRef => {
+            console.log("Usuario añadido");
+          })
+          .catch((error) => {
+            console.log("No se ha podido añadir al usuario");
+          });
+      }
+    });
+
   }
-  anterior(){
+  anterior() {
     this.circle1.nativeElement.setAttribute('r', '6.5vw');
     this.circle2.nativeElement.setAttribute('r', '4vw');
     this.circle1.nativeElement.setAttribute('fill', '#C2DE5D');
     this.circle2.nativeElement.setAttribute('fill', '#A0C514');
   }
-  siguiente(){
+  siguiente() {
     this.circle1.nativeElement.setAttribute('r', '4vw');
     this.circle2.nativeElement.setAttribute('r', '6.5vw');
     this.circle1.nativeElement.setAttribute('fill', '#A0C514');
