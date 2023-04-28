@@ -13,7 +13,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { environment } from 'src/environment/environment';
+import { firebaseConfig } from 'src/environment/environment';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
@@ -78,7 +78,7 @@ import { initializeApp } from 'firebase/app';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(firebaseConfig.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
@@ -87,7 +87,7 @@ import { initializeApp } from 'firebase/app';
     MatDialogModule,
     MatIconModule,
     provideAuth(() => getAuth()),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirebaseApp(() => initializeApp(firebaseConfig.firebase)),
     AngularFireDatabaseModule,
   ],
   providers: [],
