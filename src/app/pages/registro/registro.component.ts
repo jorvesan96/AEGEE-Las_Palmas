@@ -51,7 +51,7 @@ export class RegistroComponent implements OnInit {
 
   enviarPaso1() {
     if (this.registroForm.get('nombre')?.invalid || this.registroForm.get('apellidos')?.invalid ||
-      this.registroForm.get('dni')?.invalid || this.registroForm.get('fechaNacimiento')?.invalid ||
+      this.registroForm.get('dni')?.invalid || this.registroForm.get('nacimiento')?.invalid ||
       this.registroForm.get('pais')?.invalid || this.registroForm.get('localidad')?.invalid) {
       return;
     }
@@ -68,8 +68,6 @@ export class RegistroComponent implements OnInit {
         console.log("No se ha podido crear el usuario")
       });
 
-    console.log(registroForm.value)
-
     const fechaNacimiento = this.registroForm.value.nacimiento;
     const fechaFormateada = moment(fechaNacimiento).format('DD-MM-YYYY');
 
@@ -82,8 +80,7 @@ export class RegistroComponent implements OnInit {
     auth.onAuthStateChanged((user) => {
       if (user) {
         userID = user.uid;
-        console.log('ID de usuario:', userID);
-
+        
         const usuariosRef = db.collection('usuarios').doc(userID);
         usuariosRef.set(registroForm.value)
           .then(docRef => {
