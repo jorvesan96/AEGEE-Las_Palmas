@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { Observable } from 'rxjs';
 import { Usuario } from 'src/app/services/usuario'
-
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { FirestoreService } from 'src/app/services/firestore.service';
 @Component({
   selector: 'pages-perfil-usuario',
   templateUrl: './perfil-usuario.component.html',
   styleUrls: ['./perfil-usuario.component.css']
 })
+
 export class PerfilUsuarioComponent {
 
   usuario: Usuario = {
@@ -25,20 +25,22 @@ export class PerfilUsuarioComponent {
     localidad: ''
   };
 
-  user: Observable<any>;
+  userUID!: string;
+  user: any;
 
-  constructor(private authService: AuthService, private afAuth: AngularFireAuth) {
-    this.user = this.afAuth.authState;
-  }
+  constructor(private afAuth: AngularFireAuth, private firestore: AngularFirestore, private firestoreService: FirestoreService) { }
 
   ngOnInit() {
-    this.user.subscribe(user => {
+    this.afAuth.authState.subscribe(user => {
       if (user) {
-        const uid = user.uid;
-        this.authService.getDatosUsuario(uid).subscribe(usuario => {
-          this.usuario = usuario;
-          console.log(usuario.id); // aquí obtienes el ID del usuario
+        this.userUID = user.uid;
+        console.log(this.userUID);
+
+        this.firestoreService.getUser(this.userUID).subscribe((user: any) => {
+          console.log(user);
+          this.usuario = user;
         });
+
       }
     });
   }
