@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
@@ -14,8 +14,8 @@ export class RegistroComponent implements OnInit {
 
   registroForm: FormGroup = new FormGroup({});
   paso1Completo = false;
-  circle1 = document.getElementById('circle1');
-  circle2 = document.getElementById('circle2');
+  @ViewChild('circle1') circle1!: ElementRef;
+  @ViewChild('circle2') circle2!: ElementRef;
   constructor(private fb: FormBuilder, private http: HttpClient,
     private authService: AuthService, private db: AngularFireDatabase) { }
 
@@ -77,16 +77,16 @@ export class RegistroComponent implements OnInit {
 
   }
   anterior(){
-    this.circle1?.setAttribute('r', '6.5px');
-    this.circle2?.setAttribute('r', '4px');
-    this.circle1?.setAttribute('fill', '#C2DE5D');
-    this.circle2?.setAttribute('fill', '#A0C514');
+    this.circle1.nativeElement.setAttribute('r', '6.5vw');
+    this.circle2.nativeElement.setAttribute('r', '4vw');
+    this.circle1.nativeElement.setAttribute('fill', '#C2DE5D');
+    this.circle2.nativeElement.setAttribute('fill', '#A0C514');
   }
   siguiente(){
-    this.circle1?.setAttribute('r', '4px');
-    this.circle2?.setAttribute('r', '6.5px');
-    this.circle1?.setAttribute('fill', '#A0C514');
-    this.circle2?.setAttribute('fill', '#C2DE5D');
+    this.circle1.nativeElement.setAttribute('r', '4vw');
+    this.circle2.nativeElement.setAttribute('r', '6.5vw');
+    this.circle1.nativeElement.setAttribute('fill', '#A0C514');
+    this.circle2.nativeElement.setAttribute('fill', '#C2DE5D');
   }
 }
 
