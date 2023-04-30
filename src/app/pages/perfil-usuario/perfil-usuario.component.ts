@@ -31,6 +31,39 @@ export class PerfilUsuarioComponent {
   constructor(private afAuth: AngularFireAuth, private firestore: AngularFirestore, private firestoreService: FirestoreService) { }
 
   ngOnInit() {
+
+    addEventListener('DOMContentLoaded', () => {
+      const btnEditarPerfil: HTMLElement | null = document.getElementById('editarPerfil');
+      const inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll('input');
+      // Variable que indica si se están editando los campos o no
+      let editando: boolean = false;
+
+      if (btnEditarPerfil) {
+        btnEditarPerfil.addEventListener('click', () => {
+          // Cambia el valor de la variable cada vez que se hace clic en el botón
+          editando = !editando;
+
+          if (editando) {
+            // Cambia el texto del botón a "Guardar cambios"
+            if (btnEditarPerfil.textContent) {
+              btnEditarPerfil.textContent = 'Guardar cambios';
+            }
+            inputs.forEach((input: HTMLInputElement) => {
+              input.readOnly = false;
+            });
+          } else {
+            // Cambia el texto del botón a "Editar perfil"
+            if (btnEditarPerfil.textContent) {
+              btnEditarPerfil.textContent = 'Editar perfil';
+            }
+            inputs.forEach((input: HTMLInputElement) => {
+              input.readOnly = true;
+            });
+          }
+        });
+      }
+    });
+
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.userUID = user.uid;

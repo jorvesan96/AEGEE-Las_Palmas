@@ -28,15 +28,15 @@
   font-size: 2vw;
 }
 
-#button_formulario {
+.button_formulario {
   font-size: 100%;
-  margin-left: 25%;
-  font-family: "Bebas neue", sans-serif;
+  margin-left: 20%;
   background-color: white;
   color: #CF9800;
   border-radius: 10px;
   border: 3px solid #CF9800;
-  padding: 1vw 2vw;
+  padding: 1vw 4vw;
+  font-size: 2vw;
 }
 
 /*Validación*/
