@@ -55,4 +55,7 @@ nav{
   height: 25%;
 }
 
-
+mat-horizontal-stepper{
+  width: 70%;
+  margin-left: 15%;
+}
