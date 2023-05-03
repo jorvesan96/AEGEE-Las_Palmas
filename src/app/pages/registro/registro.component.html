@@ -1,15 +1,10 @@
   <h1>Formulario de Registro</h1>
 
   <components-separador></components-separador>
-<div class="center">
-  <svg width="59vw" height="16vw">
-    <rect id="rectangle" x="5vw" y="7.5vw" width="50vw" height="3vw" stroke="black" fill="#A0C514" stroke-width="0.5"/>
-    <circle id="circle1"  #circle1 cx="7vw" cy="9vw" r="6.5vw" stroke="black" stroke-width="0.5" fill=" #C2DE5D" />
-    <circle id="circle2"  #circle2 cx="51.7vw" cy="9vw" r="4vw" stroke="black" stroke-width="0.5" fill="#A0C514" />
-  </svg>
-    <p id="paso2">2</p>
-    <p id="paso1">1</p>
-</div>
+  <mat-horizontal-stepper linear [labelPosition]="'bottom'" >
+    <mat-step label="step 1" [ngClass]="{'completed': paso1Completo}"  [editable]="false"  [completed]="paso1Completo"></mat-step>
+    <mat-step label="step 2" [ngClass]="{'completed': paso1Completo}"  [editable]="false"  [completed]="paso1Completo"></mat-step>
+  </mat-horizontal-stepper>
   <div *ngIf="!paso1Completo">
     <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
       <mat-form-field >
