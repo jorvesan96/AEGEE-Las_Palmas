@@ -17,6 +17,7 @@ import { firebaseConfig } from 'src/environment/environment';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import {MatStepperModule} from '@angular/material/stepper';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -89,6 +90,7 @@ import { initializeApp } from 'firebase/app';
     provideAuth(() => getAuth()),
     provideFirebaseApp(() => initializeApp(firebaseConfig.firebase)),
     AngularFireDatabaseModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
