@@ -28,6 +28,8 @@ export class PerfilUsuarioComponent {
     localidad: ''
   };
 
+  inputWidth = 'auto';
+  inputValue!: string;
   valoresOriginales!: Usuario;
   guardandoCambios = false;
   textoBoton: string = 'Editar perfil';
@@ -120,4 +122,7 @@ export class PerfilUsuarioComponent {
     });
   }
 
+  onInput() {
+    this.inputWidth = (this.inputValue.length  * 55) + 'px'; // Ajusta el ancho en función de la longitud del texto
+  }
 }

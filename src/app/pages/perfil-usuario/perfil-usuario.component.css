@@ -62,3 +62,19 @@ input.invalid {
   margin-right: 20vw;
   margin-left: -4vw;
 }
+
+#edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#nombre{
+  text-align: center;
+  font-family: "Open sans", sans-serif;
+  font-size: 4.5vw;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
