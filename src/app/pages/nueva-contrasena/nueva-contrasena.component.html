@@ -1,1 +1,35 @@
-<p>nueva-contrasena works!</p>
+<div id="banner"></div>
+<section id="nueva">
+
+  <div id="nueva-container">
+    <div id="acciones">
+      <p>Iniciar sesión</p>
+      <a id="registro" routerLink='/registro'>Registro</a>
+    </div>
+
+    <form [formGroup]="contrasenaForm" name="loginForm" (ngSubmit)="reset(contrasenaForm)" id="nueva-form">
+      <div id="fields">
+        <input type="password" formControlName="contraseña" placeholder="Contraseña" class="form-control">
+        <div *ngIf="f['contraseña'].touched && f['contraseña'].invalid" class="alert">
+          <div *ngIf="f['contraseña'].errors && f['contraseña'].errors['required']">*Se necesita una contraseña.
+          </div>
+          <div *ngIf="f['contraseña'].errors && f['contraseña'].errors['minlength']">*La contraseña debe tener al
+            menos 5 caracteres</div>
+        </div>
+
+
+
+        <input type="password" formControlName="rep_contraseña" placeholder="Repetir contraseña" class="form-control">
+        <div *ngIf="f['rep_contraseña'].touched && contrasenaForm.hasError('notSame')" class="alert">
+          Las contraseñas no coinciden
+        </div>
+
+        <a routerLink="/inicio-sesion" class="volver">Volver al inicio de sesión</a>
+      </div>
+      <input type="submit" value="Acceder" id="boton">
+    </form>
+
+
+  </div>
+
+</section>
