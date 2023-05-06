@@ -41,7 +41,7 @@
       <mat-form-field>
         <mat-label>País:</mat-label>
         <mat-select placeholder="Selecciona un país" formControlName="pais" required>
-          <mat-option *ngFor="let pais of paises" [value]="pais.value">{{pais.viewValue}}</mat-option>
+          <mat-option *ngFor="let pais of paises" [value]="pais.value">{{pais.label}}</mat-option>
         </mat-select>
         <mat-error *ngIf="registroForm.get('pais')?.invalid && (registroForm.get('pais')?.dirty || registroForm.get('pais')?.touched)">
           País es requerido.
@@ -89,7 +89,7 @@
 
     <mat-form-field>
       <input matInput placeholder="repetirContrasena" formControlName="repetirContrasena" type="password" required>
-      <mat-error *ngIf="registroForm.get('repetirContrasena')?.invalid && (registroForm.get('repetirContrasena')?.dirty || registroForm.get('repeetirContrasena')?.touched)">
+      <mat-error *ngIf="registroForm.get('repetirContrasena')?.invalid && (registroForm.get('repetirContrasena')?.dirty || registroForm.get('repetirContrasena')?.touched)">
         Contraseña es requerido.
       </mat-error>
     </mat-form-field>
@@ -97,7 +97,7 @@
 </div>
 
 <nav>
-  <a id="siguiente" *ngIf="!paso1Completo" (click)="paso1Completo=true; siguiente()">Siguiente<span ngNonBindable>>>></span></a>
-  <a id="anterior" *ngIf="paso1Completo" (click)="paso1Completo=false; anterior()"><span ngNonBindable><<<</span>Anterior</a>
+  <a id="siguiente" *ngIf="!paso1Completo" (click)="paso1Completo=true">Siguiente<span ngNonBindable>>>></span></a>
+  <a id="anterior" *ngIf="paso1Completo" (click)="paso1Completo=false"><span ngNonBindable><<<</span>Anterior</a>
   <button routerLink="/" *ngIf="paso1Completo" id="enviarBoton" type="submit" (click)="enviarRegistro(registroForm)">Enviar</button>
 </nav>

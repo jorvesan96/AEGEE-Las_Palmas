@@ -1,5 +1,5 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators,AbstractControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
 import { registerVersion } from 'firebase/app';
@@ -8,6 +8,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import firebase from 'firebase/compat/app';
 import { onAuthStateChanged } from 'firebase/auth';
 import * as moment from 'moment';
+
 
 @Component({
   selector: 'app-registro',
@@ -18,22 +19,19 @@ export class RegistroComponent implements OnInit {
 
   registroForm: FormGroup = new FormGroup({});
   paso1Completo = false;
-  @ViewChild('circle1') circle1!: ElementRef;
-  @ViewChild('circle2') circle2!: ElementRef;
   constructor(private fb: FormBuilder, private http: HttpClient,
     private authService: AuthService, private db: AngularFireDatabase,
     private fbs: AngularFirestore) { }
 
-  paises = [
-    { value: 'mx', viewValue: 'México' },
-    { value: 'us', viewValue: 'Estados Unidos' },
-    { value: 'es', viewValue: 'España' },
-    { value: 'co', viewValue: 'Colombia' },
-    { value: 'pe', viewValue: 'Perú' }
-  ];
+    paises = [  { value: 'mx', label: 'México' },
+                { value: 'us', label: 'Estados Unidos' }, 
+                { value: 'es', label: 'España' }, 
+                { value: 'co', label: 'Colombia' }, 
+                { value: 'pe', label: 'Perú' }];
 
 
   ngOnInit() {
+    
     this.registroForm = this.fb.group({
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
@@ -68,6 +66,9 @@ export class RegistroComponent implements OnInit {
         console.log("No se ha podido crear el usuario")
       });
 
+    delete registroForm.value.repetirCorreo;
+    delete registroForm.value.repetirContrasena;
+
     const fechaNacimiento = this.registroForm.value.nacimiento;
     const fechaFormateada = moment(fechaNacimiento).format('DD-MM-YYYY');
 
@@ -81,8 +82,15 @@ export class RegistroComponent implements OnInit {
       if (user) {
         userID = user.uid;
         
+        const selectedPais = this.paises.find(pais => pais.value === registroForm.value.pais);
+        const paisLabel = selectedPais ? selectedPais.label : '';
+  
+        // add label to form data before saving to Firestore
+        registroForm.value.pais = paisLabel;
+
+
         const usuariosRef = db.collection('usuarios').doc(userID);
-        usuariosRef.set(registroForm.value)
+        usuariosRef.set(registroForm.value) 
           .then(docRef => {
             console.log("Usuario añadido");
           })
@@ -91,19 +99,6 @@ export class RegistroComponent implements OnInit {
           });
       }
     });
-
-  }
-  anterior() {
-    this.circle1.nativeElement.setAttribute('r', '6.5vw');
-    this.circle2.nativeElement.setAttribute('r', '4vw');
-    this.circle1.nativeElement.setAttribute('fill', '#C2DE5D');
-    this.circle2.nativeElement.setAttribute('fill', '#A0C514');
-  }
-  siguiente() {
-    this.circle1.nativeElement.setAttribute('r', '4vw');
-    this.circle2.nativeElement.setAttribute('r', '6.5vw');
-    this.circle1.nativeElement.setAttribute('fill', '#A0C514');
-    this.circle2.nativeElement.setAttribute('fill', '#C2DE5D');
   }
 }
 
