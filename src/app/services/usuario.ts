@@ -11,4 +11,5 @@ export interface Usuario {
   pais?: string;
   contrasena?: string;
   localidad?: string;
+  repetirCorreo?: string;
 }
