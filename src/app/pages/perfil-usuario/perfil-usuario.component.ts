@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { Usuario } from 'src/app/services/usuario'
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Usuario } from 'src/app/services/usuario';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+
 
 @Component({
   selector: 'pages-perfil-usuario',
@@ -26,43 +28,69 @@ export class PerfilUsuarioComponent {
     localidad: ''
   };
 
-  editando = false;
+  valoresOriginales!: Usuario;
+  guardandoCambios = false;
   textoBoton: string = 'Editar perfil';
-
   userUID!: string;
   user: any;
 
-  constructor(private afAuth: AngularFireAuth, private firestore: AngularFirestore, private firestoreService: FirestoreService) { }
+  constructor(private afAuth: AngularFireAuth, private firestoreService: FirestoreService) { }
 
   ngOnInit() {
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.userUID = user.uid;
-        console.log(this.userUID);
 
         this.firestoreService.getUser(this.userUID).subscribe((user: any) => {
-          console.log(user);
           this.usuario = user;
+          this.valoresOriginales = { ...user };
         });
       }
     });
   }
 
   editarPerfil() {
-    this.editando = !this.editando;
+    this.guardandoCambios = !this.guardandoCambios;
+    this.textoBoton = this.guardandoCambios ? 'Guardar cambios' : 'Editar perfil';
+    this.setReadOnly(!this.guardandoCambios);
+  }
+
+  cancelarCambios() {
+    this.usuario = { ...this.valoresOriginales };
+    this.guardandoCambios = false;
+    this.textoBoton = 'Editar perfil';
+    this.setReadOnly(true);
   }
 
   guardarCambios() {
-    this.editando = false;
+    // Actualizar el correo electrónico del usuario
+    console.log("entrooo");
+    if(this.usuario.correo && this.usuario.contrasena){
+      console.log("entro");
+      this.actualizarCorreo(this.usuario.correo, this.usuario.contrasena)
+        .then(() => {
+          console.log('Correo electrónico actualizado correctamente.');
+        }).catch((error) => {
+          console.error('Error al actualizar el correo electrónico: ', error);
+        });
+    }
+
+    this.guardandoCambios = false;
+    this.textoBoton = 'Editar perfil';
+    this.setReadOnly(true);
   }
 
-  cambiarModoEdicion() {
-    if (this.textoBoton === 'Editar perfil') {
-      this.textoBoton = 'Guardar cambios';
-      this.setReadOnly(false);
+
+  async actualizarCorreo(correo: string, contrasena: string) {
+    console.log("Entro");
+    const user = await this.afAuth.currentUser;
+    if (user && user.email) {
+      const credenciales = firebase.auth.EmailAuthProvider.credential(user.email, contrasena);
+      await user.reauthenticateWithCredential(credenciales);
+      await user.updateEmail(correo);
+      return this.firestoreService.updateUser({ correo }, this.userUID);
     } else {
-      this.textoBoton = 'Editar perfil';
-      this.setReadOnly(true);
+      throw new Error('No hay ningún usuario autenticado.');
     }
   }
 

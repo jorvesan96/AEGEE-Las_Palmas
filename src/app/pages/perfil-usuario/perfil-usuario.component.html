@@ -7,29 +7,30 @@
 
     <ul>
         <li><p>Fecha de Nacimiento</p></li>
-        <input type="text" id="nacimiento" name="nacimiento" [(ngModel)]="usuario.nacimiento" [readonly]="!editando">
+        <input type="text" id="nacimiento" name="nacimiento" [(ngModel)]="usuario.nacimiento" [readonly]="!guardandoCambios">
 
         <li><p>País</p></li>
-        <input type="text" id="pais" name="pais" [(ngModel)]="usuario.pais" [readonly]="!editando">
+        <input type="text" id="pais" name="pais" [(ngModel)]="usuario.pais" [readonly]="!guardandoCambios">
 
         <li><p>Localidad</p></li>
-        <input type="text" id="localidad" name="localidad" [(ngModel)]="usuario.localidad" [readonly]="!editando">
+        <input type="text" id="localidad" name="localidad" [(ngModel)]="usuario.localidad" [readonly]="!guardandoCambios">
 
         <li><p>Teléfono Móvil</p></li>
-        <input type="tel" id="telefono" name="telefono" [(ngModel)]="usuario.telefono" [readonly]="!editando">
+        <input type="tel" id="telefono" name="telefono" [(ngModel)]="usuario.telefono" [readonly]="!guardandoCambios">
 
         <li><p>DNI</p></li>
-        <input type="text" id="dni" name="dni" [(ngModel)]="usuario.dni" [readonly]="!editando">
+        <input type="text" id="dni" name="dni" [(ngModel)]="usuario.dni" [readonly]="!guardandoCambios">
 
         <li><p>Correo Electrónico</p></li>
-        <input type="email" id="email" name="email" [(ngModel)]="usuario.correo" [readonly]="!editando">
+        <input type="email" id="email" name="email" [(ngModel)]="usuario.correo" [readonly]="!guardandoCambios">
 
     </ul>
 
-    <button type="button" class="button_formulario" id="editarPerfil" (click)="cambiarModoEdicion()">
-      <label>{{ textoBoton }}</label>
-    </button>
-    <button type="submit" class="button_formulario" *ngIf="editando"><label>Guardar cambios</label></button>
+    <button *ngIf="!guardandoCambios" class="button_formulario" (click)="editarPerfil()">Editar perfil</button>
+    <div id="colocar">
+    <button *ngIf="guardandoCambios" class="button_formulario" (click)="guardarCambios()">Guardar cambios</button>
+    <button *ngIf="guardandoCambios" class="button_formulario" (click)="cancelarCambios()">Cancelar</button>
+    </div>
 </form>
 
 <app-flecha-subida></app-flecha-subida>
