@@ -11,7 +11,7 @@
 
     <div id="form">
 
-      <form [formGroup]="olvidadaForm" name="olvidadaForm" (ngSubmit)="enviarCodigo(olvidadaForm.value)"
+      <form [formGroup]="olvidadaForm" name="olvidadaForm" (ngSubmit)="enviarCodigo(olvidadaForm)"
         id="olvidada-form">
 
         <p id="introduce">Introduce tu correo electrónico y se te mandará un código para poder restablecer.</p>
@@ -23,7 +23,7 @@
           </div>
           <a routerLink="/inicio-sesion" class="olvidada">Volver a inicio de sesión</a>
         </div>
-        <input type="submit" value="Enviar" id="boton" routerLink="/codigo-contrasena">
+        <input type="submit" value="Enviar" id="boton">
       </form>
     </div>
 
