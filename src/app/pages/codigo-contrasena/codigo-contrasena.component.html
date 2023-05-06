@@ -1,1 +1,29 @@
-<p>codigo-contrasena works!</p>
+<div id="banner"></div>
+<section id="codigo">
+
+  <div id="codigo-container">
+    <div id="acciones">
+      <p>
+        <a routerLink="/inicio-sesion"> Iniciar sesión</a>
+      </p>
+      <a id="registro" routerLink='/registro'>Registro</a>
+    </div>
+
+    <div id="form">
+
+      <form [formGroup]="codigoForm" name="olvidadaForm" (ngSubmit)="validCode(codigoForm)" id="codigo-form">
+
+        <p id="introduce">Introduce tu correo electrónico y se te mandará un código para poder restablecer.</p>
+        <div id="fields">
+
+          <input matInput type="text" formControlName="codigo" class="form-control" maxlength="6" placeholder="CODIGO">
+          <div *ngIf="f['codigo'].touched && f['codigo'].invalid" class="alert"></div>
+
+          <a routerLink="/inicio-sesion" class="olvidada">Volver a inicio de sesión</a>
+        </div>
+        <input type="submit" value="Enviar" id="boton">
+      </form>
+    </div>
+
+  </div>
+</section>

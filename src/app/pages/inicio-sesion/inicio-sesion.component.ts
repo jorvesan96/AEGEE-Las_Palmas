@@ -21,7 +21,7 @@ export class InicioSesionComponent {
     contraseña: new FormControl('', Validators.compose([
       Validators.minLength(5),
       Validators.required,
-      Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$') //this is for the letters (both uppercase and lowercase) and numbers validation
+      Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')
     ])),
   });
 
