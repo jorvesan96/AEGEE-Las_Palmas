@@ -9,7 +9,11 @@ export class FirestoreService {
   constructor(private firestore: AngularFirestore) { }
 
   getUser(uid: string) {
-    console.log("entro");
     return this.firestore.collection("usuarios").doc(uid).valueChanges();
   }
+
+  updateUser(datosActualizados: any, uid: string) {
+    return this.firestore.collection('usuarios').doc(uid).update(datosActualizados);
+  }
+
 }
