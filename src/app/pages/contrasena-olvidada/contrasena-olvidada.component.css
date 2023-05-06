@@ -1,5 +1,6 @@
-body{
-  height: 100vh;
+::ng-deep footer{
+  position: absolute;
+  bottom: 0;
 }
 
 #banner {

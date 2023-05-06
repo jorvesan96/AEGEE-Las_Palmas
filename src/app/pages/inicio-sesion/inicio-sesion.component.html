@@ -1,7 +1,10 @@
 <div id="banner"></div>
-<section id="login">
 
-  <div id="login-container">
+<div id="content">
+
+  <section id="login">
+
+    <div id="login-container">
     <div id="acciones">
       <p>Iniciar sesión</p>
       <a id="registro" routerLink='/registro'>Registro</a>
@@ -22,12 +25,13 @@
             </div>
             <div *ngIf="f['contraseña'].errors && f['contraseña'].errors['minlength']">*La contraseña debe tener al
               menos 5 caracteres</div>
+            </div>
+            <a routerLink="/contrasena-olvidada" class="olvidada">He olvidado mi contraseña</a>
           </div>
-          <a routerLink="/contrasena-olvidada" class="olvidada">He olvidado mi contraseña</a>
-        </div>
-        <input type="submit" value="Acceder" id="boton">
-      </form>
-    </div>
+          <input type="submit" value="Acceder" id="boton">
+        </form>
+      </div>
 
-  </div>
-</section>
+    </div>
+  </section>
+</div>
