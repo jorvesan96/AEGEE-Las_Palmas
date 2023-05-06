@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { Usuario } from 'src/app/services/usuario'
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Usuario } from 'src/app/services/usuario';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+
+
 @Component({
   selector: 'pages-perfil-usuario',
   templateUrl: './perfil-usuario.component.html',
@@ -25,56 +28,76 @@ export class PerfilUsuarioComponent {
     localidad: ''
   };
 
+  valoresOriginales!: Usuario;
+  guardandoCambios = false;
+  textoBoton: string = 'Editar perfil';
   userUID!: string;
   user: any;
 
-  constructor(private afAuth: AngularFireAuth, private firestore: AngularFirestore, private firestoreService: FirestoreService) { }
+  constructor(private afAuth: AngularFireAuth, private firestoreService: FirestoreService) { }
 
   ngOnInit() {
-
-    addEventListener('DOMContentLoaded', () => {
-      const btnEditarPerfil: HTMLElement | null = document.getElementById('editarPerfil');
-      const inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll('input');
-      // Variable que indica si se están editando los campos o no
-      let editando: boolean = false;
-
-      if (btnEditarPerfil) {
-        btnEditarPerfil.addEventListener('click', () => {
-          // Cambia el valor de la variable cada vez que se hace clic en el botón
-          editando = !editando;
-
-          if (editando) {
-            // Cambia el texto del botón a "Guardar cambios"
-            if (btnEditarPerfil.textContent) {
-              btnEditarPerfil.textContent = 'Guardar cambios';
-            }
-            inputs.forEach((input: HTMLInputElement) => {
-              input.readOnly = false;
-            });
-          } else {
-            // Cambia el texto del botón a "Editar perfil"
-            if (btnEditarPerfil.textContent) {
-              btnEditarPerfil.textContent = 'Editar perfil';
-            }
-            inputs.forEach((input: HTMLInputElement) => {
-              input.readOnly = true;
-            });
-          }
-        });
-      }
-    });
-
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.userUID = user.uid;
-        console.log(this.userUID);
 
         this.firestoreService.getUser(this.userUID).subscribe((user: any) => {
-          console.log(user);
           this.usuario = user;
+          this.valoresOriginales = { ...user };
         });
-
       }
+    });
+  }
+
+  editarPerfil() {
+    this.guardandoCambios = !this.guardandoCambios;
+    this.textoBoton = this.guardandoCambios ? 'Guardar cambios' : 'Editar perfil';
+    this.setReadOnly(!this.guardandoCambios);
+  }
+
+  cancelarCambios() {
+    this.usuario = { ...this.valoresOriginales };
+    this.guardandoCambios = false;
+    this.textoBoton = 'Editar perfil';
+    this.setReadOnly(true);
+  }
+
+  guardarCambios() {
+    // Actualizar el correo electrónico del usuario
+    console.log("entrooo");
+    if(this.usuario.correo && this.usuario.contrasena){
+      console.log("entro");
+      this.actualizarCorreo(this.usuario.correo, this.usuario.contrasena)
+        .then(() => {
+          console.log('Correo electrónico actualizado correctamente.');
+        }).catch((error) => {
+          console.error('Error al actualizar el correo electrónico: ', error);
+        });
+    }
+
+    this.guardandoCambios = false;
+    this.textoBoton = 'Editar perfil';
+    this.setReadOnly(true);
+  }
+
+
+  async actualizarCorreo(correo: string, contrasena: string) {
+    console.log("Entro");
+    const user = await this.afAuth.currentUser;
+    if (user && user.email) {
+      const credenciales = firebase.auth.EmailAuthProvider.credential(user.email, contrasena);
+      await user.reauthenticateWithCredential(credenciales);
+      await user.updateEmail(correo);
+      return this.firestoreService.updateUser({ correo }, this.userUID);
+    } else {
+      throw new Error('No hay ningún usuario autenticado.');
+    }
+  }
+
+  setReadOnly(valor: boolean) {
+    const inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll('input');
+    inputs.forEach((input: HTMLInputElement) => {
+      input.readOnly = valor;
     });
   }
 

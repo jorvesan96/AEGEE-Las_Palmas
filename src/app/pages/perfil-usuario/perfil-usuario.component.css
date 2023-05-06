@@ -56,3 +56,9 @@ input.invalid {
   background-color: #ffcccc;
   color: #cc0000;
 }
+
+#colocar{
+  display: flex;
+  margin-right: 20vw;
+  margin-left: -4vw;
+}

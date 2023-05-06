@@ -15,6 +15,11 @@ export class FirestoreService {
     return this.firestore.collection("usuarios").doc(uid).valueChanges();
   }
 
+  updateUser(datosActualizados: any, uid: string) {
+    return this.firestore.collection('usuarios').doc(uid).update(datosActualizados);
+  }
+
+
   generatedCode!: string;
 
   getGeneratedCode(): string {

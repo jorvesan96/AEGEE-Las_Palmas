@@ -2,31 +2,35 @@
 
 <components-separador></components-separador>
 
-<form id="formulario" onsubmit="return canSubmit()">
+<form id="formulario" (ngSubmit)="guardarCambios()">
     <h2><b>Mi Perfil</b></h2>
 
-        <ul>
-            <li> <p>Fecha de Nacimiento</p> </li>
-            <input type="text" id="nacimiento" name="nacimiento" [value]="usuario.nacimiento" readonly>
+    <ul>
+        <li><p>Fecha de Nacimiento</p></li>
+        <input type="text" id="nacimiento" name="nacimiento" [(ngModel)]="usuario.nacimiento" [readonly]="!guardandoCambios">
 
-            <li> <p> País </p></li>
-            <input type="text" id="pais" name="pais" [value]="usuario.pais" readonly>
+        <li><p>País</p></li>
+        <input type="text" id="pais" name="pais" [(ngModel)]="usuario.pais" [readonly]="!guardandoCambios">
 
-            <li> <p>Localidad</p> </li>
-            <input type="text" id="localidad" name="localidad" [value]="usuario.localidad" readonly>
+        <li><p>Localidad</p></li>
+        <input type="text" id="localidad" name="localidad" [(ngModel)]="usuario.localidad" [readonly]="!guardandoCambios">
 
-            <li> <p>Teléfono Móvil</p> </li>
-            <input type="tel" id="telefono" name="telefono" [value]="usuario.telefono" readonly>
+        <li><p>Teléfono Móvil</p></li>
+        <input type="tel" id="telefono" name="telefono" [(ngModel)]="usuario.telefono" [readonly]="!guardandoCambios">
 
-            <li> <p>DNI</p> </li>
-            <input type="text" id="dni" name="dni" [value]="usuario.dni" readonly>
+        <li><p>DNI</p></li>
+        <input type="text" id="dni" name="dni" [(ngModel)]="usuario.dni" [readonly]="!guardandoCambios">
 
-            <li> <p>Correo Electrónico</p> </li>
-            <input type="email" id="email" name="email" [value]="usuario.correo" readonly>
+        <li><p>Correo Electrónico</p></li>
+        <input type="email" id="email" name="email" [(ngModel)]="usuario.correo" [readonly]="!guardandoCambios">
 
-        </ul>
+    </ul>
 
-        <button type="button" class="button_formulario" id="editarPerfil"><label>Editar Perfil</label></button>
+    <button *ngIf="!guardandoCambios" class="button_formulario" (click)="editarPerfil()">Editar perfil</button>
+    <div id="colocar">
+    <button *ngIf="guardandoCambios" class="button_formulario" (click)="guardarCambios()">Guardar cambios</button>
+    <button *ngIf="guardandoCambios" class="button_formulario" (click)="cancelarCambios()">Cancelar</button>
+    </div>
 </form>
 
 <app-flecha-subida></app-flecha-subida>
