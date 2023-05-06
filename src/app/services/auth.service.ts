@@ -31,4 +31,9 @@ export class AuthService {
       })
     );
   }
+
+  correo !: string;
+  updatePassword(contrasena: string){
+
+  }
 }
