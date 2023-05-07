@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import firebase from 'firebase/compat/app';
+import 'firebase/auth';
+import { AuthService } from 'src/app/services/auth.service';
+
 @Component({
   selector: 'app-codigo-contrasena',
   templateUrl: './codigo-contrasena.component.html',
@@ -14,7 +18,7 @@ export class CodigoContrasenaComponent {
   });
 
 
-  constructor(private firestoreService: FirestoreService, private router: Router){}
+  constructor(private firestoreService: FirestoreService, private router: Router, private auth: AuthService) { }
 
   get f() {
     return this.codigoForm.controls;
@@ -25,9 +29,18 @@ export class CodigoContrasenaComponent {
     console.log(codigoForm.value.codigo);
 
 
-    if (codigoForm.value.codigo == this.firestoreService.getGeneratedCode()){
-      this.router.navigate(["/nueva-contrasena"])
-      return true;
+
+    if (codigoForm.value.codigo == this.firestoreService.getGeneratedCode()) {
+      firebase.auth().sendPasswordResetEmail(this.auth.correo)
+        .then(() => {
+          console.log("Correo enviado");
+          this.router.navigate(["/nueva-contrasena"])
+          return true;
+        })
+        .catch(() => {
+          console.log("No se ha podido enviar el correo")
+          return false;
+        })
     }
     return false;
   }
