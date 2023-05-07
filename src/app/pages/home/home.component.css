@@ -8,6 +8,7 @@
   #imagen_junta {
     margin-left: 10%;
     margin-right: 5%;
+    height:40vw;
   }
 
   .grupo_junta p {
@@ -141,6 +142,11 @@
     margin-left: 15%;
   }
 
+  #img_junta{
+    width:13.5vw;
+    height:15vw;
+  }
+
   /*-----------------------------*/
 
   .boton_desplazamiento{
@@ -244,7 +250,7 @@
     font-size: 30px;
     position: absolute;
     z-index: 100;
-    top: 50%;
+    top: 50vw;
     border-radius: 50%;
     padding: 0.2em;
   }
@@ -280,6 +286,11 @@
     }
     to {
       opacity: 1;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .next-btn, .prev-btn {
+      top: 30vw;
     }
   }
 
@@ -333,9 +344,7 @@
     .texto_presi {
       margin-right: 0%;
     }
-  
 
-  
     .texto_secretario {
       margin-left: 0%;
     }
@@ -364,6 +373,9 @@
     }
     .texto_advisor2 {
       margin-left: 0%;
+    }
+    .boton_desplazamiento{
+      width: 90%;
     }
 
   }
