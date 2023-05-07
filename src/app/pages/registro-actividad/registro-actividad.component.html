@@ -5,13 +5,15 @@
 
   <ul>
     <li><p for="data-nombre">Nombre y Apellidos</p></li>
-    <input class="form-input" type="text" name="activityRegister" id="data-nombre">
+    <input class="form-input" type="text" name="activityRegister" id="data-nombre" [(ngModel)]="usuario.nombre">
 
     <li><p for="data-correo">Correo</p></li>
-    <input class="form-input" type="email" name="activityRegister" id="data-correo">
+    <input class="form-input" type="email" name="activityRegister" id="data-correo" [(ngModel)]="usuario.correo">
 
     <li><p for="data-telefono">Teléfono</p></li>
-    <input class="form-input" type="text" name="activityRegister" id="data-telefono">
+    <input class="form-input" type="text" name="activityRegister" id="data-telefono" [(ngModel)]="usuario.telefono">
   </ul>
 </div>
-<button class="button_enviar">Enviar</button>
+<button class="button_enviar" routerLink="/recepcion-documentos">Enviar</button>
+
+<app-flecha-subida></app-flecha-subida>
