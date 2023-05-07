@@ -101,13 +101,3 @@
   #grupo_actividades {
     grid-column: 2 / 3;
   }
-
-  .actividad1 {
-
-    transition: max-height 1.5s ease-out;
-    overflow: hidden;
-  }
-  .actividad2{
-    transition: max-height 1.5s ease-out;
-    overflow: hidden;
-  }

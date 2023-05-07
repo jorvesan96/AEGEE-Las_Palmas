@@ -1,21 +1,14 @@
 import { Component } from '@angular/core';
 import { actividad } from 'src/app/services/actividades';
 import { ActividadesService } from 'src/app/services/actividades.service';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 import 'firebase/firestore';
 import firebase from 'firebase/compat/app';
 
 @Component({
   selector: 'app-actividades',
   templateUrl: './actividades.component.html',
-  styleUrls: ['./actividades.component.css'],
-  animations: [
-    trigger('expandCollapse', [
-      state('collapsed', style({ height: '0', overflow: 'hidden' })),
-      state('expanded', style({ height: '*', overflow: 'hidden' })),
-      transition('collapsed <=> expanded', animate('2s ease-out'))
-    ])
-  ]
+  styleUrls: ['./actividades.component.css']
+
 })
 export class ActividadesComponent {
 
@@ -23,10 +16,6 @@ export class ActividadesComponent {
 
   //actividades: actividad[] = [];
   actividades: any = [];
-  contentHeight1 = "5vw";  
-  contentHeight2 = "5vw";
-  isContentVisible1 = false;
-  isContentVisible2 = false;
 
 
   ngOnInit(){
@@ -48,23 +37,6 @@ export class ActividadesComponent {
       console.log(miArray);
     });
     this.actividades= miArray;
-  }
-
-  accionarBoton1(){
-    var icono = document.getElementById("icono1");
-    icono?.classList.toggle("fa-sort-down");
-    icono?.classList.toggle("fa-sort-up");
-    this.isContentVisible1 = !this.isContentVisible1;
-    this.contentHeight1 = this.isContentVisible1 ? '20vw' : '5vw';
-    
-  }
-  accionarBoton2(){
-    var icono = document.getElementById("icono2");
-    icono?.classList.toggle("fa-sort-down");
-    icono?.classList.toggle("fa-sort-up");
-    this.isContentVisible2 = !this.isContentVisible2;
-    this.contentHeight2 = this.isContentVisible2 ? '20vw' : '5vw';
-    
   }
 
 }
