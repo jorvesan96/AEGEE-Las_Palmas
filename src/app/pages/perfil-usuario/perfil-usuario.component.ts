@@ -66,22 +66,20 @@ export class PerfilUsuarioComponent {
 
   guardarCambios() {
 
-    this.usuario.repetirCorreo = this.usuario.correo;
+    this.usuario.nombre=this.inputValue;
 
     if (this.usuario.correo && this.usuario.contrasena) {
       this.actualizarCorreo(this.usuario.correo, this.usuario.contrasena)
         .then(() => {
-          console.log('Correo electrónico actualizado correctamente.');
-          // Actualizar el correo electrónico y el campo repetirCorreo en Firestore
+          // Actualizar el correo electrónico en Firestore
           this.firestoreService.updateUser({ correo: this.usuario.correo, repetirCorreo: this.usuario.repetirCorreo }, this.userUID)
             .then(() => {
-              console.log('Correo electrónico y campo repetirCorreo actualizados en la base de datos correctamente.');
               this.guardandoCambios = false;
               this.textoBoton = 'Editar perfil';
               this.setReadOnly(true);
             })
             .catch((error) => {
-              console.error('Error al actualizar el correo electrónico y el campo repetirCorreo en la base de datos: ', error);
+              console.error('Error al actualizar el correo electrónico en la base de datos: ', error);
             });
         })
         .catch((error) => {
@@ -92,7 +90,6 @@ export class PerfilUsuarioComponent {
     // Actualizar los datos del usuario en Firestore
     this.firestoreService.updateUser(this.usuario, this.userUID)
       .then(() => {
-        console.log('Datos actualizados correctamente.');
         this.guardandoCambios = false;
         this.textoBoton = 'Editar perfil';
         this.setReadOnly(true);
@@ -103,7 +100,6 @@ export class PerfilUsuarioComponent {
   }
 
   async actualizarCorreo(correo: string, contrasena: string) {
-    console.log("Entro");
     const user = await this.afAuth.currentUser;
     if (user && user.email) {
       const credenciales = firebase.auth.EmailAuthProvider.credential(user.email, contrasena);

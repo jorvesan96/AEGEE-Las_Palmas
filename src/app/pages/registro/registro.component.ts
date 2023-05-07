@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
-import { registerVersion } from 'firebase/app';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import firebase from 'firebase/compat/app';
-import { onAuthStateChanged } from 'firebase/auth';
 import * as moment from 'moment';
 import { Router } from '@angular/router';
 
@@ -20,9 +18,10 @@ export class RegistroComponent implements OnInit {
 
   registroForm: FormGroup = new FormGroup({});
   paso1Completo = false;
-  constructor(private fb: FormBuilder, private http: HttpClient,
-    private authService: AuthService, private db: AngularFireDatabase,
-    private fbs: AngularFirestore, private router: Router) { }
+
+  constructor(private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router) { }
 
   paises = [{ value: 'mx', label: 'México' },
   { value: 'us', label: 'Estados Unidos' },
@@ -39,13 +38,18 @@ export class RegistroComponent implements OnInit {
       nacimiento: ['', Validators.required],
       pais: ['', Validators.required],
       localidad: ['', Validators.required],
-      telefono: ['', Validators.required],
+      telefono: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(9), Validators.pattern(/^[0-9]*$/)]],
       correo: ['', [Validators.required, Validators.email]],
-      repetirCorreo: ['', [Validators.required, Validators.email]],
+      repetirCorreo: ['', [Validators.required, Validators.email, validarEmailIgual()]],
       contrasena: ['', [Validators.required, Validators.minLength(6)]],
-      repetirContrasena: ['', [Validators.required, Validators.minLength(6)]]
+      repetirContrasena: ['', [Validators.required, Validators.minLength(6), validarContrasenaIgual()]]
     });
   }
+
+  get f() {
+    return this.registroForm.controls;
+  }
+
 
   enviarPaso1() {
     if (this.registroForm.get('nombre')?.invalid || this.registroForm.get('apellidos')?.invalid ||
@@ -56,9 +60,6 @@ export class RegistroComponent implements OnInit {
     this.paso1Completo = true;
   }
 
-  get f() {
-    return this.registroForm.controls;
-  }
 
   enviarRegistro(registroForm: any) {
 
@@ -67,7 +68,7 @@ export class RegistroComponent implements OnInit {
         console.log("Usuario creado:")
         this.createUser();
       })
-      .catch((error) => {
+      .catch(() => {
         console.log("No se ha podido crear el usuario")
       });
 
@@ -99,15 +100,39 @@ export class RegistroComponent implements OnInit {
 
         const usuariosRef = db.collection('usuarios').doc(userID);
         usuariosRef.set(this.registroForm.value)
-          .then(docRef => {
+          .then(() => {
             console.log("Usuario añadido");
             this.router.navigate(["/"]);
           })
-          .catch((error) => {
+          .catch(() => {
             console.log("No se ha podido añadir al usuario");
           });
       }
     });
   }
 }
+function validarEmailIgual(): ValidatorFn {
+  return (control: AbstractControl): { [key: string]: any } | null => {
+    const correo = control.parent?.get('correo');
+    const repetirCorreo = control.parent?.get('repetirCorreo');
+    if (correo?.value !== repetirCorreo?.value) {
+      return { emailNoIguales: true };
+    }
+    return null;
+  };
+}
+
+
+function validarContrasenaIgual(): ValidatorFn {
+  return (control: AbstractControl): { [key: string]: any } | null => {
+    const contrasena = control.parent?.get('contrasena');
+    const repetirContrasena = control.parent?.get('repetirContrasena');
+    if (contrasena?.value !== repetirContrasena?.value) {
+      return { contrasenaNoIguales: true };
+    }
+    return null;
+  };
+}
+
+
 

@@ -1,5 +1,5 @@
 <div id="edit">
-  <input type="text"[ngStyle]="{'width': inputWidth}" [(ngModel)]="inputValue" (input)="onInput()" value="{{ usuario.nombre }} {{ usuario.apellidos }}" id="nombre">
+  <input type="text"[ngStyle]="{'width': inputWidth}" [(ngModel)]="inputValue" (input)="onInput()" value="{{ usuario.nombre }}" id="nombre" [readonly]="!guardandoCambios">
 </div>
 
 <components-separador></components-separador>

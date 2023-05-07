@@ -1,0 +1,34 @@
+.button_enviar {
+  font-size: 100%;
+  margin: auto 44vw;
+  margin-top: 2vw ;
+  margin-bottom: 2vw;
+  background-color: white;
+  color: #CF9800;
+  border-radius: 10px;
+  border: 3px solid #CF9800;
+  padding: 1vw 4vw;
+  font-size: 2vw;
+}
+
+#registro-actividad {
+  margin: auto;
+}
+
+#registro-actividad  ul{
+  margin: auto 30vw;
+  list-style: none;
+}
+
+#registro-actividad  p{
+  font-size: 2vw;
+  text-align: center;
+}
+
+#registro-actividad  input {
+  border-radius: 10px;
+  border: 3px solid #000000;
+  width: 30vw;
+  padding: 1vw 3vw;
+  font-size: 2vw;
+}
