@@ -15,11 +15,12 @@ import 'firebase/auth';
 
 export class ContrasenaOlvidadaComponent {
 
-  generatedCode: string = "";
 
   constructor(private authService: AuthService, private router: Router,
     private afs: AngularFirestore, private firestoreService: FirestoreService) { }
 
+  exists: boolean = true;
+  generatedCode: string = "";
   correo: string | undefined;
 
   olvidadaForm = new FormGroup({
@@ -38,18 +39,21 @@ export class ContrasenaOlvidadaComponent {
     firebase.auth().fetchSignInMethodsForEmail(olvidadaForm.value.correo)
       .then(signInMethods => {
         if (signInMethods.length > 0) {
+          this.authService.correo = olvidadaForm.value.correo;
           this.router.navigate(["/codigo-contrasena"]);
           this.crearCodigo()
           return true;
         } else {
+          this.exists = false;
+          console.log("No existe")
           return false;
         }
       })
       .catch(error => {
+        this.exists = false;
         return false;
       });
 
-      this.authService.correo = olvidadaForm.value.correo;
   }
 
   crearCodigo() {

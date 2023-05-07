@@ -9,9 +9,10 @@ import { Router } from '@angular/router';
 })
 export class InicioSesionComponent {
 
-  constructor (private authService: AuthService, private router: Router){}
+  constructor(private authService: AuthService, private router: Router) { }
 
   correo: string | undefined;
+  canLogin: boolean = true;
 
   loginForm = new FormGroup({
     correo: new FormControl('', Validators.compose([
@@ -38,12 +39,11 @@ export class InicioSesionComponent {
 
     this.authService.signInWithEmail(usuario.Correo, usuario.Contraseña)
       .then(() => {
-        // El usuario se ha autenticado correctamente
         console.log("Autenticado con exito")
         this.router.navigate(["/"]);
       })
       .catch((error) => {
-        // Ha habido un error al autenticar al usuario
+        this.canLogin = false;
         console.log("Fallo el autenticar")
         return false;
       });

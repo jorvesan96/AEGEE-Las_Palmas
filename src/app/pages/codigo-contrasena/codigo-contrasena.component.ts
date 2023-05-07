@@ -20,15 +20,13 @@ export class CodigoContrasenaComponent {
 
   constructor(private firestoreService: FirestoreService, private router: Router, private auth: AuthService) { }
 
+  incorrect: boolean = false;
+
   get f() {
     return this.codigoForm.controls;
   }
 
   validCode(codigoForm: { value: any; }): boolean {
-
-    console.log(codigoForm.value.codigo);
-
-
 
     if (codigoForm.value.codigo == this.firestoreService.getGeneratedCode()) {
       firebase.auth().sendPasswordResetEmail(this.auth.correo)
@@ -42,6 +40,7 @@ export class CodigoContrasenaComponent {
           return false;
         })
     }
+    this.incorrect = true;
     return false;
   }
 

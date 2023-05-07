@@ -16,10 +16,12 @@
   width: 40vw;
   border: 2px solid black;
   margin: 5vw auto;
+  border-radius: 10px;
 }
 
 #login-container {
   background-color: white;
+  border-radius: 10px;
 }
 #acciones {
   width: 70%;

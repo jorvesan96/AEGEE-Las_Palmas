@@ -18,6 +18,7 @@
 
           <input matInput type="text" formControlName="codigo" class="form-control" maxlength="6" placeholder="CODIGO">
           <div *ngIf="f['codigo'].touched && f['codigo'].invalid" class="alert"></div>
+          <div *ngIf="incorrect" class="alert">Codigo erróneo</div>
 
           <a routerLink="/inicio-sesion" class="olvidada">Volver a inicio de sesión</a>
         </div>

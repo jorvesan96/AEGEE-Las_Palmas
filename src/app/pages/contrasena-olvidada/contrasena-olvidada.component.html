@@ -11,8 +11,7 @@
 
     <div id="form">
 
-      <form [formGroup]="olvidadaForm" name="olvidadaForm" (ngSubmit)="enviarCodigo(olvidadaForm)"
-        id="olvidada-form">
+      <form [formGroup]="olvidadaForm" name="olvidadaForm" (ngSubmit)="enviarCodigo(olvidadaForm)" id="olvidada-form">
 
         <p id="introduce">Introduce tu correo electrónico y se te mandará un código para poder restablecer.</p>
         <div id="fields">
@@ -21,6 +20,7 @@
           <div *ngIf="f['correo'].touched && f['correo'].invalid" class="alert">
             <div *ngIf="f['correo'].touched && f['correo'].errors">*Se debe introducir un correo válido.</div>
           </div>
+          <div *ngIf="!exists" class="alert">No existe este correo</div>
           <a routerLink="/inicio-sesion" class="olvidada">Volver a inicio de sesión</a>
         </div>
         <input type="submit" value="Enviar" id="boton">
