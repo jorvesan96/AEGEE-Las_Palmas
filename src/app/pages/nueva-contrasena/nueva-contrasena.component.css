@@ -3,99 +3,45 @@
   bottom: 0;
 }
 
-#banner {
-  height: 10vw;
-  background-color: lightgrey;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-}
 
-#nueva {
-  height: 50vh;
-  width: 40vw;
-  border: 2px solid black;
-  margin: 5vw auto;
-}
-
-#acciones {
-  width: 70%;
-  height: 4.9vw;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#acciones a {
-  font-family: "Open sans", sans-serif;
-  font-size: 1.2vw;
-  text-decoration: none;
-  color: black;
-}
-
-#nueva-container {
-  background-color: white;
-}
-
-.ng-untouched, .ng-touched {
-  font-family: "Open sans", sans-serif;
-  font-size: 1.2vw;
-  border: 2px solid black;
-  border-radius: 0.5vw;
-  width: 95%;
-  height: 5vh;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 2vw;
-  padding: .5vh .5vw;
-}
-#nueva-form {
-  font-weight: 0;
-  width: 80%;
-  margin: 3vw auto;
-  height: 30vh;
-  padding: 0;
-  display: flex;
+.main{
+  margin: 10vh auto;
+  display:flex;
   flex-direction: column;
-  justify-content: space-between;
-  border:none;
-}
-
-#nueva-form .nueva-field:hover {
-  background-color: lightgray;
-}
-#boton {
-  background-color: transparent;
-  font-family: "Open sans", sans-serif;
-  font-size: 1.2vw;
+  height: 100%;
+  width: 50%;
   border: 2px solid black;
-  border-radius: 0.5vw;
-  width: 10vw;
-  align-self: center;
-  padding: 1vh 1vw;
+  border-radius: .5vw;
 }
 
-#boton:hover {
-  cursor: pointer;
-  background-color: lightgray;
+.mensaje{
+  margin: 5vh auto 0 auto;
+  width: 60%;
 }
-.alert{
-  font-family: 'Open sans', sans-serif;
-  font-size: 0.8vw;
-  color: coral;
-  position: absolute;
-  margin-top: -1.8vw;
 
-}
-.volver{
+.navigate{
+  margin: 5vh auto;
+  width: 80%;
   display: flex;
+  justify-content: space-between;
+}
+.navigate a{
+  color: black;
   text-decoration: none;
-  color: darkblue;
-  font-size: .8vw;
-  text-align: center;
-  font-weight: normal;
-  width: fit-content;
-  margin-top: -3vh;
+  border: 2px solid black;
+  border-radius: .5vw;
+  padding: 1.5vh 1vw;
+}
 
+#sesion{
+  background-color: #4ca0ff;
+}
+#sesion:hover{
+  background-color: #3383df;
+}
+#inicio{
+  background-color: #c44bc2;
+}
+#inicio:hover{
+  background-color: #994396;
 }
