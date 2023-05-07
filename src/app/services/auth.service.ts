@@ -4,13 +4,14 @@ import { AngularFireDatabase, AngularFireObject } from '@angular/fire/compat/dat
 import { Observable } from 'rxjs';
 import { map } from 'rxjs';
 import { Auth } from '@angular/fire/auth';
-import firebase from 'firebase/compat/app';
 import 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
+  correo !: string;
 
   userObject: AngularFireObject<any> = {} as AngularFireObject<any>;
   constructor(private _auth: AngularFireAuth, private user: Auth, private _db: AngularFireDatabase) { }
@@ -32,8 +33,4 @@ export class AuthService {
     );
   }
 
-  correo !: string;
-  updatePassword(contrasena: string){
-
-  }
 }
