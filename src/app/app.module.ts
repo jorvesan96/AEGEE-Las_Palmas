@@ -43,6 +43,7 @@ import { CodigoContrasenaComponent } from './pages/codigo-contrasena/codigo-cont
 import { provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { initializeApp } from 'firebase/app';
+import { RegistroActividadComponent } from './pages/registro-actividad/registro-actividad.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { initializeApp } from 'firebase/app';
     PopUpComponent,
     NuevaContrasenaComponent,
     ContrasenaOlvidadaComponent,
-    CodigoContrasenaComponent
+    CodigoContrasenaComponent,
+    RegistroActividadComponent
   ],
   imports: [
     BrowserModule,

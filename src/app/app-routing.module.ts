@@ -13,6 +13,7 @@ import { VoluntariadoComponent } from './pages/voluntariado/voluntariado.compone
 import { NuevaContrasenaComponent } from './pages/nueva-contrasena/nueva-contrasena.component';
 import { ContrasenaOlvidadaComponent } from './pages/contrasena-olvidada/contrasena-olvidada.component';
 import { CodigoContrasenaComponent } from './pages/codigo-contrasena/codigo-contrasena.component';
+import { RegistroActividadComponent } from './pages/registro-actividad/registro-actividad.component';
 
 const routes: Routes = [
   {
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'codigo-contrasena',
     component: CodigoContrasenaComponent
+  },
+  {
+    path: 'registro-actividad',
+    component: RegistroActividadComponent
   }
 ];
 
