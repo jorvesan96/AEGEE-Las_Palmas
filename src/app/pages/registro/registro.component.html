@@ -1,103 +1,107 @@
-  <h1>Formulario de Registro</h1>
+<h1>Formulario de Registro</h1>
 
-  <components-separador></components-separador>
-  <mat-horizontal-stepper linear [labelPosition]="'bottom'" >
-    <mat-step label="step 1" [ngClass]="{'completed': paso1Completo}"  [editable]="false"  [completed]="paso1Completo"></mat-step>
-    <mat-step label="step 2" [ngClass]="{'completed': paso1Completo}"  [editable]="false"  [completed]="paso1Completo"></mat-step>
-  </mat-horizontal-stepper>
+<components-separador></components-separador>
+<mat-horizontal-stepper linear [labelPosition]="'bottom'">
+  <mat-step label="step 1" [ngClass]="{'completed': paso1Completo}" [editable]="false"
+    [completed]="paso1Completo"></mat-step>
+  <mat-step label="step 2" [ngClass]="{'completed': paso1Completo}" [editable]="false"
+    [completed]="paso1Completo"></mat-step>
+</mat-horizontal-stepper>
+<form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
   <div *ngIf="!paso1Completo">
-    <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
-      <mat-form-field >
-        <input matInput placeholder="Nombre" formControlName="nombre" required>
-        <mat-error *ngIf="registroForm.get('nombre')?.invalid && (registroForm.get('nombre')?.dirty || registroForm.get('nombre')?.touched)">
-          Nombre es requerido.
-        </mat-error>
-      </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nombre y apellidos" formControlName="nombre" required>
+      <mat-error
+        *ngIf="registroForm.get('nombre')?.invalid && (registroForm.get('nombre')?.dirty || registroForm.get('nombre')?.touched)">
+        Nombre es requerido.
+      </mat-error>
+    </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Apellidos" formControlName="apellidos" required>
-        <mat-error *ngIf="registroForm.get('apellidos')?.invalid && (registroForm.get('apellidos')?.dirty || registroForm.get('apellidos')?.touched)">
-          Apellidos son requeridos.
-        </mat-error>
-      </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="DNI" formControlName="dni" required>
+      <mat-error
+        *ngIf="registroForm.get('dni')?.invalid && (registroForm.get('dni')?.dirty || registroForm.get('dni')?.touched)">
+        DNI es requerido.
+      </mat-error>
+    </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="DNI" formControlName="dni" required>
-        <mat-error *ngIf="registroForm.get('dni')?.invalid && (registroForm.get('dni')?.dirty || registroForm.get('dni')?.touched)">
-          DNI es requerido.
-        </mat-error>
-      </mat-form-field>
+    <mat-form-field>
+      <mat-label>Fecha de nacimiento</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Elige una fecha" formControlName="nacimiento" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error
+        *ngIf="registroForm.get('fechaNacimiento')?.invalid && (registroForm.get('fechaNacimiento')?.dirty || registroForm.get('fechaNacimiento')?.touched)">
+        Fecha de nacimiento es requerida.
+      </mat-error>
+    </mat-form-field>
 
-      <mat-form-field>
-        <mat-label>Fecha de nacimiento</mat-label>
-        <input matInput [matDatepicker]="picker" placeholder="Elige una fecha" formControlName="nacimiento" required>
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-        <mat-error *ngIf="registroForm.get('fechaNacimiento')?.invalid && (registroForm.get('fechaNacimiento')?.dirty || registroForm.get('fechaNacimiento')?.touched)">
-          Fecha de nacimiento es requerida.
-        </mat-error>
-      </mat-form-field>
+    <mat-form-field>
+      <mat-label>País:</mat-label>
+      <mat-select placeholder="Selecciona un país" formControlName="pais" required>
+        <mat-option *ngFor="let pais of paises" [value]="pais.value">{{pais.label}}</mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="registroForm.get('pais')?.invalid && (registroForm.get('pais')?.dirty || registroForm.get('pais')?.touched)">
+        País es requerido.
+      </mat-error>
+    </mat-form-field>
 
-      <mat-form-field>
-        <mat-label>País:</mat-label>
-        <mat-select placeholder="Selecciona un país" formControlName="pais" required>
-          <mat-option *ngFor="let pais of paises" [value]="pais.value">{{pais.label}}</mat-option>
-        </mat-select>
-        <mat-error *ngIf="registroForm.get('pais')?.invalid && (registroForm.get('pais')?.dirty || registroForm.get('pais')?.touched)">
-          País es requerido.
-        </mat-error>
-      </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Localidad" formControlName="localidad" required>
+      <mat-error
+        *ngIf="registroForm.get('localidad')?.invalid && (registroForm.get('localidad')?.dirty || registroForm.get('localidad')?.touched)">
+        Localidad es requerida.
+      </mat-error>
+    </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Localidad" formControlName="localidad" required>
-        <mat-error *ngIf="registroForm.get('localidad')?.invalid && (registroForm.get('localidad')?.dirty || registroForm.get('localidad')?.touched)">
-          Localidad es requerida.
-        </mat-error>
-      </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Teléfono" formControlName="telefono" required>
+      <mat-error
+        *ngIf="registroForm.get('telefono')?.invalid && (registroForm.get('telefono')?.dirty || registroForm.get('telefono')?.touched)">
+        Teléfono es requerido.
+      </mat-error>
+    </mat-form-field>
+  </div>
 
-      <mat-form-field>
-        <input matInput placeholder="Teléfono" formControlName="telefono" required>
-        <mat-error *ngIf="registroForm.get('telefono')?.invalid && (registroForm.get('telefono')?.dirty || registroForm.get('telefono')?.touched)">
-          Teléfono es requerido.
-        </mat-error>
-      </mat-form-field>
-  </form>
-</div>
-
-<div *ngIf="paso1Completo">
-  <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
+  <div *ngIf="paso1Completo">
     <mat-form-field>
       <input matInput placeholder="Correo" formControlName="correo" required>
-      <mat-error *ngIf="registroForm.get('correo')?.invalid && (registroForm.get('correo')?.dirty || registroForm.get('correo')?.touched)">
+      <mat-error
+        *ngIf="registroForm.get('correo')?.invalid && (registroForm.get('correo')?.dirty || registroForm.get('correo')?.touched)">
         Correo es requerido.
       </mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <input matInput placeholder="repetirCorreo" formControlName="repetirCorreo" required>
-      <mat-error *ngIf="registroForm.get('repetirCorreo')?.invalid && (registroForm.get('repetirCorreo')?.dirty || registroForm.get('repetirCorreo')?.touched)">
+      <mat-error
+        *ngIf="registroForm.get('repetirCorreo')?.invalid && (registroForm.get('repetirCorreo')?.dirty || registroForm.get('repetirCorreo')?.touched)">
         Repetir correo es requerido.
       </mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <input matInput placeholder="Contrasena" formControlName="contrasena" type="password" required>
-      <mat-error *ngIf="registroForm.get('contrasena')?.invalid && (registroForm.get('contrasena')?.dirty || registroForm.get('contrasena')?.touched)">
+      <mat-error
+        *ngIf="registroForm.get('contrasena')?.invalid && (registroForm.get('contrasena')?.dirty || registroForm.get('contrasena')?.touched)">
         Contraseña es requerido.
       </mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <input matInput placeholder="repetirContrasena" formControlName="repetirContrasena" type="password" required>
-      <mat-error *ngIf="registroForm.get('repetirContrasena')?.invalid && (registroForm.get('repetirContrasena')?.dirty || registroForm.get('repetirContrasena')?.touched)">
+      <mat-error
+        *ngIf="registroForm.get('repetirContrasena')?.invalid && (registroForm.get('repetirContrasena')?.dirty || registroForm.get('repetirContrasena')?.touched)">
         Contraseña es requerido.
       </mat-error>
     </mat-form-field>
-  </form>
-</div>
+  </div>
+</form>
 
 <nav>
-  <a id="siguiente" *ngIf="!paso1Completo" (click)="paso1Completo=true">Siguiente<span ngNonBindable>>>></span></a>
-  <a id="anterior" *ngIf="paso1Completo" (click)="paso1Completo=false"><span ngNonBindable><<<</span>Anterior</a>
-  <button routerLink="/" *ngIf="paso1Completo" id="enviarBoton" type="submit" (click)="enviarRegistro(registroForm)">Enviar</button>
+  <a id="siguiente" *ngIf="!paso1Completo" (click)="paso1Completo=true">Siguiente<span ngNonBindable></span></a>
+  <a id="anterior" *ngIf="paso1Completo" (click)="paso1Completo=false"><span ngNonBindable>
+      </span>Anterior</a>
+  <button *ngIf="paso1Completo" id="enviarBoton" type="submit"  [disabled]="!registroForm.valid" (click)="enviarRegistro(registroForm)">Enviar</button>
 </nav>
