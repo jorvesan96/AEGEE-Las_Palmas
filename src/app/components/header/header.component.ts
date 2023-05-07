@@ -23,7 +23,6 @@ export class HeaderComponent {
   ngOnInit() {
     this.afAuth.authState.subscribe(user => {
       this.isLogged = !!user;
-      console.log(this.isLogged);
     });
 
   }
