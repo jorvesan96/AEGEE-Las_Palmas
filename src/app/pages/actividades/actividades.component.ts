@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { actividad } from 'src/app/services/actividades';
-import { ActividadesService } from 'src/app/services/actividades.service';
 import 'firebase/firestore';
 import firebase from 'firebase/compat/app';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-actividades',
@@ -12,11 +11,10 @@ import firebase from 'firebase/compat/app';
 })
 export class ActividadesComponent {
 
-  constructor(private actividadService: ActividadesService){}
+  constructor(private router: Router){}
 
   //actividades: actividad[] = [];
   actividades: any = [];
-
 
   ngOnInit(){
     //this.actividades = this.actividadService.getActividades();
@@ -37,6 +35,10 @@ export class ActividadesComponent {
       console.log(miArray);
     });
     this.actividades= miArray;
+  }
+
+  navegarRegistroActividad() {
+    this.router.navigate(['/registro-actividad']);
   }
 
 }

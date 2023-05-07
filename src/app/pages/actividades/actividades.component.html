@@ -55,8 +55,9 @@
             <components-separador></components-separador>
         </div>
 
-        <article class="actividad" *ngFor="let act of actividades">
-            <div class="contenedor_actividades" *ngIf="act.tipo == 'Local'">
+        <article class="actividad1" *ngFor="let act of actividades">
+            <div class="contenedor_actividades" *ngIf="act.tipo == 'Local'" (click)="navegarRegistroActividad()">
+
                 <a > <img src="" alt="" width="200" height="200"></a>
                 <div>
                     <h2 id="titulo_actividad">{{act.nombre}}</h2>
@@ -66,7 +67,7 @@
             </div>
         </article>
     </section>
-    
+
 
     <section id="grupo_actividades" >
         <div id="titulo_1">
@@ -74,8 +75,9 @@
             <components-separador></components-separador>
         </div>
 
-        <article class="actividad" *ngFor="let act of actividades">
-          <div class="contenedor_actividades" *ngIf="act.tipo == 'Europea'" >
+        <article class="actividad2" *ngFor="let act of actividades">
+          <div class="contenedor_actividades" *ngIf="act.tipo == 'Europea'" (click)="navegarRegistroActividad()" >
+>>>>>>> 7771d835fb75df5ef514ae699fe7054cb3ac0b0f
               <a > <img src="" alt="" width="200" height="200"></a>
               <div>
                   <h2 id="titulo_actividad">{{act.nombre}}</h2>

@@ -1,7 +1,6 @@
 .button_enviar {
-  font-size: 100%;
-  margin: auto 44vw;
-  margin-top: 2vw ;
+  display: flex;
+  margin:2vw auto;
   margin-bottom: 2vw;
   background-color: white;
   color: #CF9800;
@@ -13,10 +12,11 @@
 
 #registro-actividad {
   margin: auto;
+  display:flex;
 }
 
 #registro-actividad  ul{
-  margin: auto 30vw;
+  margin: auto 25vw;
   list-style: none;
 }
 
@@ -28,7 +28,7 @@
 #registro-actividad  input {
   border-radius: 10px;
   border: 3px solid #000000;
-  width: 30vw;
+  width: 35vw;
   padding: 1vw 3vw;
   font-size: 2vw;
 }
