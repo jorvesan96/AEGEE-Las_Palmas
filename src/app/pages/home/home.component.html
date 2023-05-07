@@ -8,12 +8,12 @@
                             (breakpoint)="breakpoint($event)"
                             (afterChange)="afterChange($event)"
                             (beforeChange)="beforeChange($event)">
-            <div ngxSlickItem *ngFor="let slide of " class="slide">
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
                     <img src="{{ slide }}" alt="" width="99%">
             </div>
     </ngx-slick-carousel>
     <button (click)="slickModal.slickNext()"><i class="fa-solid fa-circle-chevron-right next-btn"></i></button>
-    </div>
+</div>
 
 <section>
     <h1>¿Quiénes somos?</h1>
@@ -162,9 +162,10 @@
     </article>
 
 </section>
+
 <button class="boton_desplazamiento" (click)="accionarBoton()">
     <i id="icono" class="fa-solid fa-sort-down" style="color: #ffffff"></i>
-    </button>
+</button>
 <section class="queHacemos">
     <h1>¿Qué hacemos?</h1>
     <components-separador></components-separador>
@@ -199,3 +200,4 @@
     </div>
 </section>
 
+<app-flecha-subida></app-flecha-subida>

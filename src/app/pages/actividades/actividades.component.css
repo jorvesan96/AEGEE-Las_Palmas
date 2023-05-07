@@ -68,25 +68,19 @@
     text-align: left;
   }
 
-  .my-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5%;
-    grid-column: 2 / 3;
-  }
-
-  .button_desplegar {
-    display: block;
-    margin: 0 auto;
+  .boton_desplazamiento{
+    background-color: #C5C6C6;
+    color: #222224;
     text-align: center;
-    border-radius: 1vw;
-    padding: 1vw 2vw;
-    background-color: #cccccc;
-    color: #ffffff;
-    width: 80%;
-
-
+    margin: 0 auto;
+    width: 95%;
+    display: block;
+    font-size: xx-large;
+    border-radius: 25px;
+    padding-bottom: 1%;
+    padding-top: 0.8%;
+    position: relative;
+    margin-top: 0%;
   }
 
   #titulo_actividad{
@@ -101,11 +95,19 @@
 
   #filtro {
     grid-column: 1 / 2;
-
   }
 
 
   #grupo_actividades {
     grid-column: 2 / 3;
+  }
 
+  .actividad1 {
+
+    transition: max-height 1.5s ease-out;
+    overflow: hidden;
+  }
+  .actividad2{
+    transition: max-height 1.5s ease-out;
+    overflow: hidden;
   }

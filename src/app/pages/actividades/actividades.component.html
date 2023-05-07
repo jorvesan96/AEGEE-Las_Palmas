@@ -55,7 +55,7 @@
             <components-separador></components-separador>
         </div>
 
-        <article class="actividad" *ngFor="let act of actividades">
+        <article class="actividad1" *ngFor="let act of actividades" [ngStyle]="{ 'max-height': contentHeight1 }">
             <div class="contenedor_actividades" *ngIf="act.tipo == 'Local'">
                 <a > <img src="" alt="" width="200" height="200"></a>
                 <div>
@@ -65,18 +65,20 @@
                 </div>
             </div>
         </article>
-
-
+        <button class="boton_desplazamiento" (click)="accionarBoton1()">
+            <i id="icono1" class="fa-solid fa-sort-down" style="color: #ffffff"></i>
+        </button>
     </section>
+    
 
-    <section id="grupo_actividades">
+    <section id="grupo_actividades" >
         <div id="titulo_1">
             <h1>Actividades Europeas</h1>
             <components-separador></components-separador>
         </div>
 
-        <article class="actividad" *ngFor="let act of actividades">
-          <div class="contenedor_actividades" *ngIf="act.tipo == 'Europea'">
+        <article class="actividad2" *ngFor="let act of actividades" [ngStyle]="{ 'max-height': contentHeight2 }">
+          <div class="contenedor_actividades" *ngIf="act.tipo == 'Europea'" >
               <a > <img src="" alt="" width="200" height="200"></a>
               <div>
                   <h2 id="titulo_actividad">{{act.nombre}}</h2>
@@ -85,7 +87,10 @@
               </div>
           </div>
       </article>
-
+      <button class="boton_desplazamiento" (click)="accionarBoton2()">
+        <i id="icono2" class="fa-solid fa-sort-down" style="color: #ffffff"></i>
+    </button>
 
     </section>
 </div>
+<app-flecha-subida></app-flecha-subida>
