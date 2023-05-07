@@ -54,117 +54,38 @@
             <h1>Actividades Locales</h1>
             <components-separador></components-separador>
         </div>
-        <article class="actividad">
-            <div class="contenedor_actividades">
+
+        <article class="actividad" *ngFor="let act of actividades">
+            <div class="contenedor_actividades" *ngIf="act.tipo == 'Local'">
                 <a > <img src="" alt="" width="200" height="200"></a>
                 <div>
-                    <h2 id="titulo_actividad">Actividad 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum.
+                    <h2 id="titulo_actividad">{{act.nombre}}</h2>
+                    <p>{{act.descripcion}}
                     </p>
                 </div>
             </div>
         </article>
 
-        <article class="actividad">
-            <div class="contenedor_actividades">
-                <a> <img src="" alt="" width="200" height="200"></a>
-                <div>
-                    <h2 id="titulo_actividad">Actividad 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                
-            </div>
-        </article>
 
-        <article class="actividad">
-            <div class="contenedor_actividades">
-                <a> <img src="" alt="" width="200" height="200"></a>
-                <div>
-                    <h2 id="titulo_actividad">Actividad 3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-            </div>
-        </article>
     </section>
 
-    <div class="my-container">
-        <button type="button" class="button_desplegar">v</button>
-    </div>
-        
     <section id="grupo_actividades">
         <div id="titulo_1">
             <h1>Actividades Europeas</h1>
             <components-separador></components-separador>
         </div>
 
-        <article class="actividad">
-            <div class="contenedor_actividades">
-                <a > <img src="" alt="" width="200" height="200"></a>
-                <div>
-                    <h2 id="titulo_actividad">Actividad 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-            </div>
-        </article>
+        <article class="actividad" *ngFor="let act of actividades">
+          <div class="contenedor_actividades" *ngIf="act.tipo == 'Europea'">
+              <a > <img src="" alt="" width="200" height="200"></a>
+              <div>
+                  <h2 id="titulo_actividad">{{act.nombre}}</h2>
+                  <p>{{act.descripcion}}
+                  </p>
+              </div>
+          </div>
+      </article>
 
-        <article class="actividad">
-            <div class="contenedor_actividades">
-                <a> <img src="" alt="" width="200" height="200"></a>
-                <div>
-                    <h2 id="titulo_actividad">Actividad 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-            </div>
-        </article>
 
-        <article class="actividad">
-            <div class="contenedor_actividades">
-                <a> <img src="" alt="" width="200" height="200"></a>
-                <div>
-                    <h2 id="titulo_actividad">Actividad 3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-            </div>
-        </article>
     </section>
-
-    <div class="my-container">
-        <button type="button" class="button_desplegar">^</button>
-    </div>
-
 </div>
