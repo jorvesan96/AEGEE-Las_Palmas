@@ -23,11 +23,13 @@ export class RegistroComponent implements OnInit {
     private authService: AuthService,
     private router: Router) { }
 
-  paises = [{ value: 'mx', label: 'México' },
-  { value: 'us', label: 'Estados Unidos' },
-  { value: 'es', label: 'España' },
-  { value: 'co', label: 'Colombia' },
-  { value: 'pe', label: 'Perú' }];
+  paises = [
+    { value: 'México', label: 'México' },
+    { value: 'Estados Unidos', label: 'Estados Unidos' },
+    { value: 'España', label: 'España' },
+    { value: 'Colombia', label: 'Colombia' },
+    { value: 'Perú', label: 'Perú' }
+  ];
 
 
   ngOnInit() {
@@ -91,18 +93,11 @@ export class RegistroComponent implements OnInit {
       if (user) {
         userID = user.uid;
 
-        const selectedPais = this.paises.find(pais => pais.value === this.registroForm.value.pais);
-        const paisLabel = selectedPais ? selectedPais.label : '';
-
-        // add label to form data before saving to Firestore
-        this.registroForm.value.pais = paisLabel;
-
-
         const usuariosRef = db.collection('usuarios').doc(userID);
         usuariosRef.set(this.registroForm.value)
           .then(() => {
             console.log("Usuario añadido");
-            this.router.navigate(["/"]);
+            this.router.navigate(["/recepcion-documentos"]);
           })
           .catch(() => {
             console.log("No se ha podido añadir al usuario");
