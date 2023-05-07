@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { actividad } from 'src/app/services/actividades';
-import { ActividadesService } from 'src/app/services/actividades.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import 'firebase/firestore';
 import firebase from 'firebase/compat/app';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-actividades',
@@ -19,11 +18,11 @@ import firebase from 'firebase/compat/app';
 })
 export class ActividadesComponent {
 
-  constructor(private actividadService: ActividadesService){}
+  constructor(private router: Router){}
 
   //actividades: actividad[] = [];
   actividades: any = [];
-  contentHeight1 = "5vw";  
+  contentHeight1 = "5vw";
   contentHeight2 = "5vw";
   isContentVisible1 = false;
   isContentVisible2 = false;
@@ -56,7 +55,7 @@ export class ActividadesComponent {
     icono?.classList.toggle("fa-sort-up");
     this.isContentVisible1 = !this.isContentVisible1;
     this.contentHeight1 = this.isContentVisible1 ? '20vw' : '5vw';
-    
+
   }
   accionarBoton2(){
     var icono = document.getElementById("icono2");
@@ -64,7 +63,11 @@ export class ActividadesComponent {
     icono?.classList.toggle("fa-sort-up");
     this.isContentVisible2 = !this.isContentVisible2;
     this.contentHeight2 = this.isContentVisible2 ? '20vw' : '5vw';
-    
+
+  }
+
+  navegarRegistroActividad() {
+    this.router.navigate(['/registro-actividad']);
   }
 
 }

@@ -56,7 +56,7 @@
         </div>
 
         <article class="actividad1" *ngFor="let act of actividades" [ngStyle]="{ 'max-height': contentHeight1 }">
-            <div class="contenedor_actividades" *ngIf="act.tipo == 'Local'">
+            <div class="contenedor_actividades" *ngIf="act.tipo == 'Local'" (click)="navegarRegistroActividad()">
                 <a > <img src="" alt="" width="200" height="200"></a>
                 <div>
                     <h2 id="titulo_actividad">{{act.nombre}}</h2>
@@ -69,7 +69,7 @@
             <i id="icono1" class="fa-solid fa-sort-down" style="color: #ffffff"></i>
         </button>
     </section>
-    
+
 
     <section id="grupo_actividades" >
         <div id="titulo_1">
@@ -78,7 +78,7 @@
         </div>
 
         <article class="actividad2" *ngFor="let act of actividades" [ngStyle]="{ 'max-height': contentHeight2 }">
-          <div class="contenedor_actividades" *ngIf="act.tipo == 'Europea'" >
+          <div class="contenedor_actividades" *ngIf="act.tipo == 'Europea'" (click)="navegarRegistroActividad()" >
               <a > <img src="" alt="" width="200" height="200"></a>
               <div>
                   <h2 id="titulo_actividad">{{act.nombre}}</h2>
