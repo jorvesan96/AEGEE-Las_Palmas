@@ -15,6 +15,7 @@ export class ActividadesComponent {
 
   //actividades: actividad[] = [];
   actividades: any = [];
+  actividadSeleccionada: any;
 
   ngOnInit(){
     //this.actividades = this.actividadService.getActividades();
@@ -32,7 +33,6 @@ export class ActividadesComponent {
       // Aquí puedes hacer lo que quieras con los datos de cada documento.
       // Por ejemplo, puedes almacenarlos en un array:
       miArray.push(data);
-      console.log(miArray);
     });
     this.actividades= miArray;
   }

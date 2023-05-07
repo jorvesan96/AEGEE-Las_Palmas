@@ -14,6 +14,6 @@
     <input class="form-input" type="text" name="activityRegister" id="data-telefono" [(ngModel)]="usuario.telefono">
   </ul>
 </div>
-<button class="button_enviar" routerLink="/recepcion-documentos">Enviar</button>
+<button class="button_enviar" routerLink="/recepcion-documentos" (click)="onSubmit()">Enviar</button>
 
 <app-flecha-subida></app-flecha-subida>

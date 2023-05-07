@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FirestoreService } from 'src/app/services/firestore.service';
 import { Usuario } from 'src/app/services/usuario';
+import { MisActividadesService } from 'src/app/services/mis-actividades.service';
 
 @Component({
   selector: 'app-registro-actividad',
@@ -10,7 +11,8 @@ import { Usuario } from 'src/app/services/usuario';
 })
 export class RegistroActividadComponent {
 
-  constructor(private afAuth: AngularFireAuth, private firestoreService: FirestoreService) { }
+  constructor(private afAuth: AngularFireAuth, private firestoreService: FirestoreService,
+              private misActividadesService: MisActividadesService) { }
 
   usuario: Usuario = {
     nombre: '',
@@ -27,22 +29,23 @@ export class RegistroActividadComponent {
 
   userUID!: string;
   valoresOriginales!: Usuario;
+  actividadSeleccionada: any;
 
   ngOnInit() {
     this.afAuth.authState.subscribe(user => {
       if (user) {
-        console.log("Entro");
         this.userUID = user.uid;
 
-        console.log(this.userUID);
         this.firestoreService.getUser(this.userUID).subscribe((user: any) => {
           this.usuario = user;
           this.valoresOriginales = { ...user };
-
-          console.log(this.usuario);
         });
       }
     });
+  }
+
+  onSubmit() {
+    this.misActividadesService.agregarActividad(this.actividadSeleccionada);
   }
 
 }
