@@ -16,7 +16,6 @@ export class PerfilUsuarioComponent {
 
   usuario: Usuario = {
     nombre: '',
-    apellidos: '',
     dni: '',
     correo: '',
     estudia: true,

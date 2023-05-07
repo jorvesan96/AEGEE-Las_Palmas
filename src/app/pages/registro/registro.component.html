@@ -2,9 +2,9 @@
 
 <components-separador></components-separador>
 <mat-horizontal-stepper linear [labelPosition]="'bottom'">
-  <mat-step label="step 1" [ngClass]="{'completed': paso1Completo}" [editable]="false"
+  <mat-step [ngClass]="{'completed': paso1Completo}" [editable]="false"
     [completed]="paso1Completo"></mat-step>
-  <mat-step label="step 2" [ngClass]="{'completed': paso1Completo}" [editable]="false"
+  <mat-step [ngClass]="{'completed': paso1Completo}" [editable]="false"
     [completed]="paso1Completo"></mat-step>
 </mat-horizontal-stepper>
 <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">

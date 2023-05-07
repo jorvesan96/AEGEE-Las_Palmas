@@ -51,11 +51,19 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-step-header .mat-step-icon {
-  font-size: 2.5vw; 
-  width: 3.6vw;
-  height: 3.6vw;
-  border-radius: 50%;
-
+  font-size: 4vw; 
+  width: 6vw;
+  height: 6vw;
   color: white;
+  margin-top: 5%;
+}
+.mat-step-header {
+  position: static !important;
+  transition: none !important;
+  pointer-events: none; 
 }
 
+
+.mat-stepper-label-position-bottom .mat-stepper-horizontal-line {
+  margin-top: 2.5vw !important;
+}
