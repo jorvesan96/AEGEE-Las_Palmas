@@ -1,0 +1,7 @@
+{
+  "name": "Aegee-LasPalmas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
