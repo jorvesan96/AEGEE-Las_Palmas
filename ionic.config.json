@@ -1,0 +1,8 @@
+{
+  "name": "AEGEE-Las_Palmas",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
