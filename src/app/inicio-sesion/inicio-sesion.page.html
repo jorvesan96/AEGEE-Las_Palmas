@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>inicio-sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="banner"></div>
+
+  <section id="login">
+    <div id="login-container">
+      <div id="acciones">
+        <ion-title>Iniciar sesión</ion-title>
+        <ion-button routerLink='/registro'>Registro</ion-button>
+      </div>
+
+      <div id="form">
+        <form [formGroup]="loginForm" name="loginForm" (ngSubmit)="login(loginForm.value)" id="login-form">
+          <div id="fields">
+
+            <ion-item>
+              <ion-label position="floating">Correo eléctronico</ion-label>
+              <ion-input type="email" formControlName="correo"></ion-input>
+            </ion-item>
+            <div *ngIf="f['correo'].touched && f['correo'].invalid" class="alert">
+              <div *ngIf="f['correo'].touched && f['correo'].errors">*Se debe introducir un correo válido.</div>
+            </div>
+
+            <ion-item>
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password" formControlName="contraseña"></ion-input>
+            </ion-item>
+            <div *ngIf="f['contraseña'].touched && f['contraseña'].invalid" class="alert">
+              <div *ngIf="!canLogin">Usuario o contraseña incorrectos</div>
+              <div *ngIf="f['contraseña'].errors && f['contraseña'].errors['required']">*Se necesita una contraseña.
+              </div>
+              <div *ngIf="f['contraseña'].errors && f['contraseña'].errors['minlength']">*La contraseña debe tener al menos 5 caracteres</div>
+            </div>
+          </div>
+          <ion-button routerLink="/contrasena-olvidada" class="olvidada">He olvidado mi contraseña</ion-button>
+          <ion-button type="submit" id="boton">Acceder</ion-button>
+        </form>
+      </div>
+    </div>
+  </section>
+</ion-content>
