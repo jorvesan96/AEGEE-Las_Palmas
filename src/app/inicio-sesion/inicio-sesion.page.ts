@@ -1,54 +1,15 @@
-import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/services/auth.service';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-inicio-sesion',
   templateUrl: './inicio-sesion.page.html',
   styleUrls: ['./inicio-sesion.page.scss'],
 })
-export class InicioSesionPage{
+export class InicioSesionPage implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor() { }
 
-  correo: string | undefined;
-  canLogin: boolean = true;
-
-  loginForm = new FormGroup({
-    correo: new FormControl('', Validators.compose([
-      Validators.required,
-      Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
-    ])),
-    contraseña: new FormControl('', Validators.compose([
-      Validators.minLength(5),
-      Validators.required,
-      Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')
-    ])),
-  });
-
-  get f() {
-    return this.loginForm.controls;
-  }
-
-  login(loginForm: any): any {
-
-    const usuario = {
-      Correo: loginForm.correo,
-      Contraseña: loginForm.contraseña
-    }
-
-    this.authService.signInWithEmail(usuario.Correo, usuario.Contraseña)
-      .then(() => {
-        console.log("Autenticado con exito")
-        this.router.navigate(["/"]);
-      })
-      .catch((error) => {
-        this.canLogin = false;
-        console.log("Fallo el autenticar")
-        return false;
-      });
-
+  ngOnInit() {
   }
 
 }

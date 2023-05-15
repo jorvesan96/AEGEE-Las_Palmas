@@ -5,8 +5,8 @@ import { InicioSesionPage } from './inicio-sesion.page';
 
 const routes: Routes = [
   {
-    path: 'inicio-sesion',
-    component: InicioSesionPage,
+    path: '',
+    component: InicioSesionPage
   }
 ];
 
