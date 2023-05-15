@@ -67,3 +67,5 @@ Thumbs.db
 .firebase
 *-debug.log
 .runtimeconfig.json
+node_modules/__ngcc_entry_points__.json
+node_modules/.cli-ngcc/db92b3fbda3996c5981e0e56379c5c42767c57a85fddaa2c7cc9781753257266.lock
