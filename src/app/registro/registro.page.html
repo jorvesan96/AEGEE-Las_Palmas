@@ -1,18 +1,98 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>inicio-sesion</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>Formulario de Registro</h1>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <app-separador></app-separador>
+  <mat-horizontal-stepper linear [labelPosition]="'bottom'">
+    <mat-step [ngClass]="{'completed': paso1Completo}" [editable]="false" [completed]="paso1Completo"></mat-step>
+    <mat-step [ngClass]="{'completed': paso1Completo}" [editable]="false" [completed]="paso1Completo"></mat-step>
+  </mat-horizontal-stepper>
+  <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
+    <div *ngIf="!paso1Completo">
+      <mat-form-field>
+        <input matInput placeholder="Nombre y apellidos" formControlName="nombre" required>
+        <mat-error *ngIf="f['nombre'].touched && f['nombre'].invalid">
+          Se requiere un nombre.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="DNI" formControlName="dni" required>
+        <mat-error *ngIf="f['dni'].touched && f['dni'].invalid">
+          Se requiere un DNI.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Fecha de nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="Elige una fecha" formControlName="nacimiento" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="f['nacimiento'].touched && f['nacimiento'].invalid">
+          Se requeire una fecha de nacimiento.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>País:</mat-label>
+        <mat-select placeholder="Selecciona un país" formControlName="pais" required>
+          <mat-option *ngFor="let pais of paises" [value]="pais.value">{{pais.label}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="f['pais'].touched && f['pais'].invalid">
+          Se requiere un país.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Localidad" formControlName="localidad" required>
+        <mat-error *ngIf="f['localidad'].touched && f['localidad'].invalid">
+          Se requiere una localidad.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Teléfono" formControlName="telefono" required>
+        <mat-error *ngIf="f['telefono'].touched && f['telefono'].invalid">
+          Se requiere un teléfono válido.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="paso1Completo">
+      <mat-form-field>
+        <input matInput placeholder="Correo" formControlName="correo" required>
+        <mat-error *ngIf="f['correo'].touched && f['correo'].invalid">
+          Se requiere un correo válido.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="repetirCorreo" formControlName="repetirCorreo" required>
+        <mat-error *ngIf="f['repetirCorreo'].errors?.['emailNoIguales'] && f['repetirCorreo'].touched">
+          Los correos deben coincidir.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Contrasena" formControlName="contrasena" type="password" required>
+        <mat-error *ngIf="f['contrasena'].touched && f['contrasena'].invalid">
+          Se requiere una contraseña válida (6 caracteres o más).
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="repetirContrasena" formControlName="repetirContrasena" type="password" required>
+        <mat-error *ngIf="f['repetirContrasena'].errors?.['repetirContrasena'] && f['repetirCorreo'].touched">
+          Las contraseñas deben coincidir.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+
+  <nav>
+    <a id="siguiente" *ngIf="!paso1Completo" (click)="paso1Completo=true">Siguiente<span ngNonBindable></span></a>
+    <a id="anterior" *ngIf="paso1Completo" (click)="paso1Completo=false"><span ngNonBindable>
+      </span>Anterior</a>
+    <button *ngIf="paso1Completo" id="enviarBoton" type="submit" [disabled]="!registroForm.valid"
+      (click)="enviarRegistro(registroForm)">Enviar</button>
+  </nav>
 </ion-content>
