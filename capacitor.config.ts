@@ -4,9 +4,9 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'AEGEE-Las_Palmas',
   webDir: 'www',
-  server: {
-    androidScheme: 'https'
-  }
+  // server: {
+  //   androidScheme: 'https'
+  // }
 };
 
 export default config;
