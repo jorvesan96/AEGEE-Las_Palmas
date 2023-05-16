@@ -6,9 +6,6 @@ import { Router } from '@angular/router';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
-//...
-
-
 
 @Component({
   selector: 'app-registro',
@@ -130,3 +127,4 @@ function validarContrasenaIgual(): ValidatorFn {
     return null;
   };
 }
+
