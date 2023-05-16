@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs';
 import { Auth } from '@angular/fire/auth';
 import 'firebase/auth';
+import 'firebase/auth';
+import firebase from 'firebase/compat';
 
 @Injectable({
   providedIn: 'root'
