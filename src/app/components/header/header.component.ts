@@ -1,4 +1,4 @@
-import { Component, HostListener, } from '@angular/core';
+import { Component, HostListener, OnInit, } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 
@@ -8,7 +8,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   styleUrls: ['./header.component.scss'],
 })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   getScreenWidth: number;
   getScreenHeight: number;
 
