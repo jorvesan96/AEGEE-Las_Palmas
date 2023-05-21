@@ -1,4 +1,4 @@
-<ion-header *ngIf="getScreenWidth >= 1024">
+<ion-header >
   <ion-toolbar id="header_elements" [class.is-open]="isOpen">
     <a href="">
       <ion-img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></ion-img>
@@ -8,47 +8,6 @@
       <a *ngIf="isLogged" id="close" (click)="cerrarSesion()" routerLink="/">Cerrar sesión</a>
       <a *ngIf="!isLogged" routerLink="/registro"><ion-button>Únete a AEGEE-Las Palmas</ion-button></a>
       <a *ngIf="!isLogged" routerLink="/inicio-sesion"><ion-button>Accede a tu cuenta</ion-button></a>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-header *ngIf="getScreenWidth < 1024 && getScreenWidth >= 640">
-  <ion-toolbar id="header_elements" [class.is-open]="isOpen">
-    <a href="">
-      <ion-img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></ion-img>
-    </a>
-    <ion-buttons slot="end">
-      <a *ngIf="isLogged" routerLink="/perfil-usuario">Mi perfil</a>
-      <a *ngIf="isLogged" id="close" (click)="cerrarSesion()" routerLink="/">Cerrar sesión</a>
-      <a *ngIf="!isLogged" routerLink="/registro"><ion-button>Únete a AEGEE-Las Palmas</ion-button></a>
-      <a *ngIf="!isLogged" routerLink="/inicio-sesion"><ion-button>Accede a tu cuenta</ion-button></a>
-    </ion-buttons>
-    <ion-buttons slot="primary">
-      <ion-button (click)="toggleMenu()">
-        <ion-icon name="menu"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-header *ngIf="getScreenWidth < 640">
-  <ion-toolbar id="header_elements" [class.is-open]="isOpen">
-    <a routerLink="/">
-      <ion-img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></ion-img>
-    </a>
-    <ion-buttons slot="primary">
-      <ion-button (click)="toggleMenu()">
-        <ion-icon name="menu"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-
-  <ion-toolbar class="menu-nav-bar" [class.is-open]="isOpen">
-    <ion-buttons slot="primary">
-      <a *ngIf="!isLogged" routerLink="/registro">Registrarse</a>
-      <a *ngIf="!isLogged" routerLink="/inicio-sesion">Iniciar sesión</a>
-      <a *ngIf="isLogged" routerLink="/perfil-usuario">Mi perfil</a>
-      <a *ngIf="isLogged" id="close" (click)="cerrarSesion()" routerLink="/">Cerrar sesión</a>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>

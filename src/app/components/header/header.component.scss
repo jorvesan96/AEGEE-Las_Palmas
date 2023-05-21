@@ -1,141 +1,79 @@
-ion-header{
+ion-header {
   width: 100%;
   height: 10vw;
-  background-color: #1468c5;
   display: block;
 
   * {
     font-family: "Bebas neue", sans-serif;
     font-size: 1.5vw;
   }
-}
 
-#header_elements {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  padding: 0 7%;
-
-  a {
-    width: 100%;
+  ion-toolbar#header_elements {
     height: 100%;
-  }
-
-  #aegee_logo {
-    width: 65%;
-    background-color: #1468c5;
-  }
-
-  #close {
-    aspect-ratio: 1/1;
-    height: 60%;
-  }
-
-  ion-buttons * {
-    margin-right: 1.5vw;
-    width: 100%;
-    height: 100%;
-    padding: 1vw 1vw;
-  }
-
-  ion-buttons a {
-    color: white;
-    text-decoration: none;
-  }
-
-  ion-buttons a:hover {
-    cursor: pointer;
-    color: #163e7a;
-  }
-
-  ion-buttons ion-button {
-    color: #163e7a;
-    background-color: white;
-    border: 2px solid #163e7a;
-    border-radius: 5px;
-    padding: 1vh 1vw;
-  }
-
-  ion-buttons ion-button:hover {
-    background-color: grey;
-    cursor: pointer;
-  }
-}
-
-@media (max-width: 1024px) and (min-width: 641px) {
-  .menu-nav-bar {
-    display: none;
-  }
-
-  .is-open {
-    height: 12vw;
-    display: flex;
-    background-color: #c5c6c6;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .elements {
-    margin: auto;
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-  }
-
-  #header_elements a {
-    text-decoration: none;
-    font-size: 2.5vw;
-  }
-
-  .elements a {
-    color: #931991;
-    text-decoration: none;
-    font-size: 2.5vw;
-  }
-
-  .elements a:hover {
-    color: #5c0159;
-  }
-}
-
-@media (max-width: 640px) {
-  .menu-nav-bar {
-    display: none;
-  }
-
-  .is-open {
-    height: 15vw;
-    display: flex;
-    background-color: #c5c6c6;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-  }
-
-  .elements {
-    margin: auto;
-    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    padding: 0 7%;
+    --background: #1468c5;
+
+    a {
+      width: 100%;
+      height: 100%;
+    }
+
+    #aegee_logo {
+      width: 65%;
+      background-color: #1468c5;
+    }
+
+    #close {
+      aspect-ratio: 1/1;
+      height: 60%;
+    }
+
+    ion-buttons * {
+      margin-right: 1.5vw;
+      width: 100%;
+      height: 100%;
+      padding: 1vw 1vw;
+    }
+
+    ion-buttons a {
+      color: white;
+      text-decoration: none;
+    }
+
+    ion-buttons a:hover {
+      cursor: pointer;
+      color: #163e7a;
+    }
+
+    ion-buttons ion-button {
+      color: #163e7a;
+      background-color: white;
+      border: 2px solid #163e7a;
+      border-radius: 5px;
+      padding: 1vh 1vw;
+    }
+
+    ion-buttons ion-button:hover {
+      background-color: grey;
+      cursor: pointer;
+    }
   }
 
-  .elements a {
-    color: #931991;
-    text-decoration: none;
-    font-size: 3vw;
-  }
+  @media (max-width: 768px) { // Ajustar estilos para pantallas de hasta 768px
+    ion-toolbar#header_elements {
+      ion-buttons * {
+        margin-right: 1%;
+        width: 100%;
+        padding: 0.5vh 0.5vw;
+      }
 
-  .elements a:hover {
-    color: #5c0159;
-  }
-
-  .elements ion-img {
-    height: 6vw;
+      ion-buttons ion-button {
+        padding: 0.5vh 0.5vw;
+      }
+    }
   }
 }
