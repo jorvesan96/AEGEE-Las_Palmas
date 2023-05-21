@@ -1,65 +1,61 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <a href="">
-        <img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco">
-      </a>
-    </ion-buttons>
+<ion-header *ngIf="getScreenWidth >= 1024">
+  <ion-nav id="header_elements" [class.is-open]="isOpen">
+    <ion-item href="">
+      <ion-img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></ion-img>
+    </ion-item>
+    <ul>
+      <ion-item routerLink="/actividades">Actividades</ion-item>
+      <ion-item routerLink="/buddy-program">Buddy program</ion-item>
 
-    <ion-buttons slot="end">
-      <ng-container *ngIf="getScreenWidth >= 1024">
-        <ion-button routerLink="/actividades">Actividades</ion-button>
-        <ion-button routerLink="/buddy-program">Buddy program</ion-button>
-        <ng-container *ngIf="isLogged">
-          <ion-button routerLink="/perfil-usuario">Mi perfil</ion-button>
-          <ion-button (click)="cerrarSesion()" routerLink="/">Cerrar sesión</ion-button>
-        </ng-container>
-        <ng-container *ngIf="!isLogged">
-          <ion-button routerLink="/registro">Únete a AEGEE-Las Palmas</ion-button>
-          <ion-button routerLink="/inicio-sesion">Accede a tu cuenta</ion-button>
-        </ng-container>
-      </ng-container>
+      <ion-item *ngIf="isLogged" routerLink="/perfil-usuario" slot="end">Mi perfil</ion-item>
+      <ion-item *ngIf="isLogged" (click)="cerrarSesion()" routerLink="/" slot="end">Cerrar sesión</ion-item>
+      <ion-item *ngIf="!isLogged" routerLink="/registro"><ion-button>Únete a AEGEE-Las Palmas</ion-button></ion-item>
+      <ion-item *ngIf="!isLogged" routerLink="/inicio-sesion"><ion-button>Accede a tu cuenta</ion-button></ion-item>
+    </ul>
+  </ion-nav>
+</ion-header>
 
-      <ng-container *ngIf="getScreenWidth < 1024 && getScreenWidth >= 640">
-        <ng-container *ngIf="isLogged">
-          <ion-button routerLink="/perfil-usuario">Mi perfil</ion-button>
-          <ion-button (click)="cerrarSesion()" routerLink="/">Cerrar sesión</ion-button>
-        </ng-container>
-        <ng-container *ngIf="!isLogged">
-          <ion-button routerLink="/registro">Únete a AEGEE-Las Palmas</ion-button>
-          <ion-button routerLink="/inicio-sesion">Accede a tu cuenta</ion-button>
-        </ng-container>
-        <ion-buttons slot="end">
-          <ion-button (click)="toggleMenu()">
-            <ion-icon name="menu"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ng-container>
+<ion-header *ngIf="getScreenWidth < 1024 && getScreenWidth >= 640">
+  <ion-nav id="header_elements" [class.is-open]="isOpen">
+    <ion-item href="">
+      <ion-img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></ion-img>
+    </ion-item>
+    <ul>
+      <ion-item *ngIf="isLogged" routerLink="/perfil-usuario" slot="end">Mi perfil</ion-item>
+      <ion-item *ngIf="isLogged" (click)="cerrarSesion()" routerLink="/" slot="end">Cerrar sesión</ion-item>
+      <ion-item *ngIf="!isLogged" routerLink="/registro"><ion-button>Únete a AEGEE-Las Palmas</ion-button></ion-item>
+      <ion-item *ngIf="!isLogged" routerLink="/inicio-sesion"><ion-button>Accede a tu cuenta</ion-button></ion-item>
+    </ul>
+    <ion-img (click)="toggleMenu()" id="burger_menu" src="{{source}}" alt="menu desplegable"></ion-img>
+  </ion-nav>
 
-      <ng-container *ngIf="getScreenWidth < 640">
-        <ion-buttons slot="end">
-          <ion-button (click)="toggleMenu()">
-            <ion-icon name="menu"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ng-container>
-    </ion-buttons>
-    <!-- <nav id="header_elements">
-      <a routerLink=""> <img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco">
-      </a>
-      <img (click)="toggleMenu()" id="burger_menu" src="{{source}}" alt="menu desplegable">
-    </nav> -->
+  <ion-nav class="menu-nav-bar" [class.is-open]="isOpen">
+    <div class="elements">
+      <ion-item routerLink="/actividades">Actividades</ion-item>
+      <ion-item routerLink="/buddy-program">Buddy program</ion-item>
+    </div>
 
-    <!-- <nav class="menu-nav-bar" [class.is-open]="isOpen">
-      <div class="elements">
-        <a routerLink="/actividades">Actividades</a>
-        <a routerLink="/buddy-program">Buddy program</a>
-        <a *ngIf="!isLogged" routerLink="/registro">Registrarse</a>
-        <a *ngIf="!isLogged" routerLink="/inicio-sesion">Iniciar sesión</a>
-        <a *ngIf="isLogged" routerLink="/perfil-usuario">Mi perfil</a>
-        <a *ngIf="isLogged" (click)="cerrarSesion()" routerLink="/">Cerrar sesión</a>
+  </ion-nav>
+</ion-header>
 
-      </div>
-    </nav> -->
-  </ion-toolbar>
+<ion-header *ngIf="getScreenWidth < 640">
+  <ion-nav id="header_elements" [class.is-open]="isOpen">
+    <ion-item routerLink="">
+      <ion-img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></ion-img>
+    </ion-item>
+    <ion-img (click)="toggleMenu()" id="burger_menu" src="{{source}}" alt="menu desplegable"></ion-img>
+  </ion-nav>
+
+  <ion-nav class="menu-nav-bar" [class.is-open]="isOpen">
+    <div class="elements">
+      <ion-item routerLink="/actividades">Actividades</ion-item>
+      <ion-item routerLink="/buddy-program">Buddy program</ion-item>
+      <ion-item *ngIf="!isLogged" routerLink="/registro">Registrarse</ion-item>
+      <ion-item *ngIf="!isLogged" routerLink="/inicio-sesion">Iniciar sesión</ion-item>
+      <ion-item *ngIf="isLogged" routerLink="/perfil-usuario" slot="end">Mi perfil</ion-item>
+      <ion-item *ngIf="isLogged" (click)="cerrarSesion()" routerLink="/" slot="end">Cerrar sesión</ion-item>
+
+    </div>
+
+  </ion-nav>
 </ion-header>

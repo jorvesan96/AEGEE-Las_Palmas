@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, } from '@angular/core';
+import { Component, OnInit, HostListener  } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
@@ -6,12 +6,12 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
+export class HeaderComponent  implements OnInit {
 
-export class HeaderComponent implements OnInit {
   getScreenWidth: number;
   getScreenHeight: number;
 
-  public source: String = "../../../assets/icons/burger menu.png";
+  public source: string = "../../../assets/icons/burger menu.png";
 
   isOpen = false;
   isLogged: boolean = false;
@@ -24,8 +24,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.afAuth.authState.subscribe(user => {
       this.isLogged = !!user;
+      console.log(this.isLogged);
     });
-
   }
 
   @HostListener('window:resize')
@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleMenu(): void {
-    this.isOpen = !this.isOpen
+    this.isOpen = !this.isOpen;
     if (this.isOpen) {
       this.source = "../../../assets/icons/close-logo.png";
     } else {
@@ -46,9 +46,11 @@ export class HeaderComponent implements OnInit {
 
   cerrarSesion() {
     this.afAuth.signOut()
-    .then(() => {
-    })
-    .catch((error) => {
-      console.error('Error al cerrar sesión:', error);
-    });  }
+      .then(() => {
+      })
+      .catch((error) => {
+        console.error('Error al cerrar sesión:', error);
+      });
+  }
+
 }
