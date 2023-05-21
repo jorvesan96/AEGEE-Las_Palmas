@@ -13,9 +13,10 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent ],
+  declarations: [AppComponent, HeaderComponent, FooterComponent ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

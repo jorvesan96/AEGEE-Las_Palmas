@@ -1,0 +1,55 @@
+ion-footer {
+  ion-toolbar {
+    --background: #434342;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+
+    .footer-elements {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+
+      .footer-text {
+        font-family: "Bebas neue", sans-serif;
+        font-size: 3vh;
+        margin: 0;
+      }
+
+      .social-icons {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        a {
+          display: flex;
+          align-items: center;
+          height: 4vh;
+
+          ion-img {
+            aspect-ratio: 1/1;
+            height: 100%;
+            opacity: 50%;
+          }
+        }
+      }
+    }
+
+    @media all and (max-width: 640px) {
+      .footer-elements .footer-text {
+        font-size: 2vh;
+      }
+
+      .footer-elements .social-icons a {
+        height: 2.5vh;
+      }
+
+      .footer-elements .social-icons ion-img {
+        height: 100%;
+      }
+    }
+  }
+}

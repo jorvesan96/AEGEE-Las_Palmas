@@ -6,7 +6,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <ion-content class="app-content">
     <div *ngIf="isLoading">
       Cargando...
     </div>
@@ -16,4 +16,10 @@
       <ion-router-outlet></ion-router-outlet>
     </div>
   </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <app-footer></app-footer>
+    </ion-toolbar>
+  </ion-footer>
 </ion-app>
