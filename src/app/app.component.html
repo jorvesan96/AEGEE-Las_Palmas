@@ -1,14 +1,19 @@
 <ion-app>
-  <ion-router-outlet>
+  <ion-header>
+    <ion-toolbar>
+      <!-- Aquí puedes colocar el contenido de tu encabezado -->
+      <app-header></app-header>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
     <div *ngIf="isLoading">
       Cargando...
     </div>
 
     <div *ngIf="isLoading === false">
-      <router-outlet></router-outlet>
-      <!--<components-footer></components-footer>-->
+      <!-- Aquí puedes colocar el contenido de tus páginas -->
+      <ion-router-outlet></ion-router-outlet>
     </div>
-
-
-  </ion-router-outlet>
+  </ion-content>
 </ion-app>
