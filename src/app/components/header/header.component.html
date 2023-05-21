@@ -4,11 +4,9 @@
       <ion-img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></ion-img>
     </ion-item>
     <ul>
-      <ion-item routerLink="/actividades">Actividades</ion-item>
-      <ion-item routerLink="/buddy-program">Buddy program</ion-item>
 
       <ion-item *ngIf="isLogged" routerLink="/perfil-usuario" slot="end">Mi perfil</ion-item>
-      <ion-item *ngIf="isLogged" (click)="cerrarSesion()" routerLink="/" slot="end">Cerrar sesión</ion-item>
+      <ion-item *ngIf="isLogged" id="close" (click)="cerrarSesion()" routerLink="/" slot="end">Cerrar sesión</ion-item>
       <ion-item *ngIf="!isLogged" routerLink="/registro"><ion-button>Únete a AEGEE-Las Palmas</ion-button></ion-item>
       <ion-item *ngIf="!isLogged" routerLink="/inicio-sesion"><ion-button>Accede a tu cuenta</ion-button></ion-item>
     </ul>
@@ -22,19 +20,10 @@
     </ion-item>
     <ul>
       <ion-item *ngIf="isLogged" routerLink="/perfil-usuario" slot="end">Mi perfil</ion-item>
-      <ion-item *ngIf="isLogged" (click)="cerrarSesion()" routerLink="/" slot="end">Cerrar sesión</ion-item>
+      <ion-item *ngIf="isLogged" id="close" (click)="cerrarSesion()" routerLink="/" slot="end">Cerrar sesión</ion-item>
       <ion-item *ngIf="!isLogged" routerLink="/registro"><ion-button>Únete a AEGEE-Las Palmas</ion-button></ion-item>
       <ion-item *ngIf="!isLogged" routerLink="/inicio-sesion"><ion-button>Accede a tu cuenta</ion-button></ion-item>
     </ul>
-    <ion-img (click)="toggleMenu()" id="burger_menu" src="{{source}}" alt="menu desplegable"></ion-img>
-  </ion-nav>
-
-  <ion-nav class="menu-nav-bar" [class.is-open]="isOpen">
-    <div class="elements">
-      <ion-item routerLink="/actividades">Actividades</ion-item>
-      <ion-item routerLink="/buddy-program">Buddy program</ion-item>
-    </div>
-
   </ion-nav>
 </ion-header>
 
@@ -43,17 +32,14 @@
     <ion-item routerLink="">
       <ion-img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></ion-img>
     </ion-item>
-    <ion-img (click)="toggleMenu()" id="burger_menu" src="{{source}}" alt="menu desplegable"></ion-img>
   </ion-nav>
 
   <ion-nav class="menu-nav-bar" [class.is-open]="isOpen">
     <div class="elements">
-      <ion-item routerLink="/actividades">Actividades</ion-item>
-      <ion-item routerLink="/buddy-program">Buddy program</ion-item>
       <ion-item *ngIf="!isLogged" routerLink="/registro">Registrarse</ion-item>
       <ion-item *ngIf="!isLogged" routerLink="/inicio-sesion">Iniciar sesión</ion-item>
       <ion-item *ngIf="isLogged" routerLink="/perfil-usuario" slot="end">Mi perfil</ion-item>
-      <ion-item *ngIf="isLogged" (click)="cerrarSesion()" routerLink="/" slot="end">Cerrar sesión</ion-item>
+      <ion-item *ngIf="isLogged" id="close" (click)="cerrarSesion()" routerLink="/" slot="end">Cerrar sesión</ion-item>
 
     </div>
 
