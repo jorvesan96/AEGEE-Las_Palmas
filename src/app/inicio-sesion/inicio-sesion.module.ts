@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { InicioSesionPageRoutingModule } from './inicio-sesion-routing.module';
 import { InicioSesionPage } from './inicio-sesion.page';
-import { HeaderComponent } from '../components/header/header.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -13,6 +13,6 @@ import { HeaderComponent } from '../components/header/header.component';
     InicioSesionPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [InicioSesionPage, HeaderComponent]
+  declarations: [InicioSesionPage]
 })
 export class InicioSesionPageModule {}
