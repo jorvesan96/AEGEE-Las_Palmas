@@ -4,8 +4,8 @@
       <ion-img id="aegee_logo" src="../../../assets/images/logo_aegee_blanco.png" alt="logo_aegee_blanco"></ion-img>
     </a>
     <ion-buttons slot="end">
-      <a *ngIf="isLogged" routerLink="/perfil-usuario">Mi perfil</a>
-      <a *ngIf="isLogged" id="close" (click)="cerrarSesion()" routerLink="/">Cerrar sesión</a>
+      <a *ngIf="isLogged" routerLink="/perfil-usuario"><ion-button>Mi perfil</ion-button></a>
+      <a *ngIf="isLogged" id="close" (click)="cerrarSesion()" routerLink="/"><ion-button>Cerrar sesión</ion-button></a>
       <a *ngIf="!isLogged" routerLink="/registro"><ion-button>Únete a AEGEE-Las Palmas</ion-button></a>
       <a *ngIf="!isLogged" routerLink="/inicio-sesion"><ion-button>Accede a tu cuenta</ion-button></a>
     </ion-buttons>
