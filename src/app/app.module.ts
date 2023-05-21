@@ -12,10 +12,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent,HeaderComponent ],
+  declarations: [AppComponent ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
