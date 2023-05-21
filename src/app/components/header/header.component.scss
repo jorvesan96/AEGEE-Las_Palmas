@@ -1,4 +1,4 @@
-ion-header {
+ion-header{
   width: 100%;
   height: 10vw;
   background-color: #1468c5;
@@ -18,14 +18,13 @@ ion-header {
   flex-direction: row;
   padding: 0 7%;
 
-  ion-item {
-    width: 20%;
+  a {
+    width: 100%;
     height: 100%;
   }
 
   #aegee_logo {
-    margin-top: 0.5vw;
-    height: 90%;
+    width: 65%;
     background-color: #1468c5;
   }
 
@@ -34,21 +33,24 @@ ion-header {
     height: 60%;
   }
 
-  ul * {
+  ion-buttons * {
     margin-right: 1.5vw;
+    width: 100%;
+    height: 100%;
+    padding: 1vw 1vw;
   }
 
-  ul ion-item {
+  ion-buttons a {
     color: white;
     text-decoration: none;
   }
 
-  ul ion-item:hover {
+  ion-buttons a:hover {
     cursor: pointer;
     color: #163e7a;
   }
 
-  ul ion-button {
+  ion-buttons ion-button {
     color: #163e7a;
     background-color: white;
     border: 2px solid #163e7a;
@@ -56,7 +58,7 @@ ion-header {
     padding: 1vh 1vw;
   }
 
-  ul ion-button:hover {
+  ion-buttons ion-button:hover {
     background-color: grey;
     cursor: pointer;
   }
@@ -84,18 +86,18 @@ ion-header {
     justify-content: space-between;
   }
 
-  #header_elements ion-item {
+  #header_elements a {
     text-decoration: none;
     font-size: 2.5vw;
   }
 
-  .elements ion-item {
+  .elements a {
     color: #931991;
     text-decoration: none;
     font-size: 2.5vw;
   }
 
-  .elements ion-item:hover {
+  .elements a:hover {
     color: #5c0159;
   }
 }
@@ -123,13 +125,13 @@ ion-header {
     flex-direction: row;
   }
 
-  .elements ion-item {
+  .elements a {
     color: #931991;
     text-decoration: none;
     font-size: 3vw;
   }
 
-  .elements ion-item:hover {
+  .elements a:hover {
     color: #5c0159;
   }
 
