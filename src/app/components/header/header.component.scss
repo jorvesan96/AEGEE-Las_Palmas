@@ -18,7 +18,7 @@ ion-header {
   flex-direction: row;
   padding: 0 7%;
 
-  a {
+  ion-item {
     width: 20%;
     height: 100%;
   }
@@ -26,9 +26,9 @@ ion-header {
   #aegee_logo {
     margin-top: 0.5vw;
     height: 90%;
+    background-color: #1468c5;
   }
 
-  #burger_menu,
   #close {
     aspect-ratio: 1/1;
     height: 60%;
@@ -38,17 +38,17 @@ ion-header {
     margin-right: 1.5vw;
   }
 
-  ul a {
+  ul ion-item {
     color: white;
     text-decoration: none;
   }
 
-  ul a:hover {
+  ul ion-item:hover {
     cursor: pointer;
     color: #163e7a;
   }
 
-  ul button {
+  ul ion-button {
     color: #163e7a;
     background-color: white;
     border: 2px solid #163e7a;
@@ -56,7 +56,7 @@ ion-header {
     padding: 1vh 1vw;
   }
 
-  ul button:hover {
+  ul ion-button:hover {
     background-color: grey;
     cursor: pointer;
   }
@@ -84,18 +84,18 @@ ion-header {
     justify-content: space-between;
   }
 
-  #header_elements a {
+  #header_elements ion-item {
     text-decoration: none;
     font-size: 2.5vw;
   }
 
-  .elements a {
+  .elements ion-item {
     color: #931991;
     text-decoration: none;
     font-size: 2.5vw;
   }
 
-  .elements a:hover {
+  .elements ion-item:hover {
     color: #5c0159;
   }
 }
@@ -123,17 +123,17 @@ ion-header {
     flex-direction: row;
   }
 
-  .elements a {
+  .elements ion-item {
     color: #931991;
     text-decoration: none;
     font-size: 3vw;
   }
 
-  .elements a:hover {
+  .elements ion-item:hover {
     color: #5c0159;
   }
 
-  .elements img {
+  .elements ion-img {
     height: 6vw;
   }
 }
