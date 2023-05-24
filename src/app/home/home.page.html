@@ -1,6 +1,35 @@
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list id="grupo_actividades">
+    <ion-item id="titulo_1">
+        <ion-title>Actividades Locales</ion-title>
+    </ion-item>
+
+    <ion-item class="actividad1" *ngFor="let act of actividades">
+        <ion-card class="contenedor_actividades" *ngIf="act.tipo === 'Local'" (click)="navegarRegistroActividad()">
+
+            <ion-img src="" alt="" style="width:200; height:200;"></ion-img>
+            <ion-card-content>
+                <ion-card-title id="titulo_actividad">{{act.nombre}}</ion-card-title>
+                <ion-card-subtitle>{{act.descripcion}}</ion-card-subtitle>
+            </ion-card-content>
+        </ion-card>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list id="grupo_actividades">
+    <ion-item id="titulo_1">
+        <ion-title>Actividades Europeas</ion-title>
+    </ion-item>
+
+    <ion-item class="actividad2" *ngFor="let act of actividades">
+        <ion-card class="contenedor_actividades" *ngIf="act.tipo === 'Europea'" (click)="navegarRegistroActividad()">
+            <ion-img src="" alt="" width="200" height="200"></ion-img>
+            <ion-card-content>
+                <ion-card-title id="titulo_actividad">{{act.nombre}}</ion-card-title>
+                <ion-card-subtitle>{{act.descripcion}}</ion-card-subtitle>
+            </ion-card-content>
+        </ion-card>
+    </ion-item>
+  </ion-list>
 </ion-content>
