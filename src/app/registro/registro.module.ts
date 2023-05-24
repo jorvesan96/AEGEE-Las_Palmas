@@ -6,7 +6,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { RegistroPageRoutingModule } from './registro-routing.module';
 import { RegistroPage } from './registro.page';
-import { SeparadorModule } from '../components/separador/separador.module';
 
 @NgModule({
   imports: [
@@ -14,7 +13,6 @@ import { SeparadorModule } from '../components/separador/separador.module';
     FormsModule,
     IonicModule,
     RegistroPageRoutingModule,
-    SeparadorModule,
     ReactiveFormsModule,
     FormsModule,
     ReactiveFormsModule
