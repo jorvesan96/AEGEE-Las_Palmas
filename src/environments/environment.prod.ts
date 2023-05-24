@@ -9,5 +9,5 @@ export const environment = {
     authDomain: 'aegee-las-palmas-370b7.firebaseapp.com',
     messagingSenderId: '466542820130',
   },
-  production: true
+  production: false
 };

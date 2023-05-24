@@ -29,6 +29,7 @@ export class RegistroPage implements OnInit {
     { value: 'Perú', label: 'Perú' }
   ];
 
+
   ngOnInit() {
 
     this.registroForm = this.fb.group({
@@ -48,6 +49,7 @@ export class RegistroPage implements OnInit {
   get f() {
     return this.registroForm.controls;
   }
+
 
   enviarPaso1() {
     if (this.registroForm.get('nombre')?.invalid || this.registroForm.get('apellidos')?.invalid ||
@@ -101,9 +103,7 @@ export class RegistroPage implements OnInit {
       }
     });
   }
-
 }
-
 
 function validarEmailIgual(): ValidatorFn {
   return (control: AbstractControl): { [key: string]: any } | null => {

@@ -1,70 +1,54 @@
-form{
-  margin-top:5%;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-left: 25%;
-  margin-bottom: 10%;
-}
-h1 {
-  font-size: 4.5vw;
-}
-.center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top:5%;
+ion-content {
+  ion-form {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 10%;
 
-}
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5%;
+    }
 
-#paso2{
-  position:absolute;
-  top:33vw;
-  left: 71.3vw;
-  font-size: 2vw;
-}
+    .hide-button {
+      display: none;
+    }
 
-#paso1{
-  position:absolute;
-  top:33vw;
-  left:26.5vw;
-  font-size: 2vw;
-}
+    #paso2 {
+      position: absolute;
+      top: 33vw;
+      left: 71.3vw;
+      font-size: 2vw;
+    }
 
-nav{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
+    #paso1 {
+      position: absolute;
+      top: 33vw;
+      left: 26.5vw;
+      font-size: 2vw;
+    }
 
-#siguiente{
-  grid-column: 4;
-  grid-row: 1;
-}
+    #colocar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+    }
 
-#anterior{
-  grid-column: 2;
-  grid-row: 1;
-}
-#siguiente:hover, #anterior:hover{
-  color: blue;
-  cursor: pointer;
-}
+    ion-col {
+      width: 100%;
+      margin-bottom: 1vh;
+    }
 
-#enviarBoton {
-  grid-column: 4;
-  grid-row: 1;
-  width: 25%;
-  height: 25%;
-}
-
-mat-horizontal-stepper{
-  width: 70%;
-  margin-left: 15%;
-}
-
-mat-form-field{
-  width: 100%;
-  margin-bottom: 1vh;
+    ion-button {
+      &:hover {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+  }
 }

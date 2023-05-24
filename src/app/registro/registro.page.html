@@ -1,98 +1,116 @@
-<ion-content [fullscreen]="true">
-  <h1>Formulario de Registro</h1>
+<ion-content>
+  <ion-form [formGroup]="registroForm">
+    <ion-grid>
+      <ion-row *ngIf="!paso1Completo">
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nombre y apellidos</ion-label>
+            <ion-input formControlName="nombre" required></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="f['nombre'].touched && f['nombre'].invalid">
+            Se requiere un nombre.
+          </ion-text>
 
-  <app-separador></app-separador>
-  <mat-horizontal-stepper linear [labelPosition]="'bottom'">
-    <mat-step [ngClass]="{'completed': paso1Completo}" [editable]="false" [completed]="paso1Completo"></mat-step>
-    <mat-step [ngClass]="{'completed': paso1Completo}" [editable]="false" [completed]="paso1Completo"></mat-step>
-  </mat-horizontal-stepper>
-  <form [formGroup]="registroForm" name="registroForm" (ngSubmit)="enviarRegistro(registroForm)">
-    <div *ngIf="!paso1Completo">
-      <mat-form-field>
-        <input matInput placeholder="Nombre y apellidos" formControlName="nombre" required>
-        <mat-error *ngIf="f['nombre'].touched && f['nombre'].invalid">
-          Se requiere un nombre.
-        </mat-error>
-      </mat-form-field>
+          <ion-item>
+            <ion-label position="floating">DNI</ion-label>
+            <ion-input formControlName="dni" required></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="f['dni'].touched && f['dni'].invalid">
+            Se requiere un dni.
+          </ion-text>
 
-      <mat-form-field>
-        <input matInput placeholder="DNI" formControlName="dni" required>
-        <mat-error *ngIf="f['dni'].touched && f['dni'].invalid">
-          Se requiere un DNI.
-        </mat-error>
-      </mat-form-field>
+          <ion-item>
+            <ion-label>Fecha de nacimiento</ion-label>
+            <ion-datetime formControlName="nacimiento" displayFormat="DD/MM/YYYY" required></ion-datetime>
+          </ion-item>
+          <ion-text color="danger" *ngIf="f['nacimiento'].touched && f['nacimiento'].invalid">
+            Se requiere una fecha de nacimiento.
+          </ion-text>
 
-      <mat-form-field>
-        <mat-label>Fecha de nacimiento</mat-label>
-        <input matInput [matDatepicker]="picker" placeholder="Elige una fecha" formControlName="nacimiento" required>
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-        <mat-error *ngIf="f['nacimiento'].touched && f['nacimiento'].invalid">
-          Se requeire una fecha de nacimiento.
-        </mat-error>
-      </mat-form-field>
+          <ion-item>
+            <ion-label position="floating">País</ion-label>
+            <ion-input formControlName="pais" required></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="f['pais'].touched && f['pais'].invalid">
+            Se requiere un país.
+          </ion-text>
 
-      <mat-form-field>
-        <mat-label>País:</mat-label>
-        <mat-select placeholder="Selecciona un país" formControlName="pais" required>
-          <mat-option *ngFor="let pais of paises" [value]="pais.value">{{pais.label}}</mat-option>
-        </mat-select>
-        <mat-error *ngIf="f['pais'].touched && f['pais'].invalid">
-          Se requiere un país.
-        </mat-error>
-      </mat-form-field>
+          <ion-item>
+            <ion-label position="floating">Localidad</ion-label>
+            <ion-input formControlName="localidad" required></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="f['localidad'].touched && f['localidad'].invalid">
+            Se requiere un localidad.
+          </ion-text>
 
-      <mat-form-field>
-        <input matInput placeholder="Localidad" formControlName="localidad" required>
-        <mat-error *ngIf="f['localidad'].touched && f['localidad'].invalid">
-          Se requiere una localidad.
-        </mat-error>
-      </mat-form-field>
+          <ion-item>
+            <ion-label position="floating">Telefono</ion-label>
+            <ion-input formControlName="telefono" required></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="f['telefono'].touched && f['telefono'].invalid">
+            Se requiere un telefono.
+          </ion-text>
+        </ion-col>
+      </ion-row>
 
-      <mat-form-field>
-        <input matInput placeholder="Teléfono" formControlName="telefono" required>
-        <mat-error *ngIf="f['telefono'].touched && f['telefono'].invalid">
-          Se requiere un teléfono válido.
-        </mat-error>
-      </mat-form-field>
-    </div>
+      <ion-row *ngIf="paso1Completo">
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input formControlName="correo" required></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="f['correo'].touched && f['correo'].invalid">
+            Se requiere un correo válido.
+          </ion-text>
 
-    <div *ngIf="paso1Completo">
-      <mat-form-field>
-        <input matInput placeholder="Correo" formControlName="correo" required>
-        <mat-error *ngIf="f['correo'].touched && f['correo'].invalid">
-          Se requiere un correo válido.
-        </mat-error>
-      </mat-form-field>
+          <ion-item>
+            <ion-label position="floating">Repetir Correo</ion-label>
+            <ion-input class="custom-input" formControlName="repetirCorreo" required></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="f['repetirCorreo'].errors?.['emailNoIguales'] && f['repetirCorreo'].touched">
+            Los correos deben coincidir.
+          </ion-text>
 
-      <mat-form-field>
-        <input matInput placeholder="repetirCorreo" formControlName="repetirCorreo" required>
-        <mat-error *ngIf="f['repetirCorreo'].errors?.['emailNoIguales'] && f['repetirCorreo'].touched">
-          Los correos deben coincidir.
-        </mat-error>
-      </mat-form-field>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input class="custom-input" formControlName="contrasena" required></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="f['contrasena'].touched && f['contrasena'].invalid">
+            Se requiere una contraseña válida (6 caracteres o más).
+          </ion-text>
 
-      <mat-form-field>
-        <input matInput placeholder="Contrasena" formControlName="contrasena" type="password" required>
-        <mat-error *ngIf="f['contrasena'].touched && f['contrasena'].invalid">
-          Se requiere una contraseña válida (6 caracteres o más).
-        </mat-error>
-      </mat-form-field>
+          <ion-item>
+            <ion-label position="floating">Repetir Contraseña</ion-label>
+            <ion-input class="custom-input" formControlName="repetirContrasena" required></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="f['repetirContrasena'].errors?.['repetirContrasena'] && f['repetirCorreo'].touched">
+            Las contraseñas deben coincidir.
+          </ion-text>
+        </ion-col>
+      </ion-row>
 
-      <mat-form-field>
-        <input matInput placeholder="repetirContrasena" formControlName="repetirContrasena" type="password" required>
-        <mat-error *ngIf="f['repetirContrasena'].errors?.['repetirContrasena'] && f['repetirCorreo'].touched">
-          Las contraseñas deben coincidir.
-        </mat-error>
-      </mat-form-field>
-    </div>
-  </form>
+      <ion-row>
+        <ion-col>
+          <ion-button style="margin-bottom: 10%;" class="button-container" expand="block" fill="outline" color="primary"
+            (click)="paso1Completo = true" [class.hide-button]="paso1Completo">
+            Siguiente
+          </ion-button>
+          <ion-button expand="block" fill="outline" color="primary"
+            (click)="paso1Completo = false" [class.hide-button]="!paso1Completo">
+            Anterior
+          </ion-button>
+        </ion-col>
+      </ion-row>
 
-  <nav>
-    <a id="siguiente" *ngIf="!paso1Completo" (click)="paso1Completo=true">Siguiente<span ngNonBindable></span></a>
-    <a id="anterior" *ngIf="paso1Completo" (click)="paso1Completo=false"><span ngNonBindable>
-      </span>Anterior</a>
-    <button *ngIf="paso1Completo" id="enviarBoton" type="submit" [disabled]="!registroForm.valid"
-      (click)="enviarRegistro(registroForm)">Enviar</button>
-  </nav>
+      <ion-row>
+        <ion-col>
+          <ion-button style="margin-bottom: 20%;" routerLink="/" expand="block" fill="solid" color="primary" type="submit" [disabled]="!registroForm.valid"
+            (click)="enviarRegistro(registroForm)" [class.hide-button]="!paso1Completo" >
+            Enviar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-form>
 </ion-content>
